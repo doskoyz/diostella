@@ -1,0 +1,2468 @@
+:root {
+
+    /* Font Size */
+    --fs-title: clamp(35px, 3.75vw, 45px);          /* Judul */
+    --fs-sub-title: clamp(32px, 2.5vw, 34px);       /* Sub Judul */
+    --fs-content: clamp(30px, 2.25vw, 30px);        /* Konten */
+    --fs-cover: clamp(40px, 4vw, 65px);             /* Cover */
+    --fs-couple: clamp(35px, 3.5vw, 50px);          /* Couple */
+    --fs-greeting: clamp(35px, 3.75vw, 55px);       /* Greeting */
+    --fs-save-date: clamp(35px, 3.5vw, 55px);       /* Save the Date */
+    --fs-main-date: clamp(50px, 4vw, 60px);         /* Main Date */
+    --fs-activity-name: clamp(35px, 2.75vw, 40px);  /* Activity Name */
+
+}
+
+
+body {
+
+    /* Body Height */
+    --body-height: 100vh;
+
+    /* Font Family */
+    --ff-01: 'Ventura Times';
+    --ff-02: 'Elsie Swash Caps';
+
+    /* Color */
+    --font-clr: #464646;
+    --rgb-font-clr: 70, 70, 70;
+
+    overflow: hidden;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body font {
+    font-family: inherit;
+}
+
+
+/* Top Cover */
+.top-cover {
+    background-color: var(--secondary-clr);
+    width: 100%;
+    /* height: 100vh; */
+    height: var(--body-height);
+    /* position: relative; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    overflow: hidden;
+    opacity: 1;
+
+    transition: all 1.8s;
+    transition-timing-function: cubic-bezier(.23,.56,.38,.78);
+    -webkit-transition-timing-function: cubic-bezier(.23,.56,.38,.78);
+    -moz-transition-timing-function: cubic-bezier(.23,.56,.38,.78);
+    -o-transition-timing-function: cubic-bezier(.23,.56,.38,.78);
+}
+.top-cover.hide {
+    top: -120%;
+    bottom: 120%;
+    pointer-events: none;
+}
+.top-cover .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.top-cover .inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+                            to bottom,
+                            rgba(0, 0, 0, 0.2),
+                            rgba(0, 0, 0, 0.4),
+                            rgba(0, 0, 0, 0.2)
+                        );
+}
+.top-cover .inner .details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 10px;
+    position: relative;
+    /* background-color: lightgrey; */
+}
+.top-cover .inner .details > div {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+.top-cover .inner .details .text-01 {
+    font-family: "Elsie Swash Caps";
+    font-size: calc(var(--fs-cover) + 35px);
+    line-height: calc(var(--fs-cover) + 42px);
+    /* color: var(--primary-clr); */
+    color: var(--wood-clr);
+    word-wrap: break-word;
+    /* background-color: lightblue; */
+}
+.top-cover .inner .details .link-01 {
+    font-family: var(--ff-01);
+    /* font-size: 20px; */
+    font-size: var(--fs-sub-title);
+    line-height: calc(var(--fs-sub-title) + 5px);
+    text-decoration: none;
+    background-color: var(--wood-clr);
+    display: inline-block;
+    padding: 0em 0.5em;
+    border-radius: 7px;
+    margin: 0;
+    color: var(--white-clr);
+    box-shadow: -1px 1px 5px rgba(var(--rgb-primary-clr), 0.3);
+    transition: all 0.35s ease-in-out;
+}
+.top-cover .inner .details .link-01:hover {
+    background-color: var(--primary-clr);
+    /* color: var(--secondary-clr); */
+}
+.top-cover > .cover-show {
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.top-cover > .cover-show .slick-list {
+    width: 100%!important;
+    height: 100%!important;
+}
+.top-cover > .cover-show .slick-track {
+    width: 100%!important;
+    height: 100%!important;
+    position: relative!important;
+}
+.top-cover > .cover-show .picture-outer {
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute!important;
+    top: 0!important;
+    left: 0!important;
+}
+.top-cover > .cover-show .picture-outer img {
+    width: 100%!important;
+    height: 100%!important;
+    object-fit: cover;
+    -o-object-fit: cover;
+    object-position: center;
+    /* animation: zoom-out 40s infinite; */
+    /* filter: blur(1px);
+    -webkit-filter: blur(1px); */
+}
+
+@keyframes zoom-out {
+    0% {
+        transform: scale(1);
+        object-position: top;
+    }
+    70% {
+        transform: scale(1.4);
+        object-position: center;
+    }
+    100% {
+        transform: scale(1);
+        object-position: top;
+    }
+}
+
+
+
+
+/* COVER */
+.cover {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--secondary-clr);
+    background-image: var(--bg-cover);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cover .cover-inner {
+    position: relative;
+    width: 100%;
+    min-height: var(--body-height);
+    padding: 20px 0px 30px 0px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/* Cover Greet */
+.cover .cover-inner .cover-greet {
+    padding: 10px;
+    width: 640px;
+    text-align: center;
+    /* background-color: lightsalmon; */
+}
+.cover .cover-inner .cover-greet .orn.orn-01 {
+    width: 250px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    background-image: var(--orn-01);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 20px;
+    /* background-color: lightblue; */
+}
+.cover .cover-inner .cover-greet .text-01 {
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    display: inline-block;
+    text-transform: capitalize;
+    color: var(--font-clr);
+    font-family: "Ventura Times";
+}
+
+/* Cover Picture */
+.cover .cover-inner .cover-picture {
+    margin: 40px 0;
+    padding: 0px;
+    position: relative;
+    /* background-color: lightgreen; */
+}
+.cover .cover-inner .cover-picture .cover-show {
+    width: 1024px;
+    height: 530px;
+    position: relative;
+}
+.cover .cover-inner .cover-picture .cover-show::before {
+    content: '';
+    width: 105%;
+    height: 112%;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: var(--orn-cover-desktop);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.cover .cover-inner .cover-picture .cover-show .picture-outer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.cover .cover-inner .cover-picture .cover-show .picture-outer .picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
+}
+/* Cover BrideGroom */
+.cover .cover-inner .cover-bridegroom {
+    padding: 10px;
+    text-align: center;
+    /* background-color: lightblue; */
+    width: 100%;
+}
+.cover .cover-inner .cover-bridegroom .text-01,
+.cover .cover-inner .cover-bridegroom .text-02 {
+    font-family: "Ventura Times";
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    color: var(--font-clr);
+}
+.cover .cover-inner .cover-bridegroom .text-02 sup {
+    font-size: 12px;
+}
+.cover .cover-inner .cover-bridegroom .title-01 {
+    font-family: "Elsie Swash Caps";
+    font-size: 65px;
+    color: var(--wood-clr);
+    margin: .15em 0 .1em 0;
+    font-weight: 500;
+}
+
+
+/* Greetings */
+.greetings {
+    background: var(--primary-clr);
+    padding: 20px 0;
+}
+.greetings .orn.orn-02 {
+    width: 100%;
+    height: 75px;
+    background-image: var(--orn-02);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 10px auto 5px auto;
+    display: block;
+}
+.greetings > div {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+.greetings .title-01 {
+    font-size: var(--fs-greeting);
+
+    font-family: "Elsie Swash Caps";
+    font-weight: 500;
+    color: var(--white-clr);
+    position: relative;
+    margin-bottom: 0.15em;
+}
+.greetings .text-01 {
+    font-family: "Ventura Times";
+    font-size: calc(var(--fs-sub-title) - 2px);
+    color: var(--white-clr);
+    /* line-height: 30px; */
+    letter-spacing: 1px;
+}
+@media only screen and (max-width: 380px) {
+
+    .greetings .text-01 > br {
+        display: none;
+    }
+
+}
+
+
+
+
+
+/* BRIDEGROOM */
+section.bridegroom {
+    background: #fff;
+    width: 100%;
+    padding: 20px 0px 60px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+section.bridegroom .bridegroom-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+/* HEAD */
+section.bridegroom .bridegroom-inner .head {
+    width: 960px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+section.bridegroom .bridegroom-inner .head .text-01 {
+    font-family: "Ventura Times";
+    font-size: 36px;
+    line-height: 30px;
+    font-style: italic;
+    color: var(--font-clr);
+    letter-spacing: 1px;
+}
+@media only screen and (max-width: 420px) {
+
+    section.bridegroom .bridegroom-inner .head .text-01 > br {
+        display: none;
+    }
+
+}
+
+/* BODY */
+.bridegroom .bridegroom-inner .body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding: 20px;
+}
+.bridegroom .bridegroom-inner .body .groom,
+.bridegroom .bridegroom-inner .body .bride {
+    width: 720px;
+    overflow: hidden;
+}
+.bridegroom .bridegroom-inner .body .bridegroom-border {
+    padding: 20px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.bridegroom .bridegroom-inner .body .bridegroom-border::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 358px;
+    height: 464px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bridegroom .bridegroom-inner .body .bride .bridegroom-border::before {
+    background-image: var(--bg-bride);
+    top: 52%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+.bridegroom .bridegroom-inner .body .groom .bridegroom-border::before {
+    background-image: var(--bg-groom);
+    top: 52.5%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+.bridegroom .bridegroom-inner .body .bridegroom-border .bridegroom-picture {
+    width: 358px;
+    height: 464px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    position: relative;
+    z-index: 10;
+}
+/* Separator */
+.bridegroom .bridegroom-inner .body .bridegroom-separator {
+    padding: 20px;
+    font-size: 100px;
+    font-weight: 500;
+    color: rgba(var(--rgb-secondary-dark-clr), 0.7);
+    font-family: "Elsie Swash Caps";
+    margin: 20px;
+}
+/* Details */
+.bridegroom .bridegroom-inner .body .bridegroom-details {
+    padding: 10px;
+    text-align: center;
+}
+.bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
+    font-family: "Elsie Swash Caps";
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    color: var(--wood-clr);
+    letter-spacing: 1px;
+}
+.bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
+    font-family: "Ventura Times";
+    font-size: 32px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    color: var(--font-clr);
+}
+.bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
+    text-decoration: none;
+    font-family: "Ventura Times";
+    font-size: 32px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: var(--font-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+.bridegroom .bridegroom-inner .body .bridegroom-details .link-01:hover {
+    text-decoration: underline;
+}
+.bridegroom .bridegroom-inner .body .bridegroom-details .link-01 i {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+
+
+
+/* SAVE THE DATE */
+section.save-date {
+    width: 100%;
+    background-image: var(--bg-countdown);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+section.save-date .inner {
+    width: 720px;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+/* HEAD */
+section.save-date .inner .head {
+    padding: 20px;
+    text-align: center;
+}
+section.save-date .inner .head .title-01 {
+    font-family: "Elsie Swash Caps";
+    font-size: 46px;
+    line-height: 44px;
+    letter-spacing: 1px;
+    color: var(--font-clr);
+}
+section.save-date .inner .head .text-01 {
+    font-family: "Ventura Times";
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--font-clr);
+}
+section.save-date .inner .head .text-01 sup {
+    font-size: 12px;
+}
+/* BODY */
+section.save-date .inner .body {
+    background: transparent;
+}
+/* SCHEDULE */
+section.save-date .inner .body .schedule {
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+}
+section.save-date .inner .body .schedule::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000%;
+    height: 50px;
+    background: var(--wood-clr);
+}
+section.save-date .inner .body .schedule .countdown {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+section.save-date .inner .body .schedule .countdown .countdown-time {
+    width: 100px;
+    height: 120px;
+    background-image: var(--orn-03);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 5px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.save-date .inner .body .schedule .countdown .countdown-time h1 {
+    font-family: "Elsie Swash Caps";
+    font-size: 45px;
+    line-height: 50px;
+    color: var(--font-clr);
+}
+section.save-date .inner .body .schedule .countdown .countdown-time small {
+    font-family: "Ventura Times";
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: var(--font-clr);
+}
+section.save-date .inner .foot {
+    padding: 20px 0;
+    display: block;
+    text-align: center;
+}
+section.save-date .inner .foot .link-01 {
+    background: #fff;
+    color: var(--font-clr);
+    font-family: "Ventura Times";
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    padding: 6px 32px;
+    border-radius: 7px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+}
+body.toska section.save-date .inner .foot .link-01 {
+    color: var(--secondary-dark-clr);
+}
+section.save-date .inner .foot .link-01:hover {
+    background: var(--secondary-dark-clr);
+    color: var(--white-clr);
+}
+body.toska section.save-date .inner .foot .link-01 {
+    color: var(--secondary-dark-clr);
+}
+body.toska section.save-date .inner .foot .link-01:hover {
+    color: var(--white-clr);
+}
+
+
+
+
+
+/* LOVE STORY */
+.love-story {
+    padding: 50px;
+    background: var(--secondary-clr);
+    overflow: hidden;
+}
+.love-story .inner {
+    width: 1399px;
+    margin: 0 auto;
+    display: block;
+    /* background-color: lightcoral; */
+}
+.love-story .inner .title {
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    /* background-color: lightblue; */
+}
+.love-story .inner .title h1 {
+    font-size: 60px;
+    font-family: "Elsie Swash Caps";
+    font-weight: 500;
+    color: var(--secondary-dark-clr);
+    display: inline-block;
+    position: relative;
+    /* background-color: lightgreen; */
+}
+.love-story .inner .title h1::before,
+.love-story .inner .title h1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 170px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.love-story .inner .title h1::before {
+    right: 110%;
+    background-image: var(--orn-04);
+}
+.love-story .inner .title h1::after {
+    left: 110%;
+    background-image: var(--orn-05);
+}
+.love-story .inner .timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 30px 0;
+    overflow: hidden;
+    /* background-color: lightsalmon; */
+}
+.love-story .inner .timeline .story {
+    line-height: normal;
+    position: relative;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.love-story .inner .timeline .story:nth-child(odd) {
+    flex-direction: row;
+    text-align: left;
+}
+.love-story .inner .timeline .story:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.love-story .inner .timeline .story .picture {
+    height: 320px;
+    width: 48%;
+    border-radius: 22px;
+    overflow: hidden;
+}
+.love-story .inner .timeline .story .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+    border-radius: 22px;
+}
+.love-story .inner .timeline .story:nth-of-type(1) .picture img {
+    object-position: top;
+}
+.love-story .inner .timeline .story:nth-of-type(2) .picture img {
+    object-position: center;
+}
+.love-story .inner .timeline .story:nth-of-type(3) .picture img {
+    object-position: center;
+}
+.love-story .inner .timeline .story:nth-of-type(4) .picture img {
+    object-position: 50% 28%;
+}
+.love-story .inner .timeline .story .content {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: transparent;
+}
+.love-story .inner .timeline .story:nth-child(odd) .content .content-inner {
+    background-color: var(--tertiary-clr);
+    border-top-left-radius: 32px;
+    border-top-right-radius: 44px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 64px;
+}
+.love-story .inner .timeline .story:nth-child(even) .content .content-inner {
+    background-color: var(--primary-dark-clr);
+    border-radius: 22px;
+}
+.love-story .inner .timeline .story .content .content-inner {
+    padding: 40px 30px;
+    /* background-color: lightslategray; */
+}
+.love-story .inner .timeline .story .content .content-inner h2 {
+    margin-bottom: .15em;
+    font-size: 40px;
+    line-height: 38px;
+    font-family: "Elsie Swash Caps";
+    color: var(--secondary-dark-clr);
+}
+.love-story .inner .timeline .story .content .content-inner p {
+    line-height: 25px;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-family: "Ventura Times";
+    color: var(--secondary-dark-clr);
+}
+.love-story .inner .timeline .story:nth-child(even) .content .content-inner h2,
+.love-story .inner .timeline .story:nth-child(even) .content .content-inner p {
+    color: var(--white-clr);
+}
+
+
+
+/* GALLERY */
+.gallery-wrapper {
+    background-color: #fff;
+    padding: 0;
+}
+section.gallery {
+    background-color: transparent;
+    padding: 0px;
+    margin-bottom: 80px;
+}
+section.video-gallery {
+    background-color: transparent;
+    margin-bottom: 50px;
+}
+section.video-gallery,
+section.video-gallery .inner,
+section.video-gallery .inner .video-outer {
+    padding: 0;
+}
+.video-gallery .inner .video-outer .video > .title h2 {
+    padding: 0;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 36px;
+    font-family: "Ventura Times";
+    color: var(--secondary-dark-clr);
+}
+
+
+
+/* EVENT */
+.event-outer {
+    width: 100%;
+    position: relative;
+    background-image: var(--bg-cover);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.event-outer .event-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 10px 70px 10px;
+}
+.event-outer .event-inner .orn.orn-06 {
+    width: 771px;
+    height: 70px;
+    background-image: var(--orn-06);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 10px auto 30px auto;
+    display: block;
+}
+.event-outer .event-inner .orn.orn-07 {
+    width: 512px;
+    height: 50px;
+    background-image: var(--orn-07);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 10px auto;
+    display: block;
+}
+.event-outer .event-inner .head {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.event-outer .event-inner .head::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-event);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.event-outer .event-inner .head > .title {
+    width: 960px;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+.event-outer .event-inner .head > .title h1 {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: .15em;
+    font-family: "Ventura Times";
+    color: var(--font-clr);
+}
+.event-outer .event-inner .head > .title p {
+    font-size: 34px;
+    line-height: 24px;
+    font-family: "Ventura Times";
+    font-style: italic;
+    color: var(--font-clr);
+}
+.event-inner .event {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.event-inner .event > .title {
+    padding: 10px;
+    width: 640px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+.event-inner .event > .title h1 {
+    color: var(--primary-clr);
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: "Ventura Times";
+    margin-bottom: -0.25em;
+    color: var(--font-clr);
+}
+.event-inner .event > .title p {
+    font-size: 50px;
+    line-height: 50px;
+    font-family: "Ventura Times";
+    color: var(--font-clr);
+}
+.event-inner .event > .title p > sup {
+    font-size: 12px;
+}
+.event-inner .event > .title::before,
+.event-inner .event > .title::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 80%;
+    background: var(--primary-clr);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.event-inner .event > .title::before {
+    top: 0;
+}
+.event-inner .event > .title::after {
+    bottom: 0;
+}
+.event-outer .event-inner .body {
+    background: transparent;
+}
+.event-outer .event-inner .body .event > .details {
+    width: 640px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.event-outer .event-inner .body .event > .details .address {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.event-outer .event-inner .body .event > .details .address p {
+    font-size: 16px;
+    margin-bottom: .35em;
+    font-family: "Ebrima Regular";
+    color: var(--white-clr);
+}
+.event-outer .event-inner .body .event > .details a {
+    display: inline-block;
+    border: 1px solid var(--secondary-clr);
+    color: var(--secondary-clr);
+    padding: 7px 18px;
+    margin: 0 auto;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    font-family: "Ebrima Regular";
+}
+.event-outer .event-inner .body .event > .details a:hover {
+    background: var(--secondary-clr);
+    color: var(--primary-clr);
+}
+.event-inner .event .activities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.event-inner .event .activities .activity {
+    border-radius: 7px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 20px;
+    padding: 10px;
+}
+.event-inner .event .activities .activity span {
+    font-size: 44px;
+    margin-bottom: 0.2em;
+    color: var(--wood-clr);
+}
+.event-inner .event .activities .activity .title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.event-inner .event .activities .activity .title .orn.orn-party {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+.event-inner .event .activities .activity .title h1 {
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: 500;
+    color: var(--secondary-dark-clr);
+    font-family: "Elsie Swash Caps";
+    margin-bottom: 0.2em;
+}
+.event-inner .event .activities .activity .title p {
+    font-size: 32px;
+    line-height: 28px;
+    font-family: "Ventura Times";
+    color: var(--secondary-dark-clr);
+    font-style: italic;
+}
+.event-inner .event .activities .activity .address {
+    text-align: center;
+}
+.event-inner .event .activities .activity .address p {
+    margin-bottom: .2em;
+    font-size: 32px;
+    line-height: 28px;
+    font-family: "Ventura Times";
+    color: var(--secondary-dark-clr);
+}
+.event-inner .event .activities .activity .address p:first-child {
+    margin-bottom: .75em;
+}
+.event-inner .event .activities .activity a {
+    border: 1px solid var(--primary-clr);
+    color: var(--primary-clr);
+    padding: 7px 18px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 32px;
+    line-height: 28px;
+    font-family: "Ventura Times";
+    margin: 15px auto;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+.event-inner .event .activities .activity a:hover,
+.event-inner .event .activities .activity a:focus {
+    background: var(--primary-dark-clr);
+    border-color: var(--primary-dark-clr);
+    color: var(--white-clr);
+}
+
+
+/* ====================================================
+    Live Streaming
+==================================================== */
+section.live-streaming {
+    padding: 50px 20px 20px 20px;
+    background-color: var(--tertiary-clr);
+}
+/* Live Streaming > Inner */
+section.live-streaming > .inner {
+    background-color: transparent;
+}
+/* Live Streaming > Inner > Title */
+section.live-streaming > .inner > .title {
+    margin-bottom: 10px;
+    text-align: center;
+}
+section.live-streaming > .inner > .title > h1 {
+    font-family: "Elsie Swash Caps";
+    font-size: 46px;
+    line-height: 44px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.15em;
+    color: var(--secondary-dark-clr);
+}
+/* Live Streaming > Inner > Body */
+section.live-streaming > .inner > .body {
+    background-color: transparent;
+}
+section.live-streaming > .inner > .body > .preview {
+    position: relative;
+    width: 100%;
+    height: 360px;
+}
+section.live-streaming > .inner > .body > .preview > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+section.live-streaming > .inner > .body > .preview > .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: #ffffff;
+    opacity: 0.6;
+    color: var(--primary-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+}
+section.live-streaming > .inner > .body > .preview > .play-btn:hover {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+/* Live Streaming > Inner > Foot */
+section.live-streaming > .inner > .foot {
+    padding: 10px 20px;
+    text-align: center;
+}
+section.live-streaming > .inner > .foot > p {
+    font-size: 32px;
+    font-family: "Ventura Times";
+    line-height: 28px;
+    color: var(--secondary-dark-clr);
+}
+
+
+
+
+/* Gift */
+section.gift {
+    padding: 20px 20px 70px 20px;
+    background-color: var(--tertiary-clr);
+}
+.gift .gift-inner {
+    width: 700px;
+}
+.gift .gift-inner .gift-form {
+    width: 640px;
+    display: block;
+    margin: 0 auto;
+}
+.gift-form .bank-detail {
+    padding: 10px;
+}
+section.gift .bank-detail .saving-books {
+    margin-bottom: 0;
+}
+section.gift .bank-detail .saving-books .book {
+    padding: 20px;
+}
+section.gift .gift-inner .gift-title h1 {
+    font-family: "Elsie Swash Caps";
+    font-size: 46px;
+    line-height: 44px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+    color: var(--secondary-dark-clr);
+}
+section.gift .gift-inner .gift-title p {
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-family: "Ventura Times";
+    line-height: 28px;
+    color: var(--secondary-dark-clr);
+}
+section.gift .gift-inner .gift-form {
+    box-shadow: none;
+}
+section.gift .bank-detail .saving-books .book p,
+section.gift .bank-detail .saving-books .book span {
+    font-family: "Ventura Times";
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: var(--secondary-dark-clr);
+}
+.bank-detail .saving-books .copy-account {
+    border: .5px solid var(--secondary-dark-clr);
+}
+.bank-detail .saving-books .copy-account:hover {
+    background: var(--secondary-dark-clr);
+    color: var(--white-clr);
+}
+
+/* .saving-books .qr-outer {
+    width: 180px;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.saving-books .qr-outer img.qr {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+} */
+
+.gift .gift-inner .gift-form .gift-submit,
+.gift .gift-inner .gift-form .gift-next {
+    background: var(--secondary-dark-clr);
+    color: var(--white-clr);
+    font-weight: 600;
+}
+.gift .gift-inner .gift-form .gift-submit:hover,
+.gift .gift-inner .gift-form .gift-next:hover {
+    background: var(--primary-clr);
+}
+.gift .gift-inner .gift-form [name="nominal"]:hover + .nominal,
+.gift .gift-inner .gift-form [name="nominal"]:checked + .nominal {
+    background: var(--primary-clr);
+    border-color: var(--primary-clr);
+    color: var(--white-clr);
+}
+
+#gift-form p,
+#gift-form span,
+#gift-form label,
+#gift-form input,
+#gift-form textarea,
+#gift-form div,
+#gift-form button {
+    font-family: "Ventura Times";
+    font-size: 26px;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+#gift-form label.center {
+    font-size: 29px;
+}
+
+
+
+
+
+
+/* PROTOCOL */
+.protocol {
+    background: transparent;
+}
+.protocol .inner {
+    overflow: hidden;
+    max-height: 1000px;
+}
+.protocol .inner .head {
+    background: var(--primary-clr);
+    padding: 20px;
+}
+.protocol .inner .head .picture {
+    width: 100%;
+    height: 106px;
+}
+.protocol .inner .head .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.protocol .inner .body .picture {
+    width: 100%;
+    max-height: 900px;
+    position: relative;
+    overflow: hidden;
+}
+.protocol .inner .body .picture .bg {
+    width: 100%;
+    max-height: 900px;
+    object-fit: cover;
+    object-position: bottom;
+}
+.protocol .inner .body .picture .people {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1024px;
+}
+
+
+/* COMMENT */
+.comment-outer .comment-inner .head  {
+    margin-bottom: 0;
+}
+.comment-outer .comment-inner h1 {
+    font-family: "Elsie Swash Caps";
+    font-size: 46px;
+    line-height: 44px;
+    letter-spacing: 1px;
+    color: var(--secondary-dark-clr);
+    margin-bottom: 0;
+}
+.comment-outer .comment-inner .comments .comment .comment-head p >  strong {
+    font-family: "Ventura Times";
+    font-size: 34px;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+.comment-outer .comment-inner .comments .comment .comment-head p i {
+    font-size: 18px;
+}
+.comment-outer .comment-inner .comments .comment p {
+    font-family: "Ventura Times";
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+.comment-outer .comment-inner .comments .comment small {
+    font-family: "Ventura Times";
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 18px;
+}
+.comment-outer .comment-inner .comments .comment small sup {
+    font-size: 8px;
+}
+
+.comment-outer .comment-inner .comment-form * {
+    font-family: "Ventura Times";
+}
+.comment-outer .comment-inner .comment-form input {
+    font-size: 24px;
+    line-height: 18px;
+    letter-spacing: 1px;
+}
+.comment-outer .comment-inner .comment-form textarea {
+    font-size: 24px;
+    line-height: 18px;
+    letter-spacing: 1px;
+}
+.comment-outer .comment-inner .comment-form button,
+.comment-outer .comment-inner .foot .more-comment {
+    font-size: 26px;
+    line-height: 18px;
+    background: #878787;
+    font-family: "Ventura Times";
+}
+.comment-outer .comment-inner .comment-form button:hover,
+.comment-outer .comment-inner .foot .more-comment:hover {
+    background: var(--primary-dark-clr);
+}
+.comment-outer .comment-inner .foot {
+    padding: 10px;
+}
+.comment-outer .comment-inner .foot .more-comment {
+    width: 100%;
+    margin: 0;
+}
+.comment-outer .comment-inner .foot .more-comment > i {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+
+
+/* FORM CONTROL */
+.form-control:focus, .form-control:active {
+    background: #fff;
+    box-shadow: 0 0 2px var(--primary-dark-clr);
+    border: 1px solid var(--primary-dark-clr);
+}
+
+
+/* Wrapper */
+.quote-wrapper {
+    background-image: var(--bg-palace);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 200px;
+    position: relative;
+}
+
+
+/* QUOTE */
+section.quote {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+section.quote .inner {
+    width: 720px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+section.quote .inner p.text-01,
+section.quote .inner p.text-02 {
+    font-family: "Ventura Times";
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    color: var(--font-clr);
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+section.quote .inner p.text-02 {
+    margin-bottom: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+
+
+/* FOOTNOTE */
+section.footnote {
+    background: transparent;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+section.footnote .inner {
+    width: 720px;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+section.footnote .inner p {
+    font-family: "Ventura Times";
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--secondary-dark-clr);
+}
+section.footnote .inner p sup {
+    font-size: 12px;
+}
+section.footnote .inner h1 {
+    font-family: "Elsie Swash Caps";
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 50px;
+    margin: 20px 0;
+    color: var(--secondary-dark-clr);
+}
+
+
+
+
+/* FOOTER */
+section.footer {
+    background: var(--secondary-dark-clr);
+    padding: 5px;
+}
+section.footer .footer-inner p {
+    font-family: "Ventura Times";
+    font-size: 26px;
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+section.footer .footer-inner img {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+/* =====================================
+
+    RESPONSIVE SCREEN
+
+   =====================================*/
+
+/* =====================================
+    1500px
+   =====================================*/
+@media only screen and (max-width: 1500px) {
+    /* LOVE STORY */
+    .love-story {
+        padding: 0px;
+    }
+    .love-story .inner {
+        width: 100%;
+    }
+    .love-story .inner .title {
+        padding: 30px 0px 20px 0;
+    }
+    .love-story .inner .timeline .story {
+        padding: 20px 20px 70px 20px;
+    }
+
+}
+
+/* =====================================
+    1124px
+   =====================================*/
+@media only screen and (max-width: 1124px) {
+
+    .cover .cover-inner .cover-picture .cover-show {
+        width: 85vw;
+    }
+
+}
+@media only screen and (max-width: 800px) {
+
+    /* BrideGroom */
+    .bridegroom .bridegroom-inner .body {
+        padding: 0;
+    }
+    .bridegroom .bridegroom-inner .body .groom,
+    .bridegroom .bridegroom-inner .body .bride {
+        width: 100%;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-separator {
+        margin: 0;
+    }
+
+    /* Event */
+    .event-outer .event-inner .orn.orn-06 {
+        width: 80%;
+    }
+    .event-outer .event-inner .orn.orn-07 {
+        width: 70%;
+    }
+    .event-outer .event-inner .head > .title {
+        width: 100%;
+    }
+    .event-inner .event > .title {
+        width: 100%;
+    }
+
+    /* Save The Date */
+    section.save-date .inner {
+        width: 100%;
+    }
+
+    /* FOOTNOTE & QUOTE */
+    section.footnote .inner,
+    section.quote .inner {
+        width: 100%;
+    }
+
+}
+/* =====================================
+    720px
+   =====================================*/
+@media only screen and (max-width: 720px) {
+
+    /* Love Story */
+    .love-story .inner .title h1::before {
+        right: 100%;
+    }
+    .love-story .inner .title h1::after {
+        left: 100%;
+    }
+
+    /* Video */
+    .live-streaming .inner .body {
+        padding: 0;
+        width: 100%;
+    }
+    .live-streaming .inner .body .preview {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Gift */
+    .gift .gift-inner,
+    .gift .gift-inner .gift-form {
+        width: 100%;
+    }
+
+
+    /* LAST ORNAMENT */
+    section.last-orn .orn.orn-08 {
+        width: 80vw;
+    }
+
+}
+
+/* =====================================
+    Minimum Desktop Screen
+    1024px 768px
+   =====================================*/
+@media only screen and (max-width: 1024px) {
+
+    /* Cover */
+    .cover .cover-inner .cover-greet .orn.orn-01 {
+        width: 250px;
+        height: 50px;
+        /* margin-bottom: 5px; */
+    }
+    .cover .cover-inner .cover-greet .text-01 {
+        font-size: 28px;
+        line-height: 24px;
+        letter-spacing: 2px;
+    }
+    .cover .cover-inner .cover-picture {
+        margin: 20px auto;
+    }
+    .cover .cover-inner .cover-picture .cover-show {
+        height: 440px;
+    }
+    .cover .cover-inner .cover-picture .cover-show::before {
+        height: 105%;
+        background-image: var(--orn-cover-tablet);
+    }
+    .cover .cover-inner .cover-bridegroom .text-01,
+    .cover .cover-inner .cover-bridegroom .text-02 {
+        font-size: 28px;
+        line-height: 24px;
+        letter-spacing: 2px;
+    }
+    .cover .cover-inner .cover-bridegroom .text-02 sup {
+        font-size: 8px;
+    }
+    .cover .cover-inner .cover-bridegroom .title-01 {
+        font-family: "Elsie Swash Caps";
+        font-size: 55px;
+        color: var(--wood-clr);
+        margin: .1em 0 .1em 0;
+        font-weight: 500;
+    }
+
+
+    /* Greetings */
+    .greetings .orn.orn-02 {
+        /* width: 275px;
+        height: 80px; */
+    }
+
+
+    /* BrideGroom */
+    section.bridegroom .bridegroom-inner {
+        padding: 0px;
+    }
+    section.bridegroom .bridegroom-inner .head {
+        width: 100%;
+    }
+    .bridegroom .bridegroom-inner .body {
+        flex-direction: column-reverse;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-border::before {
+        width: 300px;
+        height: 380px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-border .bridegroom-picture {
+        width: 300px;
+        height: 380px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-separator {
+        font-size: 70px;
+    }
+
+    /* LOVE STORY */
+    .love-story .inner .timeline .story {
+        padding: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .love-story .inner .timeline .story:nth-child(odd) {
+        flex-direction: column;
+        text-align: left;
+    }
+    .love-story .inner .timeline .story:nth-child(even) {
+        flex-direction: column;
+        text-align: right;
+    }
+    .love-story .inner .timeline .story .picture {
+        height: 320px;
+        width: 95%;
+        margin-bottom: -100px;
+        position: relative;
+        z-index: 1;
+    }
+    .love-story .inner .timeline .story .picture img {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .love-story .inner .timeline .story .content {
+        width: 100%;
+    }
+    .love-story .inner .timeline .story .content .content-inner {
+        padding: 130px 40px 40px 40px;
+    }
+
+
+    /* PROTOCOL */
+    .protocol .inner .head {
+        padding: 20px;
+    }
+    .protocol .inner .head .picture {
+        height: auto;
+    }
+    .protocol .inner .body .picture {
+        height: auto;
+    }
+    .protocol .inner .body .picture .people {
+        width: 80vw;
+        top: 55%;
+    }
+
+
+    /* Wrapper */
+    .quote-wrapper {
+        padding-bottom: 100px;
+    }
+
+
+}
+
+
+/* =====================================
+    Minimum Tablet Screen
+    600px x 960px
+   =====================================*/
+
+@media only screen and (max-width: 600px) {
+
+    /* COVER */
+    .cover {
+        background-image: var(--bg-cover-mobile);
+    }
+    .cover .cover-inner .cover-picture .cover-show {
+        height: 540px;
+    }
+    .cover .cover-inner .cover-picture .cover-show::before {
+        height: 105%;
+        background-image: var(--orn-cover-mobile);
+    }
+
+    /* Bride Groom */
+    .bridegroom .bridegroom-inner .body .bridegroom-border::before {
+        width: 250px;
+        height: 320px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-border .bridegroom-picture {
+        width: 250px;
+        height: 320px;
+    }
+
+    /* Bride Groom */
+    section.bridegroom .bridegroom-inner .head .text-01 {
+        font-size: 28px;
+        line-height: 24px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 1px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
+        font-size: 28px;
+        line-height: 24px;
+        letter-spacing: 1px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
+        font-size: 28px;
+        line-height: 24px;
+        letter-spacing: 1px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 i {
+        font-size: 18px;
+    }
+
+    /* Save The Date */
+    section.save-date .inner .head .title-01 {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 1px;
+    }
+    section.save-date .inner .head .text-01 {
+        font-size: 28px;
+        line-height: 24px;
+        letter-spacing: 1px;
+    }
+    section.save-date .inner .head .text-01 sup {
+        font-size: 9px;
+    }
+    section.save-date .inner .body .schedule::before {
+        height: 30px;
+    }
+    section.save-date .inner .body .schedule .countdown .countdown-time {
+        width: 100px;
+        height: 100px;
+        margin: 5px 15px;
+    }
+    section.save-date .inner .body .schedule .countdown .countdown-time h1 {
+        font-size: 32px;
+        line-height: 28px;
+    }
+    section.save-date .inner .body .schedule .countdown .countdown-time small {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    section.save-date .inner .body .calendar #add-calendar {
+        font-size: 28px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        padding: 8px 24px;
+    }
+
+    /* Love Story */
+    .love-story .inner .title h1 {
+        font-size: 36px;
+        font-weight: 500;
+    }
+    .love-story .inner .title h1::before,
+    .love-story .inner .title h1::after {
+        top: 50%;
+        width: 80px;
+        height: 40px;
+    }
+    .love-story .inner .title h1::before {
+        right: 110%;
+    }
+    .love-story .inner .title h1::after {
+        left: 110%;
+    }
+    .love-story .inner .timeline .story {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .love-story .inner .timeline .story .picture {
+        height: 280px;
+        width: 95%;
+    }
+    .love-story .inner .timeline .story .content .content-inner {
+        padding: 130px 20px 30px 20px;
+    }
+    .love-story .inner .timeline .story .content .content-inner h2 {
+        font-size: 36px;
+        line-height: 40px;
+        font-weight: 500;
+    }
+    .love-story .inner .timeline .story .content .content-inner p {
+        line-height: 24px;
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    /* Gallery Photo */
+    .video-gallery .inner .video-outer {
+        padding: 20px 10px;
+    }
+    .video-gallery .inner .video-outer .video {
+        width: 100%;
+        margin: 15px;
+    }
+    .video-gallery .inner .video-outer .video .preview {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .video-gallery .inner .video-outer .video > .title h2 {
+        font-size: 36px;
+        line-height: 30px;
+    }
+
+
+
+    /* Live Streaming */
+    section.live-streaming .inner .title h1 {
+        font-size: 36px;
+        line-height: 30px;
+    }
+    section.live-streaming .inner .foot p {
+        font-size: 28px;
+        line-height: 20px;
+    }
+
+    /* Gift */
+    section.gift .gift-inner .gift-title h1 {
+        font-size: 36px;
+        line-height: 30px;
+        margin-bottom: 0.5em;
+    }
+    section.gift .gift-inner .gift-title p {
+        font-size: 28px;
+        line-height: 20px;
+    }
+    section.gift .bank-detail .saving-books .book p,
+    section.gift .bank-detail .saving-books .book span {
+        font-size: 28px;
+        line-height: 20px;
+    }
+    #gift-form p,
+    #gift-form span,
+    #gift-form label,
+    #gift-form input,
+    #gift-form textarea,
+    #gift-form div,
+    #gift-form button {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    #gift-form label.center {
+        font-size: 27px;
+    }
+
+
+    /* Event */
+    .event-outer {
+        background-image: var(--bg-cover-mobile);
+    }
+    .event-outer .event-inner {
+        padding: 20px 10px 40px 10px;
+    }
+    .event-outer .event-inner .orn.orn-06 {
+        margin: 10px auto;
+    }
+    .event-outer .event-inner .head {
+        padding: 0;
+    }
+    .event-outer .event-inner .head > .title h1 {
+        font-size: 38px;
+        line-height: 42px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        margin-bottom: -0.05em;
+    }
+    .event-outer .event-inner .head > .title p {
+        font-size: 28px;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+    .event-inner .event > .title {
+        padding-top: 5px;
+    }
+    .event-inner .event > .title::before,
+    .event-inner .event > .title::after {
+        width: 80%;
+    }
+    .event-inner .event > .title h1 {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 2px;
+        margin-bottom: -0.1em;
+    }
+    .event-inner .event > .title p {
+        font-size: 24px;
+        line-height: 20px;
+        font-family: "Ventura Times";
+        color: var(--font-clr);
+    }
+    .event-inner .event > .title p > sup {
+        font-size: 7px;
+    }
+
+
+    .event-inner .event .activities .activity {
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .event-inner .event .activities .activity .title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .event-inner .event .activities .activity .title h1 {
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: 1px;
+    }
+    .event-inner .event .activities .activity .title p {
+        font-size: 24px;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+    .event-inner .event .activities .activity .address p {
+        margin-bottom: .2em;
+        font-size: 24px;
+        line-height: 20px;
+    }
+    .event-inner .event .activities .activity .address p:first-child {
+        margin-bottom: .75em;
+    }
+    .event-inner .event .activities .activity a {
+        border: 1px solid var(--primary-clr);
+        color: var(--primary-clr);
+        padding: 7px 18px;
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+
+    /* Comment */
+    .comment-outer .comment-inner h1 {
+        font-size: 36px;
+        line-height: 30px;
+    }
+    .comment-outer .comment-inner .comments .comment p {
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 20px;
+    }
+    .comment-outer .comment-inner .comments .comment .comment-head p >  strong {
+        font-size: 24px;
+        letter-spacing: 1px;
+        line-height: 22px;
+    }
+    .comment-outer .comment-inner .comments .comment .comment-head p i {
+        font-size: 14px;
+    }
+    .comment-outer .comment-inner .comments .comment small {
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 18px;
+    }
+    .comment-outer .comment-inner .comments .comment small sup {
+        font-size: 7px;
+    }
+    .comment-outer .comment-inner .comment-form button,
+    .comment-outer .comment-inner .foot .more-comment {
+        font-size: 24px;
+    }
+
+    /* QUOTE */
+    section.quote {
+        padding: 0;
+    }
+    section.quote .inner {
+        padding: 20px;
+    }
+    section.quote .inner p.text-01,
+    section.quote .inner p.text-02 {
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 2px;
+    }
+    section.quote .inner p.text-02 {
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 1px;
+    }
+
+    /* FOOTNOTE */
+    section.footnote .inner p {
+        font-size: 26px;
+        line-height: 22px;
+    }
+    section.footnote .inner p sup {
+        font-size: 7px;
+    }
+    section.footnote .inner h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+
+    /* FOOTER */
+    section.footer {
+        background: var(--secondary-dark-clr);
+        padding: 5px;
+    }
+    section.footer .footer-inner p {
+        font-family: "Ventura Times";
+        font-size: 18px;
+        line-height: 16px;
+        letter-spacing: 2px;
+    }
+    section.footer .footer-inner img {
+        width: 60px;
+    }
+
+
+
+    /* Wrapper */
+    .quote-wrapper {
+        padding-bottom: 80px;
+    }
+
+
+}
+
+
+
+/* =====================================
+    Minimum Phone Screen
+    360px x 640px
+   =====================================*/
+
+@media only screen and (max-width: 360px) {
+
+
+    /* Cover */
+    .cover .cover-inner .cover-greet .orn.orn-01 {
+        width: 200px;
+        height: 40px;
+    }
+    .cover .cover-inner .cover-greet .text-01 {
+        font-size: 24px;
+        line-height: 20px;
+        letter-spacing: 2px;
+    }
+    .cover .cover-inner .cover-picture .cover-show {
+        width: 80vw;
+        height: 320px;
+    }
+    .cover .cover-inner .cover-picture .cover-show::before {
+        height: 105%;
+        background-image: var(--orn-cover-mobile);
+    }
+    .cover .cover-inner .cover-bridegroom .text-01,
+    .cover .cover-inner .cover-bridegroom .text-02 {
+        font-size: 24px;
+        line-height: 20px;
+        letter-spacing: 2px;
+    }
+    .cover .cover-inner .cover-bridegroom .text-02 sup {
+        font-size: 7px;
+    }
+    .cover .cover-inner .cover-bridegroom .title-01 {
+        font-size: 40px;
+    }
+
+
+    /* Greetings */
+    .greetings .orn.orn-02 {
+        /* width: 80vw; */
+        height: 50px;
+    }
+
+
+    /* Bride Groom */
+    section.bridegroom .bridegroom-inner .head .text-01 {
+        font-size: 22px;
+        line-height: 20px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
+        font-size: 26px;
+        line-height: 32px;
+        letter-spacing: 1px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-border::before {
+        width: 200px;
+        height: 250px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-border .bridegroom-picture {
+        width: 180px;
+        height: 250px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
+        font-size: 22px;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
+        font-size: 22px;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 i {
+        font-size: 14px;
+    }
+
+    /* Save The Date */
+    section.save-date .inner .head .title-01 {
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+    section.save-date .inner .head .text-01 {
+        font-size: 22px;
+        line-height: 18px;
+        letter-spacing: 1px;
+    }
+    section.save-date .inner .head .text-01 sup {
+        font-size: 6px;
+    }
+    section.save-date .inner .body .schedule {
+        padding: 0;
+    }
+    section.save-date .inner .body .schedule::before {
+        height: 30px;
+    }
+    section.save-date .inner .body .schedule .countdown .countdown-time {
+        width: 80px;
+        height: 80px;
+        margin: 5px auto;
+    }
+    section.save-date .inner .body .schedule .countdown .countdown-time h1 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    section.save-date .inner .body .schedule .countdown .countdown-time small {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+    section.save-date .inner .body .calendar #add-calendar {
+        font-size: 22px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        padding: 8px 24px;
+    }
+
+
+
+
+    /* Love Story */
+    .love-story .inner .title h1 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .love-story .inner .title h1::before,
+    .love-story .inner .title h1::after {
+        top: 50%;
+        width: 80px;
+        height: 40px;
+    }
+    .love-story .inner .title h1::before {
+        right: 110%;
+    }
+    .love-story .inner .title h1::after {
+        left: 110%;
+    }
+    .love-story .inner .timeline {
+        /* padding: 0 0 30px 0; */
+    }
+    .love-story .inner .timeline .story {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .love-story .inner .timeline .story .picture {
+        height: 160px;
+        width: 95%;
+    }
+    .love-story .inner .timeline .story .content .content-inner {
+        padding: 130px 20px 30px 20px;
+    }
+    .love-story .inner .timeline .story .content .content-inner h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .love-story .inner .timeline .story .content .content-inner p {
+        line-height: 19px;
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+
+
+    /* Event */
+    .event-outer .event-inner {
+        padding: 20px 10px 40px 10px;
+    }
+    .event-outer .event-inner .head {
+        padding: 0;
+    }
+    .event-outer .event-inner .head > .title h1 {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        margin-bottom: -0.05em;
+    }
+    .event-outer .event-inner .head > .title p {
+        font-size: 24px;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+    .event-inner .event > .title {
+        padding-top: 5px;
+    }
+    .event-inner .event > .title::before,
+    .event-inner .event > .title::after {
+        width: 95%;
+    }
+    .event-inner .event > .title h1 {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 2px;
+        margin-bottom: -0.1em;
+    }
+    .event-inner .event > .title p {
+        font-size: 24px;
+        line-height: 20px;
+        font-family: "Ventura Times";
+        color: var(--font-clr);
+    }
+    .event-inner .event > .title p > sup {
+        font-size: 7px;
+    }
+
+
+    .event-inner .event .activities .activity {
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .event-inner .event .activities .activity .title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .event-inner .event .activities .activity .title h1 {
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: 1px;
+    }
+    .event-inner .event .activities .activity .title p {
+        font-size: 24px;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+    .event-inner .event .activities .activity .address p {
+        margin-bottom: .2em;
+        font-size: 24px;
+        line-height: 20px;
+    }
+    .event-inner .event .activities .activity .address p:first-child {
+        margin-bottom: .75em;
+    }
+    .event-inner .event .activities .activity a {
+        border: 1px solid var(--primary-clr);
+        color: var(--primary-clr);
+        padding: 7px 18px;
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+
+    /* Video */
+    .video-gallery .inner .video-outer .video > .title h2 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+
+
+    /* Live Streaming */
+    section.live-streaming .inner .title h1 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    section.live-streaming .inner .foot p {
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+    /* Gift */
+    section.gift .gift-inner .gift-title h1 {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 0.5em;
+    }
+    section.gift .gift-inner .gift-title p {
+        font-size: 24px;
+        line-height: 20px;
+    }
+    section.gift .bank-detail .saving-books .book p,
+    section.gift .bank-detail .saving-books .book span {
+        font-size: 24px;
+        line-height: 20px;
+    }
+    #gift-form p,
+    #gift-form span,
+    #gift-form label,
+    #gift-form input,
+    #gift-form textarea,
+    #gift-form div,
+    #gift-form button {
+        font-size: 19px;
+        line-height: 23px;
+    }
+    #gift-form label.center {
+        font-size: 22px;
+    }
+
+
+
+    /* Protocol */
+    .protocol .inner .head {
+        padding: 10px;
+    }
+
+
+    /* Comment */
+    .comment-outer .comment-inner h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    .comment-outer .comment-inner .comments .comment p {
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 20px;
+    }
+    .comment-outer .comment-inner .comments .comment .comment-head p >  strong {
+        font-size: 24px;
+        letter-spacing: 1px;
+        line-height: 22px;
+    }
+    .comment-outer .comment-inner .comments .comment .comment-head p i {
+        font-size: 14px;
+    }
+    .comment-outer .comment-inner .comments .comment small {
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 18px;
+    }
+    .comment-outer .comment-inner .comments .comment small sup {
+        font-size: 7px;
+    }
+    .comment-outer .comment-inner .comment-form button,
+    .comment-outer .comment-inner .foot .more-comment {
+        font-size: 24px;
+    }
+
+    /* QUOTE */
+    section.quote {
+        padding: 0;
+    }
+    section.quote .inner {
+        padding: 20px;
+    }
+    section.quote .inner p.text-01,
+    section.quote .inner p.text-02 {
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 2px;
+    }
+    section.quote .inner p.text-02 {
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 1px;
+    }
+
+    /* FOOTNOTE */
+    section.footnote .inner p {
+        font-size: 22px;
+        line-height: 19px;
+    }
+    section.footnote .inner p sup {
+        font-size: 7px;
+    }
+    section.footnote .inner h1 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+
+    /* FOOTER */
+    section.footer {
+        background: var(--secondary-dark-clr);
+        padding: 5px;
+    }
+    section.footer .footer-inner p {
+        font-family: "Ventura Times";
+        font-size: 20px;
+        line-height: 16px;
+        letter-spacing: 2px;
+    }
+    section.footer .footer-inner img {
+        width: 60px;
+    }
+
+
+    /* Wrapper */
+    .quote-wrapper {
+        background-position: 0 0;
+        background-size: 120% 100%;
+        padding-bottom: 30px;
+    }
+
+
+}
