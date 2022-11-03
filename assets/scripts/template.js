@@ -2,7 +2,7 @@
     GENERAL CONFIGURATION
 ============================================= */
 window.MUSIC = {
-        'url': "https:\/\/katsudoto.id\/media\/audio\/Ardhito-Pramono-First-Love.mp3",
+        'url': "https://github.com/doskoyz/diostella/blob/135db43bd1b05f4adec0edb8ab816cbcbe6a1a87/background.mp3?raw=true",
         'box': '#music-box'
     };
 window.EVENT = 1670641200;
@@ -10,6 +10,7 @@ window.BOOKS = [{"bank":"Bank Central Asia (BCA)","number_account":"1341464600"}
 
 // ---------- Start Your Journey (Function) --------------------------------------------------
 function startTheJourney() {
+    $('html, body').animate({ scrollTop: $('#start').offset().top }, 'slow');
     $('.top-cover').eq(0).addClass('hide');
     $('body').eq(0).css('overflow', 'visible');
     $('.greetings h1').text(getUrlParameter('name'));
@@ -447,265 +448,6 @@ $(document).on('submit', '#rsvp-form', function(e){
 });
 
 
-
-/*  ==============================
-        WEDDING GIFT
-============================== */
-
-// ---------- Choose Bank (Function) --------------------------------------------------
-function chooseBank(value) {
-    // Data Book
-    $('[data-book]').each(function(i, book){
-        // Hide
-        $(book).hide();
-        // if book is exist
-        if ($(book).attr('data-book') == value) {
-            $(book).fadeIn();
-        }
-    });
-}
-
-// ---------- Choose Bank [ON CHANGE] --------------------------------------------------
-$(document).on('change', 'select[name="choose_bank"]', function(e){
-    e.preventDefault();
-    chooseBank($(this).val());
-});
-
-// ---------- Gift Picture [ON CLICK] --------------------------------------------------
-$(document).on('click', 'div[data-upload="gift-picture"]', function(e){
-    e.preventDefault();
-    $('#gift-form input[name="picture"]').click();
-});
-
-// ---------- Picture insinde Gift [ON CHANGE] --------------------------------------------------
-$(document).on('change', '#gift-form input[name="picture"]', function(e){
-    e.preventDefault();
-    if (this.files && this.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function(er) {
-            $('[data-image="uploaded-gift"]').fadeIn();
-            $('[data-image="uploaded-gift"]').attr('src', er.target.result);
-        }
-        reader.readAsDataURL(this.files[0]);
-    }
-});
-
-// ---------- Gift Next [ON CLICK] --------------------------------------------------
-$(document).on('click', '.gift-next', function(e){
-    e.preventDefault();
-    var form = $('#gift-form');
-
-    if ($(form).find('[name="name"]').val() == '') {
-        $(form).find('[name="name"]').focus();
-        return;
-    }
-    if ($(form).find('[name="account_name"]').val() == '') {
-        $(form).find('[name="account_name"]').focus();
-        return;
-    }
-    if ($(form).find('[name="message"]').val() == '') {
-        $(form).find('[name="message"]').focus();
-        return;
-    }
-    if ($(form).find('[name="inserted_nominal"]').val() <= 0) {
-        $('.insert-nominal').slideDown();
-        $(form).find('[name="inserted_nominal"]').focus();
-        return;
-    }
-
-    $('.gift-details').hide();
-    $('.gift-picture').fadeIn();
-});
-
-// ---------- Gift Back [ON CLICK] --------------------------------------------------
-$(document).on('click', '.gift-back', function(e){
-    e.preventDefault();
-    $('.gift-picture').hide();
-    $('.gift-details').fadeIn();
-});
-
-// ---------- Gift Form [ON SUBMIT] --------------------------------------------------
-$(document).on('submit', '#gift-form', function(e){
-    var data = new FormData(this);
-    ajaxMultiPart(data, function(){
-        $('.gift-next').prop('disabled', true);
-        $('.gift-submit').prop('disabled', true);
-        $('.gift-submit').html('<i class="fas fa-spinner fa-spin"></i>');
-    }, function(result){
-        $(this).trigger('reset');
-        showAlert(result.message, 'success');
-        setTimeout(function(){
-            window.location.reload(true);
-        }, 1000);
-    });
-    return false;
-});
-
-
-
-
-
-// Select Bank
-var select_bank = function(e) {
-    e.preventDefault();
-    var bankId = $(this).val();
-    $('.bank-item').removeClass('show');
-    $('#savingBook' + bankId).addClass('show');
-}
-
-$(document).on('change', 'select#selectBank', select_bank);
-
-// Wedding Gift Upload File
-var wgu_file = function(e) {
-    e.preventDefault();
-    var input = $(this).attr('data-wgu-file');
-    $(input).trigger('click');
-}
-
-$(document).on('click', '[data-wgu-file]', wgu_file);
-
-// Wedding Gift Picture
-var wgu_handle_picture = function(e) {
-    var preview = $(this).attr('data-wgu-preview');
-    if (e.target.files.length > 0) {
-        var src = URL.createObjectURL(e.target.files[0]);
-        $(preview).attr('src', src);
-
-        $('.wgu-description').removeClass('show');
-        $('.wgu-img-wrap').addClass('show');
-    }
-}
-
-$(document).on('change', 'input#weddingGiftPicture', wgu_handle_picture);
-
-// Wedding Gift Next
-var wedding_gift_next = function(e) {
-    e.preventDefault();
-    var width = $('#weddingGiftForm').width();
-    var marginLeft = parseFloat($('.wedding-gift__first-slide').css('margin-left'));
-
-    var newMarginLeft = marginLeft - width;
-
-    $('.wedding-gift__first-slide').css('margin-left', newMarginLeft + "px");
-}
-
-$(document).on('click', '.wedding-gift__next', wedding_gift_next);
-
-// Wedding Gift Prev
-var weeding_gift_prev = function(e) {
-    e.preventDefault();
-    var width = $('#weddingGiftForm').width();
-    var marginLeft = parseFloat($('.wedding-gift__first-slide').css('margin-left'));
-
-    var newMarginLeft = marginLeft + width;
-    if (newMarginLeft < 0) newMarginLeft = 0;
-
-    $('.wedding-gift__first-slide').css('margin-left', newMarginLeft + "px");
-}
-
-$(document).on('click', '.wedding-gift__prev', weeding_gift_prev);
-
-
-// Wedding Gift Form
-var wedding_gift_form = function(e) {
-    e.preventDefault();
-
-    var form = this;
-    var data = new FormData(form);
-
-    var submitButton = $(form).find('button.submit');
-    var submitText = $(submitButton).html();
-
-    var onSuccess = function(res) {
-
-        if (res.wedding_gift_message) {
-            $('.wedding-gift-form').html(res.wedding_gift_message);
-        }
-
-        if (!res.wedding_gift_message) {
-            setTimeout(() => { window.location.reload(); }, 1000);
-        }
-
-        afterSend();
-    }
-
-    var onError = function(res=null) { afterSend(); }
-
-    var afterSend = function() {
-        $(form).find('input, select, textarea, button').prop('disabled', false);
-        $(submitButton).html(submitText);
-    }
-
-    var beforeSend = function() {
-        $(form).find('input, select, textarea, button').prop('disabled', true);
-        $(submitButton).html('Sending <i class="fas fa-spinner fa-spin"></i>');
-    }
-
-    postData(data, onSuccess, onError, beforeSend);
-}
-
-$(document).on('submit', 'form#weddingGiftForm', wedding_gift_form);
-
-
-
-// Init Wedding Gift
-var init_wedding_gift = function() {
-
-    // Bank Options
-    if (typeof window.BANK_OPTIONS !== 'undefined' && window.BANK_OPTIONS) {
-
-        var el = $('select#selectBank').get(0);
-
-        if ($(el).length) {
-
-            // Options
-            var options = selectize_options({
-                            maxItems: 1,
-                            valueField: 'id',
-                            labelField: 'title',
-                            searchField: ['title', 'credential'],
-                            options: (window.BANK_OPTIONS ? window.BANK_OPTIONS : []),
-                            render: {
-                                item: function(item, escape) {
-                                    var title = item.title;
-                                    return '<div>' + (title ? '<p class="select-bank__title">' + escape(title) + '</p>' : '') + '</div>';
-                                },
-                                option: function(item, escape) {
-                                    var title = item.title;
-                                    var credential = item.credential;
-                                    return '<div class="item">' +
-                                                '<p class="select-bank__title">' + escape(title) + '</p>' +
-                                                '<p class="select-bank__credential">' + escape(credential) + '</p>' +
-                                            '</div>';
-                                }
-                            }
-                        });
-
-            // Generate Bank
-            var selectize = init_selectize( el, options );
-
-            // Select Bank
-            var selected = selected_selectize( selectize, window.BANK_OPTIONS[0]['id'] );
-
-            // Trigger Select
-            $(el).val(selectize.getValue()).trigger('change');
-
-        }
-
-    }
-
-}
-
-setTimeout(() => { init_wedding_gift(); }, 500);
-
-
-
-
-
-
-
-
-
 /*  ==============================
         WEDDING WISH
 ============================== */
@@ -954,8 +696,8 @@ var isMusicAttemptingToPlay = false,
 // Background Music
 (function backgroundMusic() {
     if (typeof window.MUSIC != 'undefined') {
-        var url = "https:\/\/katsudoto.id\/media\/audio\/Ardhito-Pramono-First-Love.mp3",
-            box = "#music-box";
+        var url = window.MUSIC.url,
+            box = window.MUSIC.box;
 
         // if url is not empty and the box so
         if (url != '') {

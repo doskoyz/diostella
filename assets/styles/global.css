@@ -288,7 +288,7 @@ body.senandika.olive {
 }
 
 
-/* SPECIAL NANDA */
+/* SPECIAL Dios */
 body.nanda-special {
 
     /* Hex Color */
@@ -309,7 +309,7 @@ body.nanda-special {
     --rgb-font-clr: 70, 70, 70;
 
     /* ORNAMENT */
-    --orn-01: url("https://katsudoto.id/media/template/nanda/01/orn-01.png");
+    --orn-01: url("../images/orn-01.png");
     --orn-02: url("https://katsudoto.id/media/template/nanda/01/orn-02.png");
     --orn-03: url("https://katsudoto.id/media/template/nanda/01/orn-03.png");
     --orn-04: url("https://katsudoto.id/media/template/nanda/01/orn-04.png");
@@ -318,9 +318,9 @@ body.nanda-special {
     --orn-07: url("https://katsudoto.id/media/template/nanda/01/orn-07.png");
     --orn-08: url("https://katsudoto.id/media/template/nanda/01/orn-08.png");
 
-    --orn-cover-desktop: url("https://katsudoto.id/media/template/nanda/01/orn-cover-desktop.png");
-    --orn-cover-tablet: url("https://katsudoto.id/media/template/nanda/01/orn-cover-tablet.png");
-    --orn-cover-mobile: url("https://katsudoto.id/media/template/nanda/01/orn-cover-mobile.png");
+    --orn-cover-desktop: url("../images/orn-cover-desktop.png");
+    --orn-cover-tablet: url("../images/orn-cover-tablet.png");
+    --orn-cover-mobile: url("../images/orn-cover-mobile.png");
 
     /* BACKGROUND IMAGE */
     --bg-cover: url("https://katsudoto.id/media/template/nanda/01/bg-cover.png");
@@ -2459,7 +2459,7 @@ section.person .person-envelope-open .cls-2 {
 }
 
 /*  =======================================
-    EFFECTS - Nanda
+    EFFECTS - Dios
 ======================================= */
 .effects.nanda > div {
     /* background-color: rgba(46, 135, 255, 1); */

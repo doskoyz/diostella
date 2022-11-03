@@ -707,7 +707,7 @@ body.toska section.save-date .inner .foot .link-01:hover {
     text-align: right;
 }
 .love-story .inner .timeline .story .picture {
-    height: 320px;
+    height: 400px;
     width: 48%;
     border-radius: 22px;
     overflow: hidden;
@@ -984,7 +984,7 @@ section.video-gallery .inner .video-outer {
 }
 .event-inner .event .activities .activity {
     border-radius: 7px;
-    width: 350px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1446,28 +1446,6 @@ section.footnote .inner h1 {
     margin: 20px 0;
     color: var(--secondary-dark-clr);
 }
-
-
-
-
-/* FOOTER */
-section.footer {
-    background: var(--secondary-dark-clr);
-    padding: 5px;
-}
-section.footer .footer-inner p {
-    font-family: "Ventura Times";
-    font-size: 26px;
-    line-height: 24px;
-    letter-spacing: 2px;
-}
-section.footer .footer-inner img {
-    width: 80px;
-    height: auto;
-    object-fit: contain;
-}
-
-
 
 /* =====================================
 
@@ -2051,33 +2029,11 @@ section.footer .footer-inner img {
         font-size: 32px;
         line-height: 36px;
     }
-
-
-    /* FOOTER */
-    section.footer {
-        background: var(--secondary-dark-clr);
-        padding: 5px;
-    }
-    section.footer .footer-inner p {
-        font-family: "Ventura Times";
-        font-size: 18px;
-        line-height: 16px;
-        letter-spacing: 2px;
-    }
-    section.footer .footer-inner img {
-        width: 60px;
-    }
-
-
-
     /* Wrapper */
     .quote-wrapper {
         padding-bottom: 80px;
     }
-
-
 }
-
 
 
 /* =====================================
@@ -2086,8 +2042,6 @@ section.footer .footer-inner img {
    =====================================*/
 
 @media only screen and (max-width: 360px) {
-
-
     /* Cover */
     .cover .cover-inner .cover-greet .orn.orn-01 {
         width: 200px;
@@ -2440,29 +2394,10 @@ section.footer .footer-inner img {
         line-height: 30px;
     }
 
-
-    /* FOOTER */
-    section.footer {
-        background: var(--secondary-dark-clr);
-        padding: 5px;
-    }
-    section.footer .footer-inner p {
-        font-family: "Ventura Times";
-        font-size: 20px;
-        line-height: 16px;
-        letter-spacing: 2px;
-    }
-    section.footer .footer-inner img {
-        width: 60px;
-    }
-
-
     /* Wrapper */
     .quote-wrapper {
         background-position: 0 0;
         background-size: 120% 100%;
         padding-bottom: 30px;
     }
-
-
 }
