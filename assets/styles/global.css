@@ -115,7 +115,6 @@
 
 /* Root */
 :root {
-
     --primary-clr: #452812;
     --primary-dark-clr: #371e0b;
     --secondary-clr: #f6eed7;
@@ -292,13 +291,13 @@ body.senandika.olive {
 body.nanda-special {
 
     /* Hex Color */
-    --primary-clr: #d6a59a;
-    --primary-dark-clr: #b37d70;
-    --secondary-clr: #e9f7f4;
+    --primary-clr: #7e675e;
+    --primary-dark-clr: #c1ada5;
+    --secondary-clr: #6d7973;
     --secondary-dark-clr: #3f636a;
-    --wood-clr: #e2b744;
+    --wood-clr: #60412b;
     --font-clr: #464646;
-    --tertiary-clr: #f5ebdd;
+    --tertiary-clr: #e5dace;
 
     /* RGB Color */
     --rgb-primary-clr: 214, 165, 154;
@@ -323,8 +322,8 @@ body.nanda-special {
     --orn-cover-mobile: url("../images/orn-cover-mobile.png");
 
     /* BACKGROUND IMAGE */
-    --bg-cover: url("https://katsudoto.id/media/template/nanda/01/bg-cover.png");
-    --bg-cover-mobile: url("https://katsudoto.id/media/template/nanda/01/bg-cover-mobile.png");
+    --bg-cover: url("../images/bg-cover.jpg");
+    --bg-cover-mobile: url("../images/bg-cover-mobile.jpg");
     --bg-countdown: url("https://katsudoto.id/media/template/nanda/01/bg-countdown.png");
     --bg-groom: url("https://katsudoto.id/media/template/nanda/01/bg-groom.png");
     --bg-bride: url("https://katsudoto.id/media/template/nanda/01/bg-bride.png");
