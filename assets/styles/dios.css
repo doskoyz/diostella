@@ -91,11 +91,10 @@ body font {
                         );
 }
 .top-cover .inner .details {
+    height: 100%;
     width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     padding: 20px 10px;
     position: relative;
     /* background-color: lightgrey; */
@@ -114,6 +113,10 @@ body font {
     color: var(--wood-clr);
     word-wrap: break-word;
     /* background-color: lightblue; */
+}
+.top-cover .inner .details .invitation-btn {
+    position: absolute;
+    top: 49%;
 }
 .top-cover .inner .details .link-01 {
     font-family: var(--ff-01);
@@ -164,9 +167,23 @@ body font {
     object-fit: cover;
     -o-object-fit: cover;
     object-position: center;
-    /* animation: zoom-out 40s infinite; */
-    /* filter: blur(1px);
-    -webkit-filter: blur(1px); */
+    animation: zoom-in-zoom-out 30s ease infinite;
+    background-image: var(--bg-opening);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 @keyframes zoom-out {
@@ -391,6 +408,10 @@ section.bridegroom .bridegroom-inner .head .text-01 {
     letter-spacing: 1px;
 }
 @media only screen and (max-width: 420px) {
+
+    .top-cover > .cover-show .picture-outer img {
+        background-image: var(--bg-opening-mobile);
+    }
 
     section.bridegroom .bridegroom-inner .head .text-01 > br {
         display: none;
@@ -1237,10 +1258,19 @@ section.gift .bank-detail .saving-books .book span {
 #gift-form label.center {
     font-size: 29px;
 }
-
-
-
-
+#gift-btn {
+    border: 1px solid var(--primary-clr);
+    color: var(--primary-clr);
+    padding: 7px 18px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 32px;
+    line-height: 28px;
+    font-family: "Ventura Times";
+    margin: 15px auto;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
 
 
 /* PROTOCOL */
@@ -1882,6 +1912,13 @@ section.footnote .inner h1 {
         font-size: 27px;
     }
 
+    #gift-btn {
+        border: 1px solid var(--primary-clr);
+        color: var(--primary-clr);
+        padding: 7px 18px;
+        font-size: 24px;
+        line-height: 20px;
+    }
 
     /* Event */
     .event-outer {

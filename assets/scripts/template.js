@@ -12,8 +12,8 @@ window.BOOKS = [{"bank":"Bank Central Asia (BCA)","number_account":"1341464600"}
 function startTheJourney() {
     $('html, body').animate({ scrollTop: $('#start').offset().top }, 'slow');
     $('.top-cover').eq(0).addClass('hide');
+    $('#gift-form').hide();
     $('body').eq(0).css('overflow', 'visible');
-    $('.greetings h1').text(getUrlParameter('name'));
 
     if (typeof playMusicOnce === 'function') playMusicOnce();
 
@@ -841,9 +841,6 @@ $(document).on("click scroll", function(e) {
 // Document is ready!
 $(document).ready(function(){
 
-    setTimeout(() => {
-        $('body').trigger('click');
-    }, 1000);
 
 });
 
@@ -1485,20 +1482,14 @@ $(document).ready(function(){
     });
 
     // ---------- Check nominal (Wedding Gift) value --------------------------------------------------
-    $('[name="nominal"]').each(function(i, el){
-        if ($(el).is(':checked')) {
-            if ($(this).val() <= 0) {
-                $('.insert-nominal').slideDown();
-                $('.insert-nominal').find('[name="inserted_nominal"]').focus();
-            }
-        }
+    $('#gift-btn').on('click', function(e){
+        e.preventDefault();
+        $('#gift-form').show();
+        $('#gift-form').removeClass('aos-animate');
+        setTimeout(function() {
+            $('#gift-form').addClass('aos-animate');
+        }, 400);
     });
-
-    // ---------- Show or Hide Saving Books --------------------------------------------------
-    var select = $('select[name="choose_bank"]');
-    if (select.length) {
-        chooseBank($(select).val());
-    }
 
     // ---------- Attendance Toggling --------------------------------------------------
     $.each($('input[name="attendance"]'), function(i, input){
