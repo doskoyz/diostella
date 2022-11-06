@@ -215,7 +215,7 @@ body font {
     position: relative;
     overflow: hidden;
     background-color: var(--secondary-clr);
-    background-image: var(--bg-cover);
+    background-image: var(--bg-knot);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -282,7 +282,6 @@ body font {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: var(--orn-cover-desktop);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -500,7 +499,7 @@ section.bridegroom .bridegroom-inner .head .text-01 {
     font-size: 32px;
     line-height: 26px;
     letter-spacing: 1px;
-    color: var(--font-clr);
+    color: var(--wood-clr);
 }
 .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
     text-decoration: none;
@@ -509,7 +508,7 @@ section.bridegroom .bridegroom-inner .head .text-01 {
     line-height: 26px;
     letter-spacing: 1px;
     font-style: italic;
-    color: var(--font-clr);
+    color: var(--wood-clr);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -528,23 +527,27 @@ section.bridegroom .bridegroom-inner .head .text-01 {
 
 /* SAVE THE DATE */
 section.save-date {
+    height: 100%;
     width: 100%;
     background-image: var(--bg-countdown);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     overflow: hidden;
 }
 section.save-date .inner {
-    width: 720px;
+    width: 100%;
     display: block;
     margin: 0 auto;
     padding: 20px 0;
+    height: 100%;
 }
 /* HEAD */
 section.save-date .inner .head {
     padding: 20px;
     text-align: center;
+    position: absolute;
+    width: 100%;
 }
 section.save-date .inner .head .title-01 {
     font-family: "Elsie Swash Caps";
@@ -567,6 +570,7 @@ section.save-date .inner .head .text-01 sup {
 /* BODY */
 section.save-date .inner .body {
     background: transparent;
+    margin-top: 20%;
 }
 /* SCHEDULE */
 section.save-date .inner .body .schedule {
@@ -574,19 +578,10 @@ section.save-date .inner .body .schedule {
     padding: 20px 0;
     position: relative;
 }
-section.save-date .inner .body .schedule::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000%;
-    height: 50px;
-    background: var(--wood-clr);
-}
 section.save-date .inner .body .schedule .countdown {
     width: 100%;
     display: flex;
+    padding: 0px 20px;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -623,7 +618,7 @@ section.save-date .inner .foot {
 }
 section.save-date .inner .foot .link-01 {
     background: #fff;
-    color: var(--font-clr);
+    color: var(--font-clr-rev);
     font-family: "Ventura Times";
     font-size: 32px;
     line-height: 28px;
@@ -640,14 +635,14 @@ section.save-date .inner .foot .link-01 {
     transition: all 0.25s ease-in-out;
 }
 body.toska section.save-date .inner .foot .link-01 {
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 section.save-date .inner .foot .link-01:hover {
-    background: var(--secondary-dark-clr);
+    background: var(--olive-clr);
     color: var(--white-clr);
 }
 body.toska section.save-date .inner .foot .link-01 {
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 body.toska section.save-date .inner .foot .link-01:hover {
     color: var(--white-clr);
@@ -679,7 +674,7 @@ body.toska section.save-date .inner .foot .link-01:hover {
     font-size: 60px;
     font-family: "Elsie Swash Caps";
     font-weight: 500;
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
     display: inline-block;
     position: relative;
     /* background-color: lightgreen; */
@@ -782,14 +777,14 @@ body.toska section.save-date .inner .foot .link-01:hover {
     font-size: 40px;
     line-height: 38px;
     font-family: "Elsie Swash Caps";
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 .love-story .inner .timeline .story .content .content-inner p {
     line-height: 25px;
     font-size: 26px;
     letter-spacing: 1px;
     font-family: "Ventura Times";
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 .love-story .inner .timeline .story:nth-child(even) .content .content-inner h2,
 .love-story .inner .timeline .story:nth-child(even) .content .content-inner p {
@@ -825,7 +820,7 @@ section.video-gallery .inner .video-outer {
     font-weight: 500;
     line-height: 36px;
     font-family: "Ventura Times";
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 
 
@@ -1032,7 +1027,7 @@ section.video-gallery .inner .video-outer {
     font-size: 50px;
     line-height: 45px;
     font-weight: 500;
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
     font-family: "Elsie Swash Caps";
     margin-bottom: 0.2em;
 }
@@ -1040,7 +1035,7 @@ section.video-gallery .inner .video-outer {
     font-size: 32px;
     line-height: 28px;
     font-family: "Ventura Times";
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
     font-style: italic;
 }
 .event-inner .event .activities .activity .address {
@@ -1051,7 +1046,7 @@ section.video-gallery .inner .video-outer {
     font-size: 32px;
     line-height: 28px;
     font-family: "Ventura Times";
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 .event-inner .event .activities .activity .address p:first-child {
     margin-bottom: .75em;
@@ -1100,7 +1095,7 @@ section.live-streaming > .inner > .title > h1 {
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 0.15em;
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 /* Live Streaming > Inner > Body */
 section.live-streaming > .inner > .body {
@@ -1151,7 +1146,7 @@ section.live-streaming > .inner > .foot > p {
     font-size: 32px;
     font-family: "Ventura Times";
     line-height: 28px;
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 
 
@@ -1186,14 +1181,14 @@ section.gift .gift-inner .gift-title h1 {
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 0.25em;
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 section.gift .gift-inner .gift-title p {
     font-size: 32px;
     letter-spacing: 1px;
     font-family: "Ventura Times";
     line-height: 28px;
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 section.gift .gift-inner .gift-form {
     box-shadow: none;
@@ -1204,13 +1199,13 @@ section.gift .bank-detail .saving-books .book span {
     font-size: 32px;
     line-height: 28px;
     letter-spacing: 1px;
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 .bank-detail .saving-books .copy-account {
-    border: .5px solid var(--secondary-dark-clr);
+    border: .5px solid var(--olive-clr);
 }
 .bank-detail .saving-books .copy-account:hover {
-    background: var(--secondary-dark-clr);
+    background: var(--olive-clr);
     color: var(--white-clr);
 }
 
@@ -1228,7 +1223,7 @@ section.gift .bank-detail .saving-books .book span {
 
 .gift .gift-inner .gift-form .gift-submit,
 .gift .gift-inner .gift-form .gift-next {
-    background: var(--secondary-dark-clr);
+    background: var(--olive-clr);
     color: var(--white-clr);
     font-weight: 600;
 }
@@ -1325,7 +1320,7 @@ section.gift .bank-detail .saving-books .book span {
     font-size: 46px;
     line-height: 44px;
     letter-spacing: 1px;
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
     margin-bottom: 0;
 }
 .comment-outer .comment-inner .comments .comment .comment-head p >  strong {
@@ -1430,7 +1425,7 @@ section.quote .inner p.text-02 {
     font-size: 32px;
     line-height: 28px;
     letter-spacing: 2px;
-    color: var(--font-clr);
+    color: var(--olive-clr);
     margin-bottom: 1em;
     font-weight: 600;
 }
@@ -1463,7 +1458,7 @@ section.footnote .inner p {
     line-height: 28px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 section.footnote .inner p sup {
     font-size: 12px;
@@ -1474,7 +1469,7 @@ section.footnote .inner h1 {
     font-weight: 500;
     line-height: 50px;
     margin: 20px 0;
-    color: var(--secondary-dark-clr);
+    color: var(--olive-clr);
 }
 
 /* =====================================
@@ -1552,6 +1547,35 @@ section.footnote .inner h1 {
         width: 100%;
     }
 
+    section#start {
+        height: 70%
+    }
+
+    section#start {
+        height: 70%
+    }
+
+    section.greetings {
+        height: 30%
+    }
+
+    section.save-date {
+        height: 350px;
+    }
+
+    section.save-date .inner .body .schedule .countdown .countdown-time {
+        width: 80px;
+        height: 80px;
+        margin: 5px 10px;
+    }
+    section.save-date .inner .body .schedule .countdown .countdown-time h1 {
+        font-size: 30px;
+        line-height: 26px;
+    }
+    section.save-date .inner .body .schedule .countdown .countdown-time small {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
 }
 /* =====================================
     720px
@@ -1615,7 +1639,6 @@ section.footnote .inner h1 {
     }
     .cover .cover-inner .cover-picture .cover-show::before {
         height: 105%;
-        background-image: var(--orn-cover-tablet);
     }
     .cover .cover-inner .cover-bridegroom .text-01,
     .cover .cover-inner .cover-bridegroom .text-02 {
@@ -1732,14 +1755,13 @@ section.footnote .inner h1 {
 
     /* COVER */
     .cover {
-        background-image: var(--bg-cover-mobile);
+        background-image: var(--bg-knot-mobile);
     }
     .cover .cover-inner .cover-picture .cover-show {
         height: 540px;
     }
     .cover .cover-inner .cover-picture .cover-show::before {
         height: 105%;
-        background-image: var(--orn-cover-mobile);
     }
 
     /* Bride Groom */
@@ -1754,22 +1776,22 @@ section.footnote .inner h1 {
 
     /* Bride Groom */
     section.bridegroom .bridegroom-inner .head .text-01 {
-        font-size: 28px;
+        font-size: 22px;
         line-height: 24px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 22px;
+        line-height: 22px;
         letter-spacing: 1px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
-        font-size: 28px;
-        line-height: 24px;
+        font-size: 22px;
+        line-height: 22px;
         letter-spacing: 1px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
-        font-size: 28px;
-        line-height: 24px;
+        font-size: 22px;
+        line-height: 22px;
         letter-spacing: 1px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 i {
@@ -1778,13 +1800,13 @@ section.footnote .inner h1 {
 
     /* Save The Date */
     section.save-date .inner .head .title-01 {
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 22px;
+        line-height: 22px;
         letter-spacing: 1px;
     }
     section.save-date .inner .head .text-01 {
-        font-size: 28px;
-        line-height: 24px;
+        font-size: 22px;
+        line-height: 22px;
         letter-spacing: 1px;
     }
     section.save-date .inner .head .text-01 sup {
@@ -1793,14 +1815,25 @@ section.footnote .inner h1 {
     section.save-date .inner .body .schedule::before {
         height: 30px;
     }
+    section.save-date .inner .foot .link-01 {
+        font-size: 22px;
+        line-height: 15px;
+        padding: 6px;
+    }
+    section.save-date .inner .head {
+        padding: 0px;
+    }
+    section.save-date .inner .foot {
+        padding: 5px 0;
+    }
     section.save-date .inner .body .schedule .countdown .countdown-time {
-        width: 100px;
-        height: 100px;
-        margin: 5px 15px;
+        width: 60px;
+        height: 60px;
+        margin: 0px 2px;
     }
     section.save-date .inner .body .schedule .countdown .countdown-time h1 {
-        font-size: 32px;
-        line-height: 28px;
+        font-size: 22px;
+        line-height: 22px;
     }
     section.save-date .inner .body .schedule .countdown .countdown-time small {
         font-size: 18px;
@@ -2085,7 +2118,7 @@ section.footnote .inner h1 {
         height: 40px;
     }
     .cover .cover-inner .cover-greet .text-01 {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 20px;
         letter-spacing: 2px;
     }
@@ -2095,11 +2128,10 @@ section.footnote .inner h1 {
     }
     .cover .cover-inner .cover-picture .cover-show::before {
         height: 105%;
-        background-image: var(--orn-cover-mobile);
     }
     .cover .cover-inner .cover-bridegroom .text-01,
     .cover .cover-inner .cover-bridegroom .text-02 {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 20px;
         letter-spacing: 2px;
     }
@@ -2107,7 +2139,7 @@ section.footnote .inner h1 {
         font-size: 7px;
     }
     .cover .cover-inner .cover-bridegroom .title-01 {
-        font-size: 40px;
+        font-size: 22px;
     }
 
 
@@ -2124,8 +2156,8 @@ section.footnote .inner h1 {
         line-height: 20px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
-        font-size: 26px;
-        line-height: 32px;
+        font-size: 22px;
+        line-height: 22px;
         letter-spacing: 1px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-border::before {
@@ -2171,16 +2203,16 @@ section.footnote .inner h1 {
         height: 30px;
     }
     section.save-date .inner .body .schedule .countdown .countdown-time {
-        width: 80px;
-        height: 80px;
-        margin: 5px auto;
+        width: 60px;
+        height: 60px;
+        margin: 0px 2px;
     }
     section.save-date .inner .body .schedule .countdown .countdown-time h1 {
-        font-size: 26px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 28px;
     }
     section.save-date .inner .body .schedule .countdown .countdown-time small {
-        font-size: 15px;
+        font-size: 14px;
         letter-spacing: 1px;
     }
     section.save-date .inner .body .calendar #add-calendar {

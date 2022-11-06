@@ -296,8 +296,10 @@ body.nanda-special {
     --secondary-clr: #6d7973;
     --secondary-dark-clr: #3f636a;
     --wood-clr: #60412b;
-    --font-clr: #464646;
+    --font-clr: #FFFFFF;
+    --font-clr-rev: #464646;
     --tertiary-clr: #e5dace;
+    --olive-clr: #50532b;
 
     /* RGB Color */
     --rgb-primary-clr: 214, 165, 154;
@@ -310,23 +312,21 @@ body.nanda-special {
     /* ORNAMENT */
     --orn-01: url("../images/orn-01.png");
     --orn-02: url("https://katsudoto.id/media/template/nanda/01/orn-02.png");
-    --orn-03: url("https://katsudoto.id/media/template/nanda/01/orn-03.png");
+    --orn-03: url("../images/orn-03.png");
     --orn-04: url("https://katsudoto.id/media/template/nanda/01/orn-04.png");
     --orn-05: url("https://katsudoto.id/media/template/nanda/01/orn-05.png");
     --orn-06: url("https://katsudoto.id/media/template/nanda/01/orn-06.png");
     --orn-07: url("https://katsudoto.id/media/template/nanda/01/orn-07.png");
     --orn-08: url("https://katsudoto.id/media/template/nanda/01/orn-08.png");
 
-    --orn-cover-desktop: url("../images/orn-cover-desktop.png");
-    --orn-cover-tablet: url("../images/orn-cover-tablet.png");
-    --orn-cover-mobile: url("../images/orn-cover-mobile.png");
-
     /* BACKGROUND IMAGE */
+    --bg-knot: url("../images/bg-knot.jpeg");
+    --bg-knot-mobile: url("../images/bg-knot-mobile.jpeg");
     --bg-cover: url("../images/bg-cover.jpg");
     --bg-cover-mobile: url("../images/bg-cover-mobile.jpg");
     --bg-opening: url("../images/bg-opening.jpeg");
     --bg-opening-mobile: url("../images/bg-opening-mobile.jpeg");
-    --bg-countdown: url("https://katsudoto.id/media/template/nanda/01/bg-countdown.png");
+    --bg-countdown: url("../images/bg-count.jpeg");
     --bg-groom: url("https://katsudoto.id/media/template/nanda/01/bg-groom.png");
     --bg-bride: url("https://katsudoto.id/media/template/nanda/01/bg-bride.png");
     --bg-palace: url("https://katsudoto.id/media/template/nanda/01/palace.png");

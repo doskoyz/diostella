@@ -840,8 +840,18 @@ $(document).on("click scroll", function(e) {
 
 // Document is ready!
 $(document).ready(function(){
+    var responder = getUrlParameter('name');
+    $('.greetings h1').text(responder);
+    $('h1.responder').text(responder);
+    setTimeout(() => {
+        $('body').trigger('click');
+    }, 1000);
 
+//    css calculation
+    var div = $('section.save-date');
+    var width = div.width();
 
+    div.css('height', width * 0.666);
 });
 
 
