@@ -97,7 +97,6 @@ body font {
     justify-content: center;
     padding: 20px 10px;
     position: relative;
-    /* background-color: lightgrey; */
 }
 .top-cover .inner .details > div {
     width: 100%;
@@ -106,17 +105,28 @@ body font {
     padding: 10px;
 }
 .top-cover .inner .details .text-01 {
-    font-family: "Elsie Swash Caps";
-    font-size: calc(var(--fs-cover) + 35px);
-    line-height: calc(var(--fs-cover) + 42px);
-    /* color: var(--primary-clr); */
-    color: var(--wood-clr);
-    word-wrap: break-word;
-    /* background-color: lightblue; */
+    text-align: center;
+    font-family: "Moon Time";
+    font-size: calc(var(--fs-cover) + 72px);
+    color: var(--font-clr);
 }
+.top-cover .inner .details .text-02 {
+    text-align: center;
+    font-family: var(--ff-02);
+    font-size: calc(var(--fs-cover));
+    color: var(--font-clr);
+}
+
+.top-cover .inner .details .text-03 {
+    text-align: center;
+    font-family: var(--ff-02);
+    font-size: calc(var(--fs-cover));
+    color: var(--font-clr);
+}
+
 .top-cover .inner .details .invitation-btn {
     position: absolute;
-    top: 49%;
+    bottom: 5%;
 }
 .top-cover .inner .details .link-01 {
     font-family: var(--ff-01);
@@ -127,7 +137,7 @@ body font {
     background-color: var(--wood-clr);
     display: inline-block;
     padding: 0em 0.5em;
-    border-radius: 7px;
+    border-radius: 50px;
     margin: 0;
     color: var(--white-clr);
     box-shadow: -1px 1px 5px rgba(var(--rgb-primary-clr), 0.3);
@@ -200,9 +210,6 @@ body font {
         object-position: top;
     }
 }
-
-
-
 
 /* COVER */
 .cover {
@@ -297,6 +304,7 @@ body font {
     object-fit: cover;
     object-position: 50% 25%;
 }
+
 /* Cover BrideGroom */
 .cover .cover-inner .cover-bridegroom {
     padding: 10px;
@@ -368,10 +376,6 @@ body font {
 
 }
 
-
-
-
-
 /* BRIDEGROOM */
 section.bridegroom {
     background: #fff;
@@ -407,11 +411,6 @@ section.bridegroom .bridegroom-inner .head .text-01 {
     letter-spacing: 1px;
 }
 @media only screen and (max-width: 420px) {
-
-    .top-cover > .cover-show .picture-outer img {
-        background-image: var(--bg-opening-mobile);
-    }
-
     section.bridegroom .bridegroom-inner .head .text-01 > br {
         display: none;
     }
@@ -1581,6 +1580,12 @@ section.footnote .inner h1 {
     720px
    =====================================*/
 @media only screen and (max-width: 720px) {
+    /* cover */
+    .top-cover > .cover-show .picture-outer img {
+        background-image: var(--bg-opening-mobile);
+    }
+
+
 
     /* Love Story */
     .love-story .inner .title h1::before {
@@ -1752,6 +1757,18 @@ section.footnote .inner h1 {
    =====================================*/
 
 @media only screen and (max-width: 600px) {
+    /* OPENING */
+    .top-cover .inner .details .text-01 {
+        font-size: 60px;
+    }
+
+    .top-cover .inner .details .text-02 {
+        font-size: 22px;
+    }
+
+    .top-cover .inner .details .text-03 {
+        font-size: 20px;
+    }
 
     /* COVER */
     .cover {
