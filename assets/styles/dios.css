@@ -71,7 +71,7 @@ body font {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     flex-direction: column;
     position: relative;
@@ -92,10 +92,10 @@ body font {
 }
 .top-cover .inner .details {
     height: 100%;
-    width: 100%;
+    width: 50%;
     align-items: center;
     justify-content: center;
-    padding: 20px 10px;
+    padding: 90px 10px;
     position: relative;
 }
 .top-cover .inner .details > div {
@@ -214,11 +214,11 @@ body font {
 /* COVER */
 .cover {
     width: 100%;
+    height: 100%;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     position: relative;
     overflow: hidden;
     background-color: var(--secondary-clr);
@@ -230,13 +230,11 @@ body font {
 .cover .cover-inner {
     position: relative;
     width: 100%;
-    min-height: var(--body-height);
     padding: 20px 0px 30px 0px;
     z-index: 20;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 /* Cover Greet */
@@ -258,16 +256,6 @@ body font {
     margin-bottom: 20px;
     /* background-color: lightblue; */
 }
-.cover .cover-inner .cover-greet .text-01 {
-    font-size: 36px;
-    line-height: 30px;
-    letter-spacing: 2px;
-    display: inline-block;
-    text-transform: capitalize;
-    color: var(--font-clr);
-    font-family: "Ventura Times";
-}
-
 /* Cover Picture */
 .cover .cover-inner .cover-picture {
     margin: 40px 0;
@@ -323,14 +311,22 @@ body font {
 .cover .cover-inner .cover-bridegroom .text-02 sup {
     font-size: 12px;
 }
-.cover .cover-inner .cover-bridegroom .title-01 {
+.cover .cover-inner .title-01 {
     font-family: "Elsie Swash Caps";
     font-size: 65px;
-    color: var(--wood-clr);
+    color: var(--white-clr);
     margin: .15em 0 .1em 0;
     font-weight: 500;
 }
-
+.cover .cover-inner .cover-greet .text-01 {
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    display: inline-block;
+    text-transform: capitalize;
+    color: var(--font-clr);
+    font-family: "Ventura Times";
+}
 
 /* Greetings */
 .greetings {
@@ -1508,6 +1504,19 @@ section.footnote .inner h1 {
 
 }
 @media only screen and (max-width: 800px) {
+    /* cover */
+    .top-cover > .cover-show .picture-outer img {
+        background-image: var(--bg-opening-mobile);
+    }
+
+    .top-cover .inner .details {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .top-cover .inner {
+        align-items: center;
+    }
 
     /* BrideGroom */
     .bridegroom .bridegroom-inner .body {
@@ -1547,15 +1556,15 @@ section.footnote .inner h1 {
     }
 
     section#start {
-        height: 70%
+        height: 70%;
     }
 
     section#start {
-        height: 70%
+        height: 70%;
     }
 
     section.greetings {
-        height: 30%
+        height: 30%;
     }
 
     section.save-date {
@@ -1580,13 +1589,6 @@ section.footnote .inner h1 {
     720px
    =====================================*/
 @media only screen and (max-width: 720px) {
-    /* cover */
-    .top-cover > .cover-show .picture-outer img {
-        background-image: var(--bg-opening-mobile);
-    }
-
-
-
     /* Love Story */
     .love-story .inner .title h1::before {
         right: 100%;
@@ -1654,15 +1656,9 @@ section.footnote .inner h1 {
     .cover .cover-inner .cover-bridegroom .text-02 sup {
         font-size: 8px;
     }
-    .cover .cover-inner .cover-bridegroom .title-01 {
-        font-family: "Elsie Swash Caps";
-        font-size: 55px;
-        color: var(--wood-clr);
-        margin: .1em 0 .1em 0;
-        font-weight: 500;
+    .cover .cover-inner .title-01 {
+        font-size: 45px;
     }
-
-
     /* Greetings */
     .greetings .orn.orn-02 {
         /* width: 275px;
@@ -1771,6 +1767,17 @@ section.footnote .inner h1 {
     }
 
     /* COVER */
+    .cover .cover-inner .cover-greet {
+        width: 80%;
+    }
+    .cover .cover-inner .title-01 {
+        font-size: 30px;
+    }
+    .cover .cover-inner .cover-greet .text-01 {
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: 1.5px;
+    }
     .cover {
         background-image: var(--bg-knot-mobile);
     }
@@ -2135,9 +2142,9 @@ section.footnote .inner h1 {
         height: 40px;
     }
     .cover .cover-inner .cover-greet .text-01 {
-        font-size: 22px;
-        line-height: 20px;
-        letter-spacing: 2px;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 1px;
     }
     .cover .cover-inner .cover-picture .cover-show {
         width: 80vw;
@@ -2155,11 +2162,9 @@ section.footnote .inner h1 {
     .cover .cover-inner .cover-bridegroom .text-02 sup {
         font-size: 7px;
     }
-    .cover .cover-inner .cover-bridegroom .title-01 {
+    .cover .cover-inner .title-01 {
         font-size: 22px;
     }
-
-
     /* Greetings */
     .greetings .orn.orn-02 {
         /* width: 80vw; */
