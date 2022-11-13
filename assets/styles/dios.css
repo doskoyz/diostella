@@ -1,5 +1,4 @@
 :root {
-
     /* Font Size */
     --fs-title: clamp(35px, 3.75vw, 45px);          /* Judul */
     --fs-sub-title: clamp(32px, 2.5vw, 34px);       /* Sub Judul */
@@ -10,9 +9,7 @@
     --fs-save-date: clamp(35px, 3.5vw, 55px);       /* Save the Date */
     --fs-main-date: clamp(50px, 4vw, 60px);         /* Main Date */
     --fs-activity-name: clamp(35px, 2.75vw, 40px);  /* Activity Name */
-
 }
-
 
 body {
 
@@ -1343,6 +1340,11 @@ section.gift .bank-detail .saving-books .book span {
     font-size: 8px;
 }
 
+.comment-outer .comment-inner .comments {
+    max-height: 350px;
+    overflow-y: scroll;
+}
+
 .comment-outer .comment-inner .comment-form * {
     font-family: "Ventura Times";
 }
@@ -2090,6 +2092,10 @@ section.footnote .inner h1 {
     .comment-outer .comment-inner .comment-form button,
     .comment-outer .comment-inner .foot .more-comment {
         font-size: 24px;
+    }
+    .comment-outer .comment-inner .comments {
+        max-height: 250px;
+        overflow-y: scroll;
     }
 
     /* QUOTE */

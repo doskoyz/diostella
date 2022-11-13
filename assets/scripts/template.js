@@ -97,12 +97,6 @@ $(document).on('click', '.copy-account', function(e){
     copyToClipboard(number.html());
 });
 
-// ---------- Number Format (Variables) ---------------------------------------------------------------
-var numberFormat = new Intl.NumberFormat('ID', {
-    // style: 'currency',
-    // currency: 'IDR',
-});
-
 // ---------- Disabled Dragging an image [ON DRAGSTART] -----------------------------------------------
 $('img').on('dragstart', function(e){
     e.preventDefault();
@@ -124,6 +118,25 @@ $('img').on('dragstart', function(e){
 /*  ==============================
         CALLING
 ============================== */
+function sendComment(data) {
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://diostella-e700.restdb.io/rest/comments",
+      "method": "POST",
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": "636be4cac890f30a8fd1f2a0",
+        "cache-control": "no-cache"
+      },
+      "processData": false,
+      "data": JSON.stringify(data)
+    }
+
+    $.ajax(settings).done(function (response) {
+      showAlert('Sukses input pesan', 'success');
+    });
+}
 
 // ---------- Sending Data (Only) By AJAX --------------------------------------------------
 function ajaxCall(data, callback) {
@@ -269,8 +282,6 @@ var isCoverPlayed = false;
     }
 }());
 
-
-
 /*  ================================================
     SAVE THE DATE
 ============================================= */
@@ -308,256 +319,19 @@ var isCoverPlayed = false;
     }
 }());
 
-
-/*  ==============================
-        RSVP
-============================== */
-
-// ---------- Attendance Toggle (Function) --------------------------------------------------
-function attendanceToggle(input) {
-    var attendanceCome = $('.attendance-value.come');
-    var attendanceNotCome = $('.attendance-value.not-come');
-
-    var come = 'Datang',                // Come
-        notCome = 'Tidak Datang';       // Not Come
-
-    if (typeof window.RSVP != 'undefined') {
-        come = window.RSVP['button_text']['attend'];            // Attend
-        notCome = window.RSVP['button_text']['not_attend'];     // Not Attend
-    }
-
-    $(attendanceCome).html(come);
-    $(attendanceNotCome).html(notCome);
-
-    if ($(input).is(':checked')) {
-        if ($(input).next('.attendance-value.come').length > 0) {
-            $(attendanceCome).html('<i class="fas fa-smile"></i> ' + come);
-            $('#rsvp-guest-amount').slideDown();
-        }
-        if ($(input).next('.attendance-value.not-come').length > 0) {
-            $(attendanceNotCome).html('<i class="fas fa-sad-tear"></i> ' + notCome);
-            $('#rsvp-guest-amount').slideUp();
-        }
-    }
-}
-
-// ---------- Attendance [ON CLICK] --------------------------------------------------
-$(document).on('change', '[name="attendance"]', function(e){
-    e.preventDefault();
-    attendanceToggle(this);
-})
-
-// ---------- Change Confirmation [ON CLICK] --------------------------------------------------
-$(document).on('click', '.change-confirmation', function(e){
-    e.preventDefault();
-    $('.rsvp-inner').find('.rsvp-form').fadeIn();
-    $('.rsvp-inner').find('.rsvp-confirm').hide();
-});
-
-// ---------- Plus Button [ON CLICK] --------------------------------------------------
-$(document).on('click', '[data-quantity="plus"]', function(e){
-    e.preventDefault();
-    var fieldName = $(this).attr('data-field');
-    var $input = $('input[name="' + fieldName + '"]');
-    var currentVal = parseInt($input.val());
-    var bool = $input.prop('readonly');
-    if (!bool) {
-        if (!isNaN(currentVal)) {
-            if (currentVal < $input.prop('max')) {
-                $input.val(currentVal + 1);
-            }
-        } else {
-            $input.val(1);
-        }
-    }
-});
-
-// ---------- Minus Button [ON CLICK] --------------------------------------------------
-$(document).on('click', '[data-quantity="minus"]', function(e){
-    e.preventDefault();
-    var fieldName = $(this).attr('data-field');
-    var $input = $('input[name="' + fieldName + '"]');
-    var currentVal = parseInt($input.val());
-    var bool = $input.prop('readonly');
-    if (!bool) {
-        if (!isNaN(currentVal)) {
-            $input.val(currentVal - 1);
-            if (currentVal <= 0) {
-                $input.val(0);
-            }
-        } else {
-            $input.val(0);
-        }
-    }
-});
-
-// ---------- Quantity Control [ON CHANGE] --------------------------------------------------
-$(document).on('change', '[data-quantity="control"]', function(e){
-    e.preventDefault();
-    var max = $(this).prop('max');
-    var value = $(this).val();
-    if (value > max) {
-        $(this).val(max);
-    }
-});
-
-// ---------- Nominal [ON CHANGE] --------------------------------------------------
-$(document).on('change', '[name="nominal"]', function(e){
-    e.preventDefault();
-    var val = $(this).val();
-    var input = $('.insert-nominal');
-
-    $(input).slideUp();
-    if (parseInt(val) <= 0) {
-        if ($(this).is(':checked') == true) {
-            $(input).slideDown();
-            $(input).find('[name="inserted_nominal"]').val('').focus();
-        }
-    }
-
-    // var x = numberFormat.format(parseInt(val));
-    $(input).find('[name="inserted_nominal"]').val(val);
-
-});
-
-// ---------- Inserted Nominal [ON KEYUP, KEYDOWN, CHANGE] --------------------------------------------------
-$(document).on('keyup keydown change', '[name="inserted_nominal"]', function(e){
-    if($(this).val().length > 16){
-        var val = $(this).val().substr(0,$(this).val().length-1);
-        $(this).val(val);
-    };
-});
-
-// ---------- RSVP Form [ON SUBMIT] --------------------------------------------------
-$(document).on('submit', '#rsvp-form', function(e){
-    e.preventDefault();
-
-    // Data
-    var data = $(this).serialize();
-
-    // Ajax Call
-    ajaxCall(data, function(result){
-        $('.rsvp-inner').find('.rsvp-form').fadeOut();
-        $('.rsvp-inner').find('.rsvp-confirm').fadeIn();
-
-        showAlert(result.message, 'success');
-        window.location.reload();
-    });
-
-    return false;
-});
-
-
 /*  ==============================
         WEDDING WISH
 ============================== */
-
-// ---------- Calling Modal [ON CLICK] --------------------------------------------------
-$(document).on('click', '[data-modal]', function(e){
-    e.preventDefault();
-    var element = this;
-    var modal = $(element).data('modal');
-    var data = {
-        'status': 'modal',
-        'modal': modal
+$(document).ready(function(){
+    comments = [
+        {"name": "dios", "comment": "test", "date": "Mon Nov 14 2022 01:00:22"},
+        {"name": "stella", "comment": "test 123", "date": "Mon Nov 14 2022 01:00:22"}
+    ];
+    for (idx in comments) {
+        comment = comments[idx];
+        $('section.comment-outer .comments').append('<div class="comment aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000"><div class="comment-head"><p><strong>' + comment.name + '</strong> <i class="fas fa-check"></i></p></div><div class="comment-body"><p>' + comment.comment + '</p></div><div class="comment-foot"><small>' + comment.date + '</small></div></div>');
     }
-
-    // Delete Comment
-    if (modal == 'delete_comment') {
-        var comment = $(element).data('comment');
-        data['comment'] = comment;
-    }
-
-    ajaxCall(data, function(result){
-        if (result.modal != '') {
-            openModal(result['modal']);
-        }
-
-    });
-
 });
-
-// ---------- Deleting [ON CLICK] --------------------------------------------------
-$(document).on('click', '[data-delete]', function(e){
-    e.preventDefault();
-    var element = this;
-    var status = $(element).data('delete');
-    var data = {
-        'status': status
-    };
-
-    if (status == 'delete_comment') {
-        var comment = $(element).data('comment');
-        data['comment'] = comment;
-    }
-
-    ajaxCall(data, function(result){
-        if (result.callback == 'comment') {
-            closeModal();
-            showAlert(result.message, 'success');
-            allComments();
-            load_comment();
-        }
-    });
-
-});
-
-// ---------- All Comments (Function) --------------------------------------------------
-var allComments = (function comment(){
-    var data = {
-        'status': 'all_comments',
-    }
-    ajaxCall(data, function(result){
-        $('.comments').html('');
-        $('.comments').append(result.comments);
-        if (result.more != '') {
-            $('.comment-inner .foot').html('');
-            $('.comment-inner .foot').append(result.more);
-        }
-    });
-    return comment;
-}());
-
-// ---------- Comment Form [ON SUBMIT] --------------------------------------------------
-$(document).on('submit', '#comment-form', function(e){
-    e.preventDefault();
-    var form = $(this);
-    var data = $(this).serialize();
-    var comment = $(this).find('[name="comment"]');
-    if (comment.val() == '') {
-        comment.focus();
-    } else {
-        ajaxCall(data, function(result){
-            $(form).trigger('reset');
-            showAlert(result.message, 'success');
-            allComments();
-        });
-    }
-    return false;
-});
-
-// ---------- More Comment --------------------------------------------------
-$(document).on('click', '.more-comment', function(e){
-    e.preventDefault();
-    var lastComment = $(this).data('last-comment');
-    var data = {
-        'status': 'more_comments',
-        'last_comment': lastComment,
-    }
-    $(this).html('Loading... <i class="fas fa-spinner fa-spin"></i>');
-    ajaxCall(data, function(result){
-        $('.comment-inner .foot').html('');
-        $('.more-comment').html('Show more comments');
-        if (result.comments != '') {
-            $('.comments').append(result.comments);
-        }
-        if (result.more != '') {
-            $('.comment-inner .foot').append(result.more);
-        }
-    });
-});
-
-
 
 // Post Comment
 var post_comment = function(e) {
@@ -597,91 +371,6 @@ var post_comment = function(e) {
 
     postData(data, onSuccess, onError, beforeSend);
 }
-
-$(document).on('submit', 'form#weddingWishForm', post_comment);
-
-
-// Load Comment
-var load_comment = function() {
-    var data = new FormData();
-    data.append('post', 'loadComment');
-
-    var template = $('.wedding-wish-wrap').attr('data-template');
-    if (template != '') data.append('template', template);
-
-    var onSuccess = function(res) {
-        if (res.commentItems) $('.comment-wrap').addClass('show').html(res.commentItems);
-
-        if (!res.commentItems) $('.comment-wrap').removeClass('show');
-
-        if (res.nextComment && res.nextComment != 0) {
-            $('.more-comment-wrap').addClass('show');
-            $('#moreComment').attr('data-start', res.nextComment);
-        }
-
-        if (!res.nextComment) {
-            $('.more-comment-wrap').removeClass('show');
-            $('#moreComment').attr('data-start', 0);
-        }
-    }
-
-    postData(data, onSuccess);
-}
-
-setTimeout(() => { load_comment(); }, 500);
-
-
-// More Comment
-var more_comment = function(e) {
-    e.preventDefault();
-    var me = this;
-    var meText = $(me).html();
-    var start = $(this).attr('data-start');
-    var loadText = $(this).attr('data-load-text');
-    var template = $(this).attr('data-template');
-
-    if (loadText == '') loadText = "Loading";
-
-    if (start != '') {
-
-        var data = new FormData();
-        data.append('post', 'moreComment');
-        data.append('start', start);
-        data.append('template', template);
-
-        var onSuccess = function(res) {
-            if (res.commentItems) $('.comment-wrap').addClass('show').append(res.commentItems);
-
-            if (res.nextComment && res.nextComment != 0) {
-                $('.more-comment-wrap').addClass('show');
-                $(me).attr('data-start', res.nextComment);
-            }
-
-            if (!res.nextComment) {
-                $('.more-comment-wrap').removeClass('show');
-                $(me).attr('data-start', 0);
-            }
-
-            afterSend();
-        }
-
-        var onError = function(res=null) { afterSend(); }
-
-        var afterSend = function() {
-            $(me).prop('disabled', false).html(meText);
-        }
-
-        var beforeSend = function() {
-            $(me).prop('disabled', true).html(loadText + " <i class='fas fa-spinner fa-spin'></i>");
-        }
-
-        postData(data, onSuccess, onError, beforeSend);
-    }
-}
-
-$(document).on('click', '#moreComment', more_comment);
-
-
 
 /*  ==============================
         MUSIC
@@ -852,6 +541,7 @@ $(document).ready(function(){
     var width = div.width();
 
     div.css('height', width * 0.666);
+//    sendComment({"name": "xyz","comment": "abc"});
 });
 
 
@@ -1078,7 +768,6 @@ function startSliderSyncing() {
 
         $(sliderSyncingPreview).slick(sliderSyncingPreviewOptions);
         $(sliderSyncingNav).slick(sliderSyncingNavOptions);
-
     }
 }
 
@@ -1165,7 +854,6 @@ function gallerySingleSlider() {
     }
 }
 
-
 // KAT GALLERY MODERN
 function galleryKatModern() {
     if (typeof window.GALLERY_MODERN != 'undefined' && window.GALLERY_MODERN === true) {
@@ -1244,40 +932,38 @@ function galleryKatModern() {
     }
 }
 
-
-
 /*  ==============================
         OTHERS
 ============================== */
 // ---------- Modal Video ---------------------------------------------------------------
 var modal_video_options = {
-        youtube: {
-                autoplay: 1,
-                cc_load_policy: 1,
-                color: null,
-                controls: 1,
-                disableks: 0,
-                enablejsapi: 0,
-                end: null,
-                fs: 1,
-                h1: null,
-                iv_load_policy: 1,
-                // list: null,
-                listType: null,
-                loop: 0,
-                modestbranding: null,
-                mute: 0,
-                origin: null,
-                // playlist: null,
-                playsinline: null,
-                rel: 0,
-                showinfo: 1,
-                start: 0,
-                wmode: 'transparent',
-                theme: 'dark',
-                nocookie: false,
-            }
-    };
+    youtube: {
+        autoplay: 1,
+        cc_load_policy: 1,
+        color: null,
+        controls: 1,
+        disableks: 0,
+        enablejsapi: 0,
+        end: null,
+        fs: 1,
+        h1: null,
+        iv_load_policy: 1,
+        // list: null,
+        listType: null,
+        loop: 0,
+        modestbranding: null,
+        mute: 0,
+        origin: null,
+        // playlist: null,
+        playsinline: null,
+        rel: 0,
+        showinfo: 1,
+        start: 0,
+        wmode: 'transparent',
+        theme: 'dark',
+        nocookie: false,
+    }
+};
 
 
 $('.play-btn').modalVideo(modal_video_options);
@@ -1319,13 +1005,11 @@ $(window).on("scroll", function () {
     AOS.init(AOSOptions);
 });
 
-
 // ---------- LIGHT GALLERY --------------------------------------------------
 $(function(){
     lightGallery(document.getElementById('lightGallery'), {
         download: false,
     });
-
     showGalleries();
 });
 
@@ -1337,193 +1021,6 @@ function showGalleries() {
         });
     });
 };
-
-
-
-/*  ================================================
-        RSVP Functions
-============================================= */
-
-// Function RSVP Init
-var fn_rsvp_init = function() {
-
-    var post, request, content, template, changeButton;
-
-    if (typeof window.RSVP_DATA != 'undefined') {
-        post = window.RSVP_DATA.post;
-        request = window.RSVP_DATA.request;
-        content = window.RSVP_DATA.content;
-        template = window.RSVP_DATA.template;
-        changeButton = window.RSVP_DATA.changeButton;
-    }
-
-    var changeRSVPText = $(changeButton).html();
-
-    // Data
-    var data = new FormData();
-    data.append('post', post);
-    data.append('request', request);
-    data.append('content', content);
-    data.append('template', template);
-
-    var onSuccess = function(res) {
-        if (res.rsvp_content && res.rsvp_content != '') {
-            $('.rsvp-body').html(res.rsvp_content);
-
-            // RSVP Status
-            if ( $('input[type="radio"][name="rsvp_status"]:checked').length == 0 ) {
-                $('input[type="radio"][name="rsvp_status"]').eq(0).trigger('click');
-            }
-        }
-
-        $(changeButton).html(changeRSVPText).prop('disabled', false);
-    }
-
-    var onError = function(res=null) {
-        $(changeButton).html(changeRSVPText).prop('disabled', false);
-    }
-
-    var beforeSend = function() {
-        $(changeButton).html(changeRSVPText + " <i class='fas fa-spinner fa-spin'></i>").prop('disabled', true);
-    }
-
-    postData(data, onSuccess, onError, beforeSend);
-}
-
-
-// Function RSVP Change
-var fn_rsvp_change = function(e) {
-    e.preventDefault();
-
-    if (typeof window.RSVP_DATA != 'undefined') {
-        window.RSVP_DATA.content = 'rsvp_form';
-
-        if (typeof fn_rsvp_init === 'function') fn_rsvp_init();
-
-        window.RSVP_DATA.content = '';
-    }
-}
-
-$(document).on('click', '#changeRSVP', fn_rsvp_change);
-
-
-// Function RSVP Form
-var fn_rsvp_form = function(e) {
-    e.preventDefault();
-
-    var data = new FormData(this);
-    var form = this;
-
-    var submitButton = $(form).find('button.submit');
-    var submitText = $(submitButton).html();
-
-    var onSuccess = function(res) {
-        if (res.rsvp_content && res.rsvp_content != '') $('.rsvp-body').html(res.rsvp_content);
-        afterSend();
-    }
-
-    var onError = function(res=null) { afterSend(); }
-
-    var afterSend = function() {
-        $(form).find('input, button').prop('disabled', false);
-        $(submitButton).html( submitText );
-    }
-
-    var beforeSend = function() {
-        $(form).find('input, button').prop('disabled', true);
-        $(submitButton).html( submitText + " <i class='fas fa-spinner fa-spin'></i>" );
-    }
-
-    postData(data, onSuccess, onError, beforeSend);
-}
-
-$(document).on('submit', 'form#RSVPForm', fn_rsvp_form);
-
-
-// Function RSVP Amount Toggle
-var fn_rsvp_amount_toggle = function(e) {
-    e.preventDefault();
-    if (typeof window.RSVP_DATA != 'undefined') {
-        if ( $(this).val() == 'going' ) {
-            $(window.RSVP_DATA.amountElement).slideDown('slow');
-        } else {
-            $(window.RSVP_DATA.amountElement).slideUp('slow');
-        }
-    }
-}
-
-$(document).on('change', 'input[type="radio"][name="rsvp_status"]', fn_rsvp_amount_toggle);
-
-
-// Document on Ready
-$(document).ready(function(){
-
-    if (typeof fn_rsvp_init === 'function') fn_rsvp_init();
-
-});
-
-
-
-/*  ================================================
-        DOCUMENT [ON READY]
-============================================= */
-$(document).ready(function(){
-
-    // ---------- URLify --------------------------------------------------
-    $('p').each(function(i, el) {
-        el.innerHTML = urlify(el.innerHTML);
-    });
-
-    // // ---------- Make Textarea getting small --------------------------------------------------
-    // $.each($('textarea'), function(i, textarea){
-    //     textarea.style.height = '1px';
-    // });
-
-    // ---------- Checking the Quantity Control value --------------------------------------------------
-    $('[data-quantity="control"]').each(function(i, input){
-        var max = $(input).attr('max');
-        var value = $(input).val();
-
-        // If value is greater than max
-        if (value >= max) $(input).val(max);
-
-        // If value lower than 0
-        if (value < 0) $(input).val(1);
-    });
-
-    // ---------- Check nominal (Wedding Gift) value --------------------------------------------------
-    $('#gift-btn').on('click', function(e){
-        e.preventDefault();
-        $('#gift-form').show();
-        $('#gift-form').removeClass('aos-animate');
-        setTimeout(function() {
-            $('#gift-form').addClass('aos-animate');
-        }, 400);
-    });
-
-    // ---------- Attendance Toggling --------------------------------------------------
-    $.each($('input[name="attendance"]'), function(i, input){
-        attendanceToggle(input);
-    });
-
-    // ---------- RSVP INNER --------------------------------------------------
-    var rsvpInner = $('.rsvp-inner');
-    if ($(rsvpInner).hasClass('come')) {
-        // If RSVP Inner has 'come' class
-        $(rsvpInner).find('.rsvp-form').fadeOut();
-        $(rsvpInner).find('.rsvp-confirm').fadeIn();
-    }
-    if ($(rsvpInner).hasClass('not-come')) {
-        // If RSVP Inner has 'not-come' class
-        $(rsvpInner).find('.rsvp-form').fadeOut();
-        $(rsvpInner).find('.rsvp-confirm').fadeIn();
-    }
-    if ($(rsvpInner).hasClass('no-news')) {
-        // If RSVP Inner has 'no-news' class
-        $(rsvpInner).find('.rsvp-form').fadeIn();
-        $(rsvpInner).find('.rsvp-confirm').fadeOut();
-    }
-});
 
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1),
