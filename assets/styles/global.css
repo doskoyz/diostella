@@ -329,7 +329,7 @@ body.nanda-special {
     --bg-countdown: url("../images/bg-count.jpeg");
     --bg-groom: url("https://katsudoto.id/media/template/nanda/01/bg-groom.png");
     --bg-bride: url("https://katsudoto.id/media/template/nanda/01/bg-bride.png");
-    --bg-palace: url("https://katsudoto.id/media/template/nanda/01/palace.png");
+    --bg-footer: url("../images/footer.jpeg");
 
 }
 
@@ -2160,7 +2160,7 @@ section.protocol-04 .protocol-item-wrap .protocol-item .text-wrap .text {
     height: 60px;
     cursor: pointer;
 
-    background-image: url("https://katsudoto.id/media/template/details/music.png");
+    background-image: url("../images/song.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;

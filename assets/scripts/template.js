@@ -2,7 +2,7 @@
     GENERAL CONFIGURATION
 ============================================= */
 window.MUSIC = {
-        'url': "https://github.com/doskoyz/diostella/blob/135db43bd1b05f4adec0edb8ab816cbcbe6a1a87/background.mp3?raw=true",
+        'url': "../assets/music/song.mp3",
         'box': '#music-box'
     };
 window.EVENT = 1670641200;
