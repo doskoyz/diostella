@@ -97,6 +97,16 @@ $(document).on('click', '.copy-account', function(e){
     copyToClipboard(number.html());
 });
 
+// ---------- Wedding gift ---------------------------------------------------------------------------
+$('#gift-btn').on('click', function(e){
+    e.preventDefault();
+    $('#gift-form').show();
+    $('#gift-form').removeClass('aos-animate');
+    setTimeout(function() {
+        $('#gift-form').addClass('aos-animate');
+    }, 400);
+});
+
 // ---------- Disabled Dragging an image [ON DRAGSTART] -----------------------------------------------
 $('img').on('dragstart', function(e){
     e.preventDefault();
