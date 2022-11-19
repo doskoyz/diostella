@@ -12,13 +12,8 @@
 }
 
 body {
-
     /* Body Height */
     --body-height: 100vh;
-
-    /* Font Family */
-    --ff-01: 'Ventura Times';
-    --ff-02: 'Elsie Swash Caps';
 
     /* Color */
     --font-clr: #464646;
@@ -103,20 +98,20 @@ body font {
 }
 .top-cover .inner .details .text-01 {
     text-align: center;
-    font-family: "Moon Time";
-    font-size: calc(var(--fs-cover) + 72px);
+    font-size: 100px;
+    font-family: var(--caramel);
     color: var(--font-clr);
 }
 .top-cover .inner .details .text-02 {
     text-align: center;
-    font-family: var(--ff-02);
-    font-size: calc(var(--fs-cover));
+    font-family: var(--montserrat);
+    font-size: calc(var(--fs-cover) - 10px);
     color: var(--font-clr);
 }
 
 .top-cover .inner .details .text-03 {
     text-align: center;
-    font-family: var(--ff-02);
+    font-family: var(--montserrat-bold);
     font-size: calc(var(--fs-cover));
     color: var(--font-clr);
 }
@@ -126,17 +121,16 @@ body font {
     bottom: 5%;
 }
 .top-cover .inner .details .link-01 {
-    font-family: var(--ff-01);
-    /* font-size: 20px; */
+    font-size: 20px;
     font-size: var(--fs-sub-title);
-    line-height: calc(var(--fs-sub-title) + 5px);
     text-decoration: none;
     background-color: var(--wood-clr);
     display: inline-block;
-    padding: 0em 0.5em;
+    padding: 0.5em 0.5em;
     border-radius: 50px;
     margin: 0;
     color: var(--white-clr);
+    font-family: var(--montserrat-bold);
     box-shadow: -1px 1px 5px rgba(var(--rgb-primary-clr), 0.3);
     transition: all 0.35s ease-in-out;
 }
@@ -299,7 +293,6 @@ body font {
 }
 .cover .cover-inner .cover-bridegroom .text-01,
 .cover .cover-inner .cover-bridegroom .text-02 {
-    font-family: "Ventura Times";
     font-size: 36px;
     line-height: 30px;
     letter-spacing: 2px;
@@ -309,20 +302,17 @@ body font {
     font-size: 12px;
 }
 .cover .cover-inner .title-01 {
-    font-family: "Elsie Swash Caps";
-    font-size: 65px;
+    font-size: 70px;
     color: var(--white-clr);
+    font-family: var(--caramel);
     margin: .15em 0 .1em 0;
     font-weight: 500;
 }
 .cover .cover-inner .cover-greet .text-01 {
-    font-size: 36px;
-    line-height: 30px;
-    letter-spacing: 2px;
+    font-size: 30px;
     display: inline-block;
-    text-transform: capitalize;
     color: var(--font-clr);
-    font-family: "Ventura Times";
+    font-family: var(--cinzel);
 }
 
 /* Greetings */
@@ -331,8 +321,7 @@ body font {
     padding: 20px 0;
 }
 .greetings .orn.orn-02 {
-    width: 100%;
-    height: 75px;
+    height: 100px;
     background-image: var(--orn-02);
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -347,26 +336,18 @@ body font {
 }
 .greetings .title-01 {
     font-size: var(--fs-greeting);
-
-    font-family: "Elsie Swash Caps";
+    font-family: var(--montserrat);
     font-weight: 500;
     color: var(--white-clr);
     position: relative;
     margin-bottom: 0.15em;
 }
 .greetings .text-01 {
-    font-family: "Ventura Times";
     font-size: calc(var(--fs-sub-title) - 2px);
+    font-family: var(--montserrat);
     color: var(--white-clr);
     /* line-height: 30px; */
     letter-spacing: 1px;
-}
-@media only screen and (max-width: 380px) {
-
-    .greetings .text-01 > br {
-        display: none;
-    }
-
 }
 
 /* BRIDEGROOM */
@@ -396,18 +377,11 @@ section.bridegroom .bridegroom-inner .head {
     margin-bottom: 10px;
 }
 section.bridegroom .bridegroom-inner .head .text-01 {
-    font-family: "Ventura Times";
     font-size: 36px;
     line-height: 30px;
     font-style: italic;
     color: var(--font-clr);
     letter-spacing: 1px;
-}
-@media only screen and (max-width: 420px) {
-    section.bridegroom .bridegroom-inner .head .text-01 > br {
-        display: none;
-    }
-
 }
 
 /* BODY */
@@ -469,7 +443,7 @@ section.bridegroom .bridegroom-inner .head .text-01 {
     font-size: 100px;
     font-weight: 500;
     color: rgba(var(--rgb-secondary-dark-clr), 0.7);
-    font-family: "Elsie Swash Caps";
+    font-family: var(--caramel);
     margin: 20px;
 }
 /* Details */
@@ -478,7 +452,6 @@ section.bridegroom .bridegroom-inner .head .text-01 {
     text-align: center;
 }
 .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
-    font-family: "Elsie Swash Caps";
     font-size: 40px;
     line-height: 50px;
     font-weight: 500;
@@ -487,19 +460,18 @@ section.bridegroom .bridegroom-inner .head .text-01 {
     letter-spacing: 1px;
 }
 .bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
-    font-family: "Ventura Times";
-    font-size: 32px;
-    line-height: 26px;
-    letter-spacing: 1px;
+    font-family: var(--montserrat-bold);
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: -1px;
     color: var(--wood-clr);
 }
 .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
     text-decoration: none;
-    font-family: "Ventura Times";
-    font-size: 32px;
+    font-family: var(--montserrat);
+    font-size: 26px;
     line-height: 26px;
     letter-spacing: 1px;
-    font-style: italic;
     color: var(--wood-clr);
     display: flex;
     align-items: center;
@@ -542,14 +514,11 @@ section.save-date .inner .head {
     width: 100%;
 }
 section.save-date .inner .head .title-01 {
-    font-family: "Elsie Swash Caps";
-    font-size: 46px;
-    line-height: 44px;
-    letter-spacing: 1px;
+    font-family: var(--caramel);
+    font-size: 72px;
     color: var(--font-clr);
 }
 section.save-date .inner .head .text-01 {
-    font-family: "Ventura Times";
     font-size: 32px;
     line-height: 28px;
     letter-spacing: 1px;
@@ -562,7 +531,7 @@ section.save-date .inner .head .text-01 sup {
 /* BODY */
 section.save-date .inner .body {
     background: transparent;
-    margin-top: 20%;
+    margin-top: 21%;
 }
 /* SCHEDULE */
 section.save-date .inner .body .schedule {
@@ -592,15 +561,15 @@ section.save-date .inner .body .schedule .countdown .countdown-time {
     justify-content: center;
 }
 section.save-date .inner .body .schedule .countdown .countdown-time h1 {
-    font-family: "Elsie Swash Caps";
+    font-family: var(--cinzel);
     font-size: 45px;
     line-height: 50px;
     color: var(--font-clr);
 }
 section.save-date .inner .body .schedule .countdown .countdown-time small {
-    font-family: "Ventura Times";
+    font-family: var(--montserrat);
     font-size: 25px;
-    letter-spacing: 1px;
+    letter-spacing: -1px;
     color: var(--font-clr);
 }
 section.save-date .inner .foot {
@@ -611,7 +580,6 @@ section.save-date .inner .foot {
 section.save-date .inner .foot .link-01 {
     background: #fff;
     color: var(--font-clr-rev);
-    font-family: "Ventura Times";
     font-size: 32px;
     line-height: 28px;
     letter-spacing: 1px;
@@ -664,7 +632,6 @@ body.toska section.save-date .inner .foot .link-01:hover {
 }
 .love-story .inner .title h1 {
     font-size: 60px;
-    font-family: "Elsie Swash Caps";
     font-weight: 500;
     color: var(--olive-clr);
     display: inline-block;
@@ -767,25 +734,29 @@ body.toska section.save-date .inner .foot .link-01:hover {
 .love-story .inner .timeline .story .content .content-inner h2 {
     margin-bottom: .15em;
     font-size: 40px;
-    line-height: 38px;
-    font-family: "Elsie Swash Caps";
+    line-height: 45px;
     color: var(--olive-clr);
+    font-family: var(--montserrat-bold);
 }
 .love-story .inner .timeline .story .content .content-inner p {
-    line-height: 25px;
-    font-size: 26px;
+    line-height: 28px;
+    font-size: 24px;
+    font-weight: bold;
     letter-spacing: 1px;
-    font-family: "Ventura Times";
     color: var(--olive-clr);
+    font-family: var(--montserrat);
 }
 .love-story .inner .timeline .story:nth-child(even) .content .content-inner h2,
 .love-story .inner .timeline .story:nth-child(even) .content .content-inner p {
     color: var(--white-clr);
 }
 
-
-
 /* GALLERY */
+#lightGallery {
+    width: 98%;
+    max-height: 400px;
+    overflow-y: auto;
+}
 .gallery-wrapper {
     background-color: #fff;
     padding: 0;
@@ -811,7 +782,6 @@ section.video-gallery .inner .video-outer {
     letter-spacing: 1px;
     font-weight: 500;
     line-height: 36px;
-    font-family: "Ventura Times";
     color: var(--olive-clr);
 }
 
@@ -889,13 +859,12 @@ section.video-gallery .inner .video-outer {
     letter-spacing: 2px;
     font-weight: 500;
     margin-bottom: .15em;
-    font-family: "Ventura Times";
+    font-family: var(--caramel);
     color: var(--font-clr);
 }
 .event-outer .event-inner .head > .title p {
     font-size: 34px;
     line-height: 24px;
-    font-family: "Ventura Times";
     font-style: italic;
     color: var(--font-clr);
 }
@@ -920,14 +889,12 @@ section.video-gallery .inner .video-outer {
     line-height: 60px;
     letter-spacing: 2px;
     font-weight: 500;
-    font-family: "Ventura Times";
     margin-bottom: -0.25em;
     color: var(--font-clr);
 }
 .event-inner .event > .title p {
     font-size: 50px;
     line-height: 50px;
-    font-family: "Ventura Times";
     color: var(--font-clr);
 }
 .event-inner .event > .title p > sup {
@@ -966,7 +933,6 @@ section.video-gallery .inner .video-outer {
 .event-outer .event-inner .body .event > .details .address p {
     font-size: 16px;
     margin-bottom: .35em;
-    font-family: "Ebrima Regular";
     color: var(--white-clr);
 }
 .event-outer .event-inner .body .event > .details a {
@@ -979,7 +945,6 @@ section.video-gallery .inner .video-outer {
     border-radius: 7px;
     font-size: 14px;
     transition: all 0.2s ease-in-out;
-    font-family: "Ebrima Regular";
 }
 .event-outer .event-inner .body .event > .details a:hover {
     background: var(--secondary-clr);
@@ -992,7 +957,7 @@ section.video-gallery .inner .video-outer {
 }
 .event-inner .event .activities .activity {
     border-radius: 7px;
-    width: 470px;
+    width: 485px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1020,13 +985,11 @@ section.video-gallery .inner .video-outer {
     line-height: 45px;
     font-weight: 500;
     color: var(--olive-clr);
-    font-family: "Elsie Swash Caps";
     margin-bottom: 0.2em;
 }
 .event-inner .event .activities .activity .title p {
     font-size: 32px;
     line-height: 28px;
-    font-family: "Ventura Times";
     color: var(--olive-clr);
     font-style: italic;
 }
@@ -1037,7 +1000,6 @@ section.video-gallery .inner .video-outer {
     margin-bottom: .2em;
     font-size: 32px;
     line-height: 28px;
-    font-family: "Ventura Times";
     color: var(--olive-clr);
 }
 .event-inner .event .activities .activity .address p:first-child {
@@ -1051,7 +1013,6 @@ section.video-gallery .inner .video-outer {
     border-radius: 7px;
     font-size: 32px;
     line-height: 28px;
-    font-family: "Ventura Times";
     margin: 15px auto;
     display: inline-block;
     transition: all 0.2s ease-in-out;
@@ -1081,10 +1042,9 @@ section.live-streaming > .inner > .title {
     text-align: center;
 }
 section.live-streaming > .inner > .title > h1 {
-    font-family: "Elsie Swash Caps";
-    font-size: 46px;
+    font-family: var(--cinzel);
+    font-size: 52px;
     line-height: 44px;
-    font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 0.15em;
     color: var(--olive-clr);
@@ -1096,7 +1056,7 @@ section.live-streaming > .inner > .body {
 section.live-streaming > .inner > .body > .preview {
     position: relative;
     width: 100%;
-    height: 360px;
+    height: 560px;
 }
 section.live-streaming > .inner > .body > .preview > img {
     width: 100%;
@@ -1136,17 +1096,14 @@ section.live-streaming > .inner > .foot {
 }
 section.live-streaming > .inner > .foot > p {
     font-size: 32px;
-    font-family: "Ventura Times";
+    font-family: var(--montserrat);
     line-height: 28px;
     color: var(--olive-clr);
 }
 
-
-
-
 /* Gift */
 section.gift {
-    padding: 20px 20px 70px 20px;
+    padding: 20px 20px 20px 20px;
     background-color: var(--tertiary-clr);
 }
 .gift .gift-inner {
@@ -1167,18 +1124,16 @@ section.gift .bank-detail .saving-books .book {
     padding: 20px;
 }
 section.gift .gift-inner .gift-title h1 {
-    font-family: "Elsie Swash Caps";
-    font-size: 46px;
-    line-height: 44px;
-    font-weight: 600;
+    font-family: var(--caramel);
+    font-size: 48px;
+    line-height: 52px;
     letter-spacing: 1px;
     margin-bottom: 0.25em;
     color: var(--olive-clr);
 }
 section.gift .gift-inner .gift-title p {
     font-size: 32px;
-    letter-spacing: 1px;
-    font-family: "Ventura Times";
+    font-family: var(--montserrat);
     line-height: 28px;
     color: var(--olive-clr);
 }
@@ -1187,7 +1142,6 @@ section.gift .gift-inner .gift-form {
 }
 section.gift .bank-detail .saving-books .book p,
 section.gift .bank-detail .saving-books .book span {
-    font-family: "Ventura Times";
     font-size: 32px;
     line-height: 28px;
     letter-spacing: 1px;
@@ -1237,7 +1191,6 @@ section.gift .bank-detail .saving-books .book span {
 #gift-form textarea,
 #gift-form div,
 #gift-form button {
-    font-family: "Ventura Times";
     font-size: 26px;
     letter-spacing: 1px;
     line-height: 28px;
@@ -1253,7 +1206,6 @@ section.gift .bank-detail .saving-books .book span {
     border-radius: 7px;
     font-size: 32px;
     line-height: 28px;
-    font-family: "Ventura Times";
     margin: 15px auto;
     display: inline-block;
     transition: all 0.2s ease-in-out;
@@ -1323,7 +1275,6 @@ section.gift .bank-detail .saving-books .book span {
     margin-bottom: 0;
 }
 .comment-outer .comment-inner h1 {
-    font-family: "Elsie Swash Caps";
     font-size: 46px;
     line-height: 44px;
     letter-spacing: 1px;
@@ -1331,7 +1282,6 @@ section.gift .bank-detail .saving-books .book span {
     margin-bottom: 0;
 }
 .comment-outer .comment-inner .comments .comment .comment-head p >  strong {
-    font-family: "Ventura Times";
     font-size: 34px;
     letter-spacing: 1px;
     line-height: 28px;
@@ -1340,13 +1290,11 @@ section.gift .bank-detail .saving-books .book span {
     font-size: 18px;
 }
 .comment-outer .comment-inner .comments .comment p {
-    font-family: "Ventura Times";
     font-size: 22px;
     letter-spacing: 1px;
     line-height: 22px;
 }
 .comment-outer .comment-inner .comments .comment small {
-    font-family: "Ventura Times";
     font-size: 20px;
     letter-spacing: 1px;
     line-height: 18px;
@@ -1360,9 +1308,6 @@ section.gift .bank-detail .saving-books .book span {
     overflow-y: scroll;
 }
 
-.comment-outer .comment-inner .comment-form * {
-    font-family: "Ventura Times";
-}
 .comment-outer .comment-inner .comment-form input {
     font-size: 24px;
     line-height: 18px;
@@ -1378,7 +1323,6 @@ section.gift .bank-detail .saving-books .book span {
     font-size: 26px;
     line-height: 18px;
     background: #878787;
-    font-family: "Ventura Times";
 }
 .comment-outer .comment-inner .comment-form button:hover,
 .comment-outer .comment-inner .foot .more-comment:hover {
@@ -1433,7 +1377,6 @@ section.quote .inner {
 }
 section.quote .inner p.text-01,
 section.quote .inner p.text-02 {
-    font-family: "Ventura Times";
     font-size: 32px;
     line-height: 28px;
     letter-spacing: 2px;
@@ -1465,23 +1408,20 @@ section.footnote .inner {
     margin: 0 auto;
 }
 section.footnote .inner p {
-    font-family: "Ventura Times";
     font-size: 32px;
-    line-height: 28px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-family: var(--montserrat);
     color: var(--olive-clr);
 }
 section.footnote .inner p sup {
-    font-size: 12px;
+    font-size: 14px;
 }
 section.footnote .inner h1 {
-    font-family: "Elsie Swash Caps";
     font-size: 60px;
     font-weight: 500;
     line-height: 50px;
     margin: 20px 0;
     color: var(--olive-clr);
+    font-family: var(--caramel);
 }
 
 /* =====================================
@@ -1514,126 +1454,11 @@ section.footnote .inner h1 {
     1124px
    =====================================*/
 @media only screen and (max-width: 1124px) {
-
+    .top-cover .inner .details .text-01 {
+        font-size: 70px;
+    }
     .cover .cover-inner .cover-picture .cover-show {
         width: 85vw;
-    }
-
-}
-@media only screen and (max-width: 800px) {
-    /* cover */
-    .top-cover > .cover-show .picture-outer img {
-        background-image: var(--bg-opening-mobile);
-    }
-
-    .top-cover .inner .details {
-        width: 100%;
-        padding: 20px 10px;
-    }
-
-    .top-cover .inner {
-        align-items: center;
-    }
-
-    /* BrideGroom */
-    .bridegroom .bridegroom-inner .body {
-        padding: 0;
-    }
-    .bridegroom .bridegroom-inner .body .groom,
-    .bridegroom .bridegroom-inner .body .bride {
-        width: 100%;
-    }
-    .bridegroom .bridegroom-inner .body .bridegroom-separator {
-        margin: 0;
-    }
-
-    /* Event */
-    .event-outer .event-inner .orn.orn-06 {
-        width: 80%;
-    }
-    .event-outer .event-inner .orn.orn-07 {
-        width: 70%;
-    }
-    .event-outer .event-inner .head > .title {
-        width: 100%;
-    }
-    .event-inner .event > .title {
-        width: 100%;
-    }
-
-    /* Save The Date */
-    section.save-date .inner {
-        width: 100%;
-    }
-
-    /* FOOTNOTE & QUOTE */
-    section.footnote .inner,
-    section.quote .inner {
-        width: 100%;
-    }
-
-    section#start {
-        height: 70%;
-    }
-
-    section#start {
-        height: 70%;
-    }
-
-    section.greetings {
-        height: 30%;
-    }
-
-    section.save-date {
-        height: 350px;
-    }
-
-    section.save-date .inner .body .schedule .countdown .countdown-time {
-        width: 80px;
-        height: 80px;
-        margin: 5px 10px;
-    }
-    section.save-date .inner .body .schedule .countdown .countdown-time h1 {
-        font-size: 30px;
-        line-height: 26px;
-    }
-    section.save-date .inner .body .schedule .countdown .countdown-time small {
-        font-size: 18px;
-        letter-spacing: 1px;
-    }
-}
-/* =====================================
-    720px
-   =====================================*/
-@media only screen and (max-width: 720px) {
-    /* Love Story */
-    .love-story .inner .title h1::before {
-        right: 100%;
-    }
-    .love-story .inner .title h1::after {
-        left: 100%;
-    }
-
-    /* Video */
-    .live-streaming .inner .body {
-        padding: 0;
-        width: 100%;
-    }
-    .live-streaming .inner .body .preview {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Gift */
-    .gift .gift-inner,
-    .gift .gift-inner .gift-form {
-        width: 100%;
-    }
-
-
-    /* LAST ORNAMENT */
-    section.last-orn .orn.orn-08 {
-        width: 80vw;
     }
 
 }
@@ -1651,9 +1476,9 @@ section.footnote .inner h1 {
         /* margin-bottom: 5px; */
     }
     .cover .cover-inner .cover-greet .text-01 {
-        font-size: 28px;
-        line-height: 24px;
-        letter-spacing: 2px;
+        font-size: 25px;
+        line-height: 22px;
+        letter-spacing: 0.5px;
     }
     .cover .cover-inner .cover-picture {
         margin: 20px auto;
@@ -1674,15 +1499,12 @@ section.footnote .inner h1 {
         font-size: 8px;
     }
     .cover .cover-inner .title-01 {
-        font-size: 45px;
+        font-size: 55px;
     }
     /* Greetings */
     .greetings .orn.orn-02 {
-        /* width: 275px;
-        height: 80px; */
+        height: 80px;
     }
-
-
     /* BrideGroom */
     section.bridegroom .bridegroom-inner {
         padding: 0px;
@@ -1758,10 +1580,156 @@ section.footnote .inner h1 {
     .quote-wrapper {
         padding-bottom: 100px;
     }
-
-
 }
 
+@media only screen and (max-width: 800px) {
+    /* cover */
+    .top-cover .inner .details .text-01 {
+        font-size: 60px;
+    }
+
+    .cover .cover-inner .cover-greet .text-01 {
+        font-size: 22px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+    }
+
+    .top-cover > .cover-show .picture-outer img {
+        background-image: var(--bg-opening-mobile);
+    }
+    .top-cover .inner .details {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    section.live-streaming > .inner > .body > .preview {
+        height: 360px;
+    }
+    /* greetings */
+    .greetings .text-01 {
+        font-size: 24px;
+    }
+
+    .top-cover .inner {
+        align-items: center;
+    }
+
+    /* BrideGroom */
+    .bridegroom .bridegroom-inner .body {
+        padding: 0;
+    }
+    .bridegroom .bridegroom-inner .body .groom,
+    .bridegroom .bridegroom-inner .body .bride {
+        width: 100%;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-separator {
+        margin: 0;
+    }
+
+    /* Event */
+    .event-outer .event-inner .orn.orn-06 {
+        width: 80%;
+    }
+    .event-outer .event-inner .orn.orn-07 {
+        width: 70%;
+    }
+    .event-outer .event-inner .head > .title {
+        width: 100%;
+    }
+    .event-inner .event > .title {
+        width: 100%;
+    }
+
+    /* Save The Date */
+    section.save-date .inner {
+        width: 100%;
+    }
+
+    /* Gift */
+    section.gift .gift-inner .gift-title p {
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+    /* FOOTNOTE & QUOTE */
+    section.footnote .inner,
+    section.quote .inner {
+        width: 100%;
+    }
+
+    section#start {
+        height: 70%;
+    }
+
+    section#start {
+        height: 70%;
+    }
+
+    section.greetings {
+        height: 30%;
+    }
+
+    section.save-date {
+        height: 350px;
+    }
+
+    section.save-date .inner .body .schedule .countdown .countdown-time {
+        width: 80px;
+        height: 80px;
+        margin: 5px 10px;
+    }
+    section.save-date .inner .body .schedule .countdown .countdown-time h1 {
+        font-size: 30px;
+        line-height: 26px;
+    }
+    section.save-date .inner .body .schedule .countdown .countdown-time small {
+        font-size: 16px;
+        letter-spacing: -0.5px;
+    }
+}
+/* =====================================
+    720px
+   =====================================*/
+@media only screen and (max-width: 720px) {
+    .top-cover .inner .details .text-01 {
+        font-size: 55px;
+    }
+    /* Love Story */
+    .love-story .inner .title h1::before {
+        right: 100%;
+    }
+    .love-story .inner .title h1::after {
+        left: 100%;
+    }
+
+    /* Video */
+    .live-streaming .inner .body {
+        padding: 0;
+        width: 100%;
+    }
+    .live-streaming .inner .body .preview {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Save the Date */
+    section.save-date .inner .body .schedule .countdown .countdown-time small {
+        font-size: 14px;
+        letter-spacing: -0.5px;
+    }
+
+    /* Gift */
+    .gift .gift-inner,
+    .gift .gift-inner .gift-form {
+        width: 100%;
+    }
+
+
+    /* LAST ORNAMENT */
+    section.last-orn .orn.orn-08 {
+        width: 80vw;
+    }
+
+}
 
 /* =====================================
     Minimum Tablet Screen
@@ -1771,7 +1739,7 @@ section.footnote .inner h1 {
 @media only screen and (max-width: 600px) {
     /* OPENING */
     .top-cover .inner .details .text-01 {
-        font-size: 60px;
+        font-size: 50px;
     }
 
     .top-cover .inner .details .text-02 {
@@ -1782,17 +1750,21 @@ section.footnote .inner h1 {
         font-size: 20px;
     }
 
+    .top-cover .inner .details .link-01 {
+        font-size: 20px;
+    }
+
     /* COVER */
     .cover .cover-inner .cover-greet {
         width: 80%;
     }
     .cover .cover-inner .title-01 {
-        font-size: 30px;
+        font-size: 40px;
     }
     .cover .cover-inner .cover-greet .text-01 {
-        font-size: 22px;
-        line-height: 22px;
-        letter-spacing: 1.5px;
+        font-size: 18px;
+        line-height: 16px;
+        letter-spacing: 0.5px;
     }
     .cover {
         background-image: var(--bg-knot-mobile);
@@ -1804,6 +1776,13 @@ section.footnote .inner h1 {
         height: 105%;
     }
 
+    /* greetings */
+    .greetings .orn.orn-02 {
+        height: 70px;
+    }
+    .greetings .text-01 {
+        font-size: 18px;
+    }
     /* Bride Groom */
     .bridegroom .bridegroom-inner .body .bridegroom-border::before {
         width: 250px;
@@ -1840,8 +1819,7 @@ section.footnote .inner h1 {
 
     /* Save The Date */
     section.save-date .inner .head .title-01 {
-        font-size: 22px;
-        line-height: 22px;
+        font-size: 28px;
         letter-spacing: 1px;
     }
     section.save-date .inner .head .text-01 {
@@ -1876,8 +1854,8 @@ section.footnote .inner h1 {
         line-height: 22px;
     }
     section.save-date .inner .body .schedule .countdown .countdown-time small {
-        font-size: 18px;
-        letter-spacing: 1px;
+        font-size: 12px;
+        letter-spacing: -0.5px;
     }
     section.save-date .inner .body .calendar #add-calendar {
         font-size: 28px;
@@ -1915,14 +1893,13 @@ section.footnote .inner h1 {
         padding: 130px 20px 30px 20px;
     }
     .love-story .inner .timeline .story .content .content-inner h2 {
-        font-size: 36px;
-        line-height: 40px;
-        font-weight: 500;
+        font-size: 25px;
+        line-height: 35px;
     }
     .love-story .inner .timeline .story .content .content-inner p {
         line-height: 24px;
-        font-size: 28px;
-        letter-spacing: 1px;
+        font-size: 18px;
+        letter-spacing: 0px;
     }
 
     /* Gallery Photo */
@@ -1944,8 +1921,6 @@ section.footnote .inner h1 {
         line-height: 30px;
     }
 
-
-
     /* Live Streaming */
     section.live-streaming .inner .title h1 {
         font-size: 36px;
@@ -1963,8 +1938,8 @@ section.footnote .inner h1 {
         margin-bottom: 0.5em;
     }
     section.gift .gift-inner .gift-title p {
-        font-size: 28px;
-        line-height: 20px;
+        font-size: 20px;
+        line-height: 18px;
     }
     section.gift .bank-detail .saving-books .book p,
     section.gift .bank-detail .saving-books .book span {
@@ -2034,7 +2009,6 @@ section.footnote .inner h1 {
     .event-inner .event > .title p {
         font-size: 24px;
         line-height: 20px;
-        font-family: "Ventura Times";
         color: var(--font-clr);
     }
     .event-inner .event > .title p > sup {
@@ -2134,10 +2108,9 @@ section.footnote .inner h1 {
     /* FOOTNOTE */
     section.footnote .inner p {
         font-size: 26px;
-        line-height: 22px;
     }
     section.footnote .inner p sup {
-        font-size: 7px;
+        font-size: 10px;
     }
     section.footnote .inner h1 {
         font-size: 32px;
@@ -2149,6 +2122,12 @@ section.footnote .inner h1 {
     }
 }
 
+@media only screen and (max-width: 420px) {
+    section.bridegroom .bridegroom-inner .head .text-01 > br {
+        display: none;
+    }
+
+}
 
 /* =====================================
     Minimum Phone Screen
@@ -2163,8 +2142,8 @@ section.footnote .inner h1 {
     }
     .cover .cover-inner .cover-greet .text-01 {
         font-size: 14px;
-        line-height: 14px;
-        letter-spacing: 1px;
+        line-height: 12px;
+        letter-spacing: 0.5px;
     }
     .cover .cover-inner .cover-picture .cover-show {
         width: 80vw;
@@ -2183,14 +2162,15 @@ section.footnote .inner h1 {
         font-size: 7px;
     }
     .cover .cover-inner .title-01 {
-        font-size: 22px;
+        font-size: 35px;
     }
     /* Greetings */
     .greetings .orn.orn-02 {
-        /* width: 80vw; */
         height: 50px;
     }
-
+    .greetings .text-01 {
+        font-size: 16px;
+    }
 
     /* Bride Groom */
     section.bridegroom .bridegroom-inner .head .text-01 {
@@ -2226,7 +2206,7 @@ section.footnote .inner h1 {
 
     /* Save The Date */
     section.save-date .inner .head .title-01 {
-        font-size: 26px;
+        font-size: 3px;
         line-height: 30px;
         letter-spacing: 1px;
     }
@@ -2254,8 +2234,7 @@ section.footnote .inner h1 {
         line-height: 28px;
     }
     section.save-date .inner .body .schedule .countdown .countdown-time small {
-        font-size: 14px;
-        letter-spacing: 1px;
+        font-size: 10px;
     }
     section.save-date .inner .body .calendar #add-calendar {
         font-size: 22px;
@@ -2263,10 +2242,6 @@ section.footnote .inner h1 {
         letter-spacing: 1px;
         padding: 8px 24px;
     }
-
-
-
-
     /* Love Story */
     .love-story .inner .title h1 {
         font-size: 30px;
@@ -2299,15 +2274,14 @@ section.footnote .inner h1 {
         padding: 130px 20px 30px 20px;
     }
     .love-story .inner .timeline .story .content .content-inner h2 {
-        font-size: 24px;
+        font-size: 26px;
         line-height: 30px;
     }
     .love-story .inner .timeline .story .content .content-inner p {
-        line-height: 19px;
-        font-size: 19px;
-        letter-spacing: 1px;
+        line-height: 20px;
+        font-size: 16px;
+        letter-spacing: 0px;
     }
-
 
     /* Event */
     .event-outer .event-inner {
@@ -2344,7 +2318,6 @@ section.footnote .inner h1 {
     .event-inner .event > .title p {
         font-size: 24px;
         line-height: 20px;
-        font-family: "Ventura Times";
         color: var(--font-clr);
     }
     .event-inner .event > .title p > sup {
@@ -2393,8 +2366,6 @@ section.footnote .inner h1 {
         line-height: 32px;
     }
 
-
-
     /* Live Streaming */
     section.live-streaming .inner .title h1 {
         font-size: 28px;
@@ -2407,13 +2378,13 @@ section.footnote .inner h1 {
 
     /* Gift */
     section.gift .gift-inner .gift-title h1 {
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 32px;
+        line-height: 36px;
         margin-bottom: 0.5em;
     }
     section.gift .gift-inner .gift-title p {
-        font-size: 24px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 16px;
     }
     section.gift .bank-detail .saving-books .book p,
     section.gift .bank-detail .saving-books .book span {
@@ -2434,13 +2405,10 @@ section.footnote .inner h1 {
         font-size: 22px;
     }
 
-
-
     /* Protocol */
     .protocol .inner .head {
         padding: 10px;
     }
-
 
     /* Comment */
     .comment-outer .comment-inner h1 {
@@ -2495,10 +2463,9 @@ section.footnote .inner h1 {
     /* FOOTNOTE */
     section.footnote .inner p {
         font-size: 22px;
-        line-height: 19px;
     }
     section.footnote .inner p sup {
-        font-size: 7px;
+        font-size: 8px;
     }
     section.footnote .inner h1 {
         font-size: 26px;

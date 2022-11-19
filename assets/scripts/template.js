@@ -541,7 +541,7 @@ $(document).on("click scroll", function(e) {
 $(document).ready(function(){
     var responder = getUrlParameter('name');
     $('.greetings h1').text(responder);
-    $('h1.responder').text(responder);
+    $('p.responder').text(responder);
     setTimeout(() => {
         $('body').trigger('click');
     }, 1000);

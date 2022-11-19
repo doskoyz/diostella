@@ -1,56 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Butler */
-@font-face {
-    font-family: "Butler Bold";
-    src: url('https://katsudoto.id/plugin/fonts/Butler_Bold.otf') format('opentype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Butler Light";
-    src: url('https://katsudoto.id/plugin/fonts/Butler_Light.otf') format('opentype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Butler Regular";
-    src: url('https://katsudoto.id/plugin/fonts/Butler_Regular.otf') format('opentype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-
-/* Bebas Neue */
-@font-face {
-    font-family: "Bebas Neue";
-    src: url('https://katsudoto.id/plugin/fonts/BebasNeue_Regular.otf') format('opentype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-
-/* Raleway */
-@font-face {
-    font-family: "Raleway Regular";
-    src: url('https://katsudoto.id/plugin/fonts/raleway/Raleway-Regular.ttf') format('truetype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Raleway Bold";
-    src: url('https://katsudoto.id/plugin/fonts/raleway/Raleway-Bold.ttf') format('truetype');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
-}
-
-
-
 :root {
     /* Hex Colour */
     --primary-clr: #101a4b;
@@ -85,16 +32,9 @@
 
     /* Font Family */
     --montserrat: 'Montserrat', sans-serif;
-    --roboto: 'Roboto', sans-serif;
-
-    --butler: 'Butler Regular', sans-serif;
-    --butler-bold: 'Butler Bold', sans-serif;
-    --butler-light: 'Butler Light', sans-serif;
-    --bebas-neue: 'Bebas Neue', sans-serif;
-
-    --raleway: 'Raleway Regular', sans-serif;
-    --raleway-bold: 'Raleway Bold', sans-serif;
-
+    --montserrat-bold: 'Montserrat Bold', sans-serif;
+    --caramel: 'Caramel', sans-serif;
+    --cinzel: 'Cinzel', sans-serif;
 }
 
 body {
@@ -140,7 +80,6 @@ textarea::-webkit-scrollbar-thumb {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: var(--roboto);
 }
 
 *::after,
@@ -424,7 +363,6 @@ img {
     justify-content: center;
     background-color: var(--white-clr);
     text-decoration: none;
-    font-family: "Bebas Neue";
     font-size: 22px;
     letter-spacing: 1px;
     border-radius: 7px;
@@ -555,7 +493,6 @@ img {
     text-decoration: none;
     color: var(--primary-clr);
     font-size: 20px;
-    font-family: "Bebas Neue";
     letter-spacing: 1px;
     line-height: 20px;
     cursor: pointer;
@@ -603,7 +540,6 @@ img {
     font-size: 22px;
     text-decoration: none;
     color: var(--primary-clr);
-    font-family: "Bebas Neue";
     font-weight: 500;
     letter-spacing: 2px;
     display: flex;
@@ -1877,7 +1813,6 @@ input[type=number] {
     letter-spacing: 1px;
     color: var(--primary-clr);
     font-weight: 500;
-    font-family: "Bebas Neue";
     display: block;
     margin: 0;
     margin-bottom: -2px;
@@ -2037,7 +1972,6 @@ input[type=number] {
     font-size: 28px;
     margin: 10px auto;
     text-transform: uppercase;
-    font-family: "Bebas Neue";
     letter-spacing: 2px;
     font-weight: 500;
     position: relative;
@@ -2779,7 +2713,6 @@ input[type=number] {
 .modal-finish .finish-caption h2 {
     margin-bottom: 0.25em;
     font-size: 27px;
-    font-family: "Butler Bold";
 }
 
 .modal-finish .finish-caption p {
@@ -2795,7 +2728,6 @@ input[type=number] {
 .modal-finish .finish-caption .finish-countdown {
     font-size: 20px;
     margin: 10px 0;
-    font-family: "Butler Light";
 }
 
 
@@ -3087,7 +3019,6 @@ input[type=number] {
 }
 
 .modal-add-ons .head h1 {
-    font-family: "Bebas Neue";
     font-size: 36px;
     line-height: 36px;
     transform: scaleY(1.1);
@@ -3236,7 +3167,6 @@ input[type=number] {
 }
 
 .modal-preview-design .preview-design .details .title .category {
-    font-family: "Bebas Neue";
     font-size: 22px;
     padding: 5px 10px;
     letter-spacing: 1px;
@@ -3251,7 +3181,6 @@ input[type=number] {
 }
 
 .modal-preview-design .preview-design .details .title .design {
-    font-family: "Bebas Neue";
     display: block;
     font-size: 25px;
     letter-spacing: 1px;
@@ -3834,7 +3763,6 @@ input[type=number] {
     padding: 0.45em 1.25em 0.35em 1.25em;
     border-radius: 0.4em;
     text-decoration: none;
-    font-family: "Bebas Neue";
     letter-spacing: 1px;
     font-size: 20px;
     transition: all 0.25s ease-in-out;
@@ -5179,79 +5107,6 @@ div.blob.blob-green {
     }
 }
 
-
-
-/* montserrat-400 - latin */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-400.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-400.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-400.woff2') format('woff2'), /* Super Modern Browsers */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-400.woff') format('woff'), /* Modern Browsers */
-        /* url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-400.ttf') format('truetype'), Safari, Android, iOS */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-400.svg#Montserrat') format('svg'); /* Legacy iOS */
-    font-display: swap;
-}
-/* montserrat-300 - latin */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 300;
-    src: url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-300.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-300.woff2') format('woff2'), /* Super Modern Browsers */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-300.woff') format('woff'), /* Modern Browsers */
-        /* url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-300.ttf') format('truetype'), Safari, Android, iOS */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-300.svg#Montserrat') format('svg'); /* Legacy iOS */
-    font-display: swap;
-}
-/* montserrat-500 - latin */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    src: url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-500.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-500.woff2') format('woff2'), /* Super Modern Browsers */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-500.woff') format('woff'), /* Modern Browsers */
-        /* url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-500.ttf') format('truetype'), Safari, Android, iOS */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-500.svg#Montserrat') format('svg'); /* Legacy iOS */
-    font-display: swap;
-}
-/* montserrat-700 - latin */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    src: url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-700.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-700.woff2') format('woff2'), /* Super Modern Browsers */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-700.woff') format('woff'), /* Modern Browsers */
-        /* url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-700.ttf') format('truetype'), Safari, Android, iOS */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-700.svg#Montserrat') format('svg'); /* Legacy iOS */
-    font-display: swap;
-}
-/* montserrat-800 - latin */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 800;
-    src: url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-800.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-800.woff2') format('woff2'), /* Super Modern Browsers */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-800.woff') format('woff'), /* Modern Browsers */
-        /* url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-800.ttf') format('truetype'), Safari, Android, iOS */
-        url('https://katsudoto.id/plugin/fonts/montserrat-latin/montserrat-800.svg#Montserrat') format('svg'); /* Legacy iOS */
-    font-display: swap;
-}
-
 /* =======================================================
     GUEST CARD
 ======================================================= */
@@ -5617,7 +5472,6 @@ div.blob.blob-green {
 }
 .contact .contact-header .caption {
     color: var(--clr-03);
-    font-family: var(--raleway);
 }
 
 /* Contact Links */
@@ -5704,7 +5558,6 @@ div.blob.blob-green {
 .contact-links .contact-link .contact-link-wrap .caption {
     font-weight: 500;
     font-size: 15px;
-    font-family: var(--raleway);
 }
 
 /* Contact Sosmed */
@@ -5793,7 +5646,6 @@ div.blob.blob-green {
     text-align: center;
 }
 .portofolio-header .portofolio-title {
-    font-family: "Butler Regular";
     font-weight: normal;
     font-size: 60px;
     letter-spacing: 15px;
@@ -6093,7 +5945,6 @@ div.blob.blob-green {
     text-align: center;
     color: #fff;
     background: var(--primary-clr);
-    font-family: var(--roboto);
     font-size: 13px;
     position: absolute;
     z-index: 10000;
