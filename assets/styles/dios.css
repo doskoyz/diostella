@@ -1099,6 +1099,7 @@ section.live-streaming > .inner > .foot > p {
 section.gift {
     padding: 20px 20px 20px 20px;
     background-color: var(--tertiary-clr);
+    font-family: var(--montserrat-bold);
 }
 .gift .gift-inner {
     width: 700px;
@@ -1269,9 +1270,9 @@ section.gift .bank-detail .saving-books .book span {
     color: var(--olive-clr);
     margin-bottom: 0;
 }
-.comment-outer .comment-inner .comments .comment .comment-head p >  strong {
+.comment-outer .comment-inner .comments .comment .comment-head p > strong {
     font-family: var(--montserrat);
-    font-size: 28px;
+    font-size: 26px;
     letter-spacing: 0.5px;
 }
 .comment-outer .comment-inner .comments .comment .comment-head p i {
@@ -1372,8 +1373,6 @@ section.quote .inner p.text-02 {
     letter-spacing: 1px;
     font-style: italic;
 }
-
-
 
 /* FOOTNOTE */
 section.footnote {
@@ -1944,8 +1943,9 @@ section.footnote .inner h1 {
     #gift-form textarea,
     #gift-form div,
     #gift-form button {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 24px;
+        line-spacing: 0.5px;
     }
     #gift-form label.center {
         font-size: 27px;
@@ -2050,8 +2050,8 @@ section.footnote .inner h1 {
     .comment-outer .comment-inner .comments .comment p {
         font-size: 20px;
     }
-    .comment-outer .comment-inner .comments .comment .comment-head p >  strong {
-        font-size: 22px;
+    .comment-outer .comment-inner .comments .comment .comment-head p > strong {
+        font-size: 20px;
     }
     .comment-outer .comment-inner .comments .comment .comment-head p i {
         font-size: 14px;
@@ -2383,8 +2383,9 @@ section.footnote .inner h1 {
     #gift-form textarea,
     #gift-form div,
     #gift-form button {
-        font-size: 19px;
-        line-height: 23px;
+        font-size: 16px;
+        line-height: 18px;
+        line-spacing: 0px;
     }
     #gift-form label.center {
         font-size: 22px;
@@ -2403,8 +2404,8 @@ section.footnote .inner h1 {
     .comment-outer .comment-inner .comments .comment p {
         font-size: 16px;
     }
-    .comment-outer .comment-inner .comments .comment .comment-head p >  strong {
-        font-size: 18px;
+    .comment-outer .comment-inner .comments .comment .comment-head p > strong {
+        font-size: 16px;
     }
     .comment-outer .comment-inner .comments .comment .comment-head p i {
         font-size: 14px;

@@ -144,7 +144,8 @@ function sendComment(data) {
     }
 
     $.ajax(settings).done(function (response) {
-      showAlert('Sukses input pesan', 'success');
+        $('#send-comment').text('Kirim pesan');
+        showAlert('Sukses input pesan', 'success');
     });
 }
 
@@ -346,15 +347,21 @@ $(document).ready(function(){
 $('#send-comment').click(function(e){
     e.preventDefault();
     var data = {};
+    var isValid = true;
     $('.form-control').each(function(idx, value){
         var names = value.name.split('_');
         if (value.value == "" || value.value == null) {
             showAlert(names[1] + ' tidak boleh kosong', 'error');
+            isValid = false;
             return false;
         }
         data[names[0]] = value.value;
     });
-    sendComment(data);
+    if (isValid) {
+        data['date'] = Date();
+        $('#send-comment').text('Mengirim');
+        sendComment(data);
+    }
 });
 
 /*  ==============================
