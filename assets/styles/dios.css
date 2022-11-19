@@ -1290,18 +1290,33 @@ section.gift .bank-detail .saving-books .book span {
 }
 .protocol .inner .body .picture .bg {
     width: 100%;
-    max-height: 900px;
-    object-fit: cover;
-    object-position: bottom;
+    background-position: cover;
 }
-.protocol .inner .body .picture .people {
+.protocol .inner .body .picture .covid {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1024px;
+    width: 200px;
 }
 
+.protocol .inner .body .picture .covid-1 {
+    top: 15%;
+    left: 32%;
+}
+
+.protocol .inner .body .picture .covid-2 {
+    top: 10%;
+    left: 50%;
+    padding: 10px;
+}
+
+.protocol .inner .body .picture .covid-3 {
+    top: 55%;
+    left: 32%;
+}
+
+.protocol .inner .body .picture .covid-4 {
+    top: 55%;
+    left: 50%;
+}
 
 /* COMMENT */
 .comment-outer .comment-inner .head  {
@@ -1734,9 +1749,8 @@ section.footnote .inner h1 {
     .protocol .inner .body .picture {
         height: auto;
     }
-    .protocol .inner .body .picture .people {
-        width: 80vw;
-        top: 55%;
+    .protocol .inner .body .picture .covid {
+        width: 70px;
     }
 
 

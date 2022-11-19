@@ -311,7 +311,7 @@ body.nanda-special {
 
     /* ORNAMENT */
     --orn-01: url("../images/orn-01.png");
-    --orn-02: url("https://katsudoto.id/media/template/nanda/01/orn-02.png");
+    --orn-02: url("../images/orn-02.png");
     --orn-03: url("../images/orn-03.png");
     --orn-04: url("https://katsudoto.id/media/template/nanda/01/orn-04.png");
     --orn-05: url("https://katsudoto.id/media/template/nanda/01/orn-05.png");
@@ -2791,12 +2791,8 @@ section.person .person-envelope-open .cls-2 {
 
 }
 
-
-
-
 /* 480px */
 @media only screen and (max-width: 480px) {
-
     /* Video */
     .video-gallery .inner .video-outer {
         padding: 0;
@@ -2815,4 +2811,3 @@ section.person .person-envelope-open .cls-2 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
