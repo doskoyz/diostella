@@ -343,44 +343,19 @@ $(document).ready(function(){
     }
 });
 
-// Post Comment
-var post_comment = function(e) {
+$('#send-comment').click(function(e){
     e.preventDefault();
-
-    var form = this;
-    var data = new FormData(form);
-
-    var submitButton = $(form).find('button.submit');
-    var submitText = $(submitButton).html();
-
-    if( $(form).find('input[name="name"]').val() == '' ) {
-        return $(form).find('input[name="name"]').focus();
-    }
-
-    if( $(form).find('textarea[name="comment"]').val() == '' ) {
-        return $(form).find('textarea[name="comment"]').focus();
-    }
-
-    var onSuccess = function() {
-        load_comment();
-        afterSend();
-    }
-
-    var onError = function(res=null) { afterSend() }
-
-    var afterSend = function() {
-        $(form).find('textarea[name="comment"]').val('');
-        $(form).find('input, select, textarea, button').prop('disabled', false);
-        $(submitButton).html(submitText);
-    }
-
-    var beforeSend = function() {
-        $(form).find('input, select, textarea, button').prop('disabled', true);
-        $(submitButton).html('Mengirim <i class="fas fa-spinner fa-spin"></i>');
-    }
-
-    postData(data, onSuccess, onError, beforeSend);
-}
+    var data = {};
+    $('.form-control').each(function(idx, value){
+        var names = value.name.split('_');
+        if (value.value == "" || value.value == null) {
+            showAlert(names[1] + ' tidak boleh kosong', 'error');
+            return false;
+        }
+        data[names[0]] = value.value;
+    });
+    sendComment(data);
+});
 
 /*  ==============================
         MUSIC
@@ -551,7 +526,6 @@ $(document).ready(function(){
     var width = div.width();
 
     div.css('height', width * 0.666);
-//    sendComment({"name": "xyz","comment": "abc"});
 });
 
 

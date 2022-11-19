@@ -232,8 +232,7 @@ body.nanda-special {
     --bg-countdown: url("../images/bg-count.jpeg");
     --bg-groom: url("https://katsudoto.id/media/template/nanda/01/bg-groom.png");
     --bg-bride: url("https://katsudoto.id/media/template/nanda/01/bg-bride.png");
-    --bg-footer: url("../images/footer.jpeg");
-
+    --bg-footer: url("../images/footer.jpg");
 }
 
 
@@ -577,7 +576,7 @@ p > a:hover {
     width: 100%;
     display: block;
 }
-.comment-outer .comment-inner .more-comment {
+.comment-outer .comment-inner #send-comment {
     padding: 8px 20px;
     outline: none;
     border: none;
@@ -590,7 +589,7 @@ p > a:hover {
     display: block;
     width: 100%;
 }
-.comment-outer .comment-inner .more-comment:hover {
+.comment-outer .comment-inner #send-comment:hover {
     background: var(--primary-clr);
 }
 

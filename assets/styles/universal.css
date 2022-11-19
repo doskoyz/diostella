@@ -1064,13 +1064,18 @@ input:-webkit-autofill:active {
 
 
 /* Form Label */
-
 .form-label {
-    font-size: 15px;
+    font-family: var(--montserrat-bold);
+    font-size: 16px;
     color: var(--primary-clr);
-    font-weight: 500;
     display: inline-block;
-    margin-bottom: 0.5em;
+}
+
+h2.form-label {
+    font-family: var(--montserrat);
+    font-size: 22px;
+    color: var(--primary-clr);
+    display: inline-block;
 }
 
 .form-label-md {

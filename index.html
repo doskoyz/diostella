@@ -114,8 +114,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="bridegroom-details">
                     <h1 class="title-01 aos-init" data-aos="fade-down" data-aos-duration="1000">Stella Florencia Amijoyo</h1>
                     <p class="text-01 aos-init" data-aos="fade-up" data-aos-duration="1000">The daughter of <br> Mr. Tatang Amijoyo &amp; Mrs. Siska Christina</p>
-                    <a href="https://www.instagram.com/stella_flo" target="_blank" class="link-01 aos-init" data-aos="fade-up" data-aos-duration="1000"><i class="fab fa-instagram"></i> @stella_
-                        flo</a>
+                    <a href="https://www.instagram.com/stella_flo" target="_blank" class="link-01 aos-init" data-aos="fade-up" data-aos-duration="1000"><i class="fab fa-instagram"></i> @stella_flo</a>
                 </div>
             </div>
             <div class="bridegroom-separator aos-init" data-aos="zoom-out" data-aos-duration="1000">&amp;</div>
@@ -469,10 +468,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="body">
             <div class="picture">
                 <img class="bg" src="./assets/images/protocol.jpeg" alt="">
-                <img class="covid covid-1 aos-init" src="./assets/images/distance.png" alt="" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-once="true">
-                <img class="covid covid-2 aos-init" src="./assets/images/mask.png" alt="" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-once="true">
-                <img class="covid covid-3 aos-init" src="./assets/images/temp.png" alt="" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-once="true">
-                <img class="covid covid-4 aos-init" src="./assets/images/sanitizer.png" alt="" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-once="true">
+                <div class="covid covid-1 aos-init" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-once="true">
+                    <img class="covid" src="./assets/images/distance.png" alt="">
+                    Menjaga Jarak
+                </div>
+                <div class="covid covid-2 aos-init" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-once="true">
+                    <img class="covid" src="./assets/images/mask.png" alt="">
+                    Menggunakan Masker
+                </div>
+                <div class="covid covid-3 aos-init" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-once="true">
+                    <img class="covid" src="./assets/images/temp.png" alt="">
+                    Pengecekan Suhu
+                </div>
+                <div class="covid covid-4 aos-init" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-once="true">
+                    <img class="covid" src="./assets/images/sanitizer.png" alt="">
+                    Memakai Hand Sanitizer
+                </div>
             </div>
         </div>
     </div>
@@ -486,22 +497,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="bio-detail">
             <div class="form-group">
-                <label class="form-label center">Pesan untuk Dios dan Stella</label>
+                <h2 class="form-label center">Pesan untuk Dios dan Stella</h2>
             </div>
             <div class="form-group">
                 <label class="form-label">Nama:</label>
-                <input class="form-control" type="text" name="name" required="" />
+                <input class="form-control" type="text" name="name_nama" required="" />
             </div>
             <div class="form-group">
                 <label class="form-label">Pesan:</label>
-                <textarea class="form-control" name="wish" required=""></textarea>
+                <textarea class="form-control" name="comment_pesan" required=""></textarea>
             </div>
+<!--            <div class="form-group">-->
+<!--                <label class="form-label">Hadir:</label>-->
+<!--                <input class="switch" type="checkbox" name="attend_hadir" value="true"/>-->
+<!--            </div>-->
+            <div class="nominal-outer">
+<label>
+<input type="radio" name="nominal" value="50000">
+<div class="nominal">
+50.000
+</div>
+</label>
+<label>
+<input type="radio" name="nominal" value="100000">
+<div class="nominal">
+100.000
+</div>
+</label>
+<label>
+<input type="radio" name="nominal" value="200000">
+<div class="nominal">
+200.000
+</div>
+</label>
+<label>
+<input type="radio" name="nominal" value="0">
+ <div class="nominal">
+Lainnya
+</div>
+</label>
+</div>
             <div class="foot aos-init" data-aos="fade-up" data-aos-duration="1000">
-                <button class="more-comment" data-last-comment="6923">Kirim pesan</button>
+                <button id="send-comment" data-last-comment="6923">Kirim pesan</button>
             </div>
         </div>
         <div class="comments"></div>
-        <div class="foot aos-init" data-aos="fade-up" data-aos-duration="1000"><button class="more-comment" data-last-comment="6923">Show more comments</button></div>
     </div>
 </section>
 
