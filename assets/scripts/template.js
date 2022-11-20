@@ -2,7 +2,7 @@
     GENERAL CONFIGURATION
 ============================================= */
 window.MUSIC = {
-        'url': "../assets/music/song.mp3",
+        'url': "./assets/music/song.mp3",
         'box': '#music-box'
     };
 window.EVENT = 1670641200;
