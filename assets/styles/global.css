@@ -41,35 +41,6 @@
 
     --tertiary-clr: #909090;
     --rgb-tertiary-clr: 144, 144, 144;
-
-    /* ORNAMEN PARTY */
-    /* Gold */
-    --orn-party-gold-01: url('https://katsudoto.id/media/template/icon/gold/01.png');
-    --orn-party-gold-02: url('https://katsudoto.id/media/template/icon/gold/02.png');
-    --orn-party-gold-03: url('https://katsudoto.id/media/template/icon/gold/03.png');
-    --orn-party-gold-04: url('https://katsudoto.id/media/template/icon/gold/04.png');
-    --orn-party-gold-05: url('https://katsudoto.id/media/template/icon/gold/05.png');
-
-    /* Gray */
-    --orn-party-gray-01: url('https://katsudoto.id/media/template/icon/gray/01.png');
-    --orn-party-gray-02: url('https://katsudoto.id/media/template/icon/gray/02.png');
-    --orn-party-gray-03: url('https://katsudoto.id/media/template/icon/gray/03.png');
-    --orn-party-gray-04: url('https://katsudoto.id/media/template/icon/gray/04.png');
-    --orn-party-gray-05: url('https://katsudoto.id/media/template/icon/gray/05.png');
-
-    /* Light */
-    --orn-party-light-01: url('https://katsudoto.id/media/template/icon/light/01.png');
-    --orn-party-light-02: url('https://katsudoto.id/media/template/icon/light/02.png');
-    --orn-party-light-03: url('https://katsudoto.id/media/template/icon/light/03.png');
-    --orn-party-light-04: url('https://katsudoto.id/media/template/icon/light/04.png');
-    --orn-party-light-05: url('https://katsudoto.id/media/template/icon/light/05.png');
-
-
-    /* Font Family */
-    --roboto: 'Roboto', sans-serif;
-    --bebas-neue: 'Bebas Neue', sans-serif;
-    --bebaskai: 'BebasKai', sans-serif;
-
 }
 
 * {
@@ -95,104 +66,8 @@ body font {
     font-family: inherit;
 }
 
-
-/* Biasa-01 (SENANDIKA) */
-body.senandika {
-
-    /* Fonts */
-    --ff-01: 'Great Vibes', cursive;
-    --ff-02: 'Noto Sans JP', sans-serif;
-
-}
-
-/* SENANDIKA - CAMEL */
-body.senandika.camel {
-    /* Hex Color */
-    --primary-clr: #a26139;
-    --secondary-clr: #1b1b1b;
-    --tertiary-clr: #909090;
-    --wood-clr: #3d3d3d;
-
-    /* RGB Color */
-    --rgb-primary-clr: 162, 97, 57;
-    --rgb-secondary-clr: 27, 27, 27;
-    --rgb-tertiary-clr: 144, 144, 144;
-    --rgb-wood-clr: 61, 61, 61;
-
-    --flower-01: url("https://katsudoto.id/media/template/biasa-01/01/flower-01.png");
-    --flower-02: url("https://katsudoto.id/media/template/biasa-01/01/flower-02.png");
-
-    --line-01: url("https://katsudoto.id/media/template/biasa-01/01/line-01.png");
-    --line-02: url("https://katsudoto.id/media/template/biasa-01/01/line-02.png");
-    --line-01-md: url("https://katsudoto.id/media/template/biasa-01/01/line-01-md.png");
-    --line-02-md: url("https://katsudoto.id/media/template/biasa-01/01/line-02-md.png");
-    --orn-01: url("https://katsudoto.id/media/template/biasa-01/01/orn-01.png");
-
-    --bg-lg-01: url("https://katsudoto.id/media/template/biasa-01/01/bg-lg-01.jpg");
-    --bg-md-01: url("https://katsudoto.id/media/template/biasa-01/01/bg-md-01.jpg");
-    --bg-sm-01: url("https://katsudoto.id/media/template/biasa-01/01/bg-sm-01.jpg");
-}
-
-/* SENANDIKA - ORCHID */
-body.senandika.orchid {
-    /* Hex Color */
-    --primary-clr: #8b4462;
-    --secondary-clr: #1f1019;
-    --tertiary-clr: #909090;
-    --wood-clr: #502a3a;
-
-    /* RGB Color */
-    --rgb-primary-clr: 139, 68, 98;
-    --rgb-secondary-clr: 31,16,25;
-    --rgb-tertiary-clr: 144, 144, 144;
-    --rgb-wood-clr: 80, 42, 58;
-
-    --flower-01: url("https://katsudoto.id/media/template/biasa-01/02/flower-01.png");
-    --flower-02: url("https://katsudoto.id/media/template/biasa-01/02/flower-02.png");
-
-    --line-01: url("https://katsudoto.id/media/template/biasa-01/02/line-01.png");
-    --line-02: url("https://katsudoto.id/media/template/biasa-01/02/line-02.png");
-    --line-01-md: url("https://katsudoto.id/media/template/biasa-01/02/line-01-md.png");
-    --line-02-md: url("https://katsudoto.id/media/template/biasa-01/02/line-02-md.png");
-    --orn-01: url("https://katsudoto.id/media/template/biasa-01/02/orn-01.png");
-
-    --bg-lg-01: url("https://katsudoto.id/media/template/biasa-01/02/bg-lg-01.jpg");
-    --bg-md-01: url("https://katsudoto.id/media/template/biasa-01/02/bg-md-01.jpg");
-    --bg-sm-01: url("https://katsudoto.id/media/template/biasa-01/02/bg-sm-01.jpg");
-}
-
-/* SENANDIAK - OLIVE */
-body.senandika.olive {
-    /* Hex Color */
-    --primary-clr: #2f3c22;
-    --secondary-clr: #1a1c0f;
-    --tertiary-clr: #909090;
-    --wood-clr: #1b280e;
-
-    /* RGB Color */
-    --rgb-primary-clr: 47, 60, 34;
-    --rgb-secondary-clr: 26, 28, 15;
-    --rgb-tertiary-clr: 144, 144, 144;
-    --rgb-wood-clr: 27, 40, 14;
-
-    --flower-01: url("https://katsudoto.id/media/template/biasa-01/03/flower-01.png");
-    --flower-02: url("https://katsudoto.id/media/template/biasa-01/03/flower-02.png");
-
-    --line-01: url("https://katsudoto.id/media/template/biasa-01/03/line-01.png");
-    --line-02: url("https://katsudoto.id/media/template/biasa-01/03/line-02.png");
-    --line-01-md: url("https://katsudoto.id/media/template/biasa-01/03/line-01-md.png");
-    --line-02-md: url("https://katsudoto.id/media/template/biasa-01/03/line-02-md.png");
-    --orn-01: url("https://katsudoto.id/media/template/biasa-01/03/orn-01.png");
-
-    --bg-lg-01: url("https://katsudoto.id/media/template/biasa-01/03/bg-lg-01.jpg");
-    --bg-md-01: url("https://katsudoto.id/media/template/biasa-01/03/bg-md-01.jpg");
-    --bg-sm-01: url("https://katsudoto.id/media/template/biasa-01/03/bg-sm-01.jpg");
-}
-
-
 /* SPECIAL Dios */
-body.nanda-special {
-
+body.dios-special {
     /* Hex Color */
     --primary-clr: #7e675e;
     --primary-dark-clr: #c1ada5;
@@ -216,10 +91,8 @@ body.nanda-special {
     --orn-01: url("../images/orn-01.png");
     --orn-02: url("../images/orn-02.png");
     --orn-03: url("../images/orn-03.png");
-    --orn-04: url("https://katsudoto.id/media/template/nanda/01/orn-04.png");
-    --orn-05: url("https://katsudoto.id/media/template/nanda/01/orn-05.png");
-    --orn-06: url("https://katsudoto.id/media/template/nanda/01/orn-06.png");
-    --orn-07: url("https://katsudoto.id/media/template/nanda/01/orn-07.png");
+    --orn-06: url("../images/orn-06.png");
+    --orn-07: url("../images/orn-07.png");
     --orn-08: url("https://katsudoto.id/media/template/nanda/01/orn-08.png");
 
     /* BACKGROUND IMAGE */
@@ -230,8 +103,8 @@ body.nanda-special {
     --bg-opening: url("../images/bg-opening.jpeg");
     --bg-opening-mobile: url("../images/bg-opening-mobile.jpeg");
     --bg-countdown: url("../images/bg-count.jpeg");
-    --bg-groom: url("https://katsudoto.id/media/template/nanda/01/bg-groom.png");
-    --bg-bride: url("https://katsudoto.id/media/template/nanda/01/bg-bride.png");
+    --bg-groom: url("../images/bg-groom.png");
+    --bg-bride: url("../images/bg-bride.png");
     --bg-footer: url("../images/footer.jpg");
 }
 
@@ -269,17 +142,6 @@ p > a:hover {
     background-color: transparent!important;
     color: #4455aa!important;
 }
-
-
-
-
-
-
-
-
-
-
-
 /* RESERVATION */
 .rsvp {
     background: #fff;
@@ -627,7 +489,7 @@ p > a:hover {
 }
 .comment .comment-head p {
     font-size: 18px;
-    color: var(--primary-clr);
+    color: var(--wood-clr);
 }
 .comment .comment-head p i {
     font-size: 1em;
@@ -2469,8 +2331,6 @@ section.person .person-envelope-open .cls-2 {
     }
 }
 
-
-
 /*  =======================================
     EFFECTS - Chindy
 ======================================= */
@@ -2604,13 +2464,6 @@ section.person .person-envelope-open .cls-2 {
 
 }
 
-
-
-
-
-
-
-
 /* 1240px */
 @media only screen and (max-width: 1240px) {
 
@@ -2622,8 +2475,6 @@ section.person .person-envelope-open .cls-2 {
         width: 100%;
         padding: 10px 20px;
     }
-
-
 
     /* VIDEO GALLERY */
     .video-gallery {
@@ -2656,10 +2507,7 @@ section.person .person-envelope-open .cls-2 {
     }
     /* ================================== */
 
-
 }
-
-
 
 /* 670px */
 @media only screen and (max-width: 680px) {
@@ -2686,7 +2534,6 @@ section.person .person-envelope-open .cls-2 {
         width: 100%;
         height: 240px;
     }
-
     /* Gift */
     .gift-form .nominal-outer {
         grid-template-columns: repeat(2, 1fr);

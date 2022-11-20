@@ -1,13 +1,4 @@
 :root {
-    /* Hex Colour */
-    --primary-clr: #101a4b;
-    --secondary-clr: #f6eed7;
-    --tertiary-clr: #d4cfc2;
-    --wood-clr: #d9b680;
-    --dark-clr: #000000;
-    --light-clr: #fafafa;
-    --info-clr: #1a8cb8;
-
     --mellow-apricot: #F1C380;
     --dark-chestnut: #916958;
 
@@ -28,7 +19,6 @@
     --error-clr: #d9534f;
     --error-dark-clr: #d82121;
     --error-light-clr: #f6bdc0;
-
 
     /* Font Family */
     --montserrat: 'Montserrat', sans-serif;
@@ -1067,14 +1057,14 @@ input:-webkit-autofill:active {
 .form-label {
     font-family: var(--montserrat-bold);
     font-size: 16px;
-    color: var(--primary-clr);
+    color: var(--wood-clr);
     display: inline-block;
 }
 
 h2.form-label {
     font-family: var(--montserrat);
     font-size: 22px;
-    color: var(--primary-clr);
+    color: var(--wood-clr);
     display: inline-block;
 }
 

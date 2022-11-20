@@ -317,7 +317,7 @@ body font {
 
 /* Greetings */
 .greetings {
-    background: var(--primary-clr);
+    background: var(--wood-clr);
     padding: 20px 0;
 }
 .greetings .orn.orn-02 {
@@ -326,7 +326,7 @@ body font {
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 10px auto 5px auto;
+    margin: 0px auto;
     display: block;
 }
 .greetings > div {
@@ -335,9 +335,8 @@ body font {
     padding: 10px;
 }
 .greetings .title-01 {
-    font-size: var(--fs-greeting);
+    font-size: 30px;
     font-family: var(--montserrat);
-    font-weight: 500;
     color: var(--white-clr);
     position: relative;
     margin-bottom: 0.15em;
@@ -442,7 +441,7 @@ section.bridegroom .bridegroom-inner .head .text-01 {
     padding: 20px;
     font-size: 100px;
     font-weight: 500;
-    color: rgba(var(--rgb-secondary-dark-clr), 0.7);
+    color: var(--wood-clr);
     font-family: var(--caramel);
     margin: 20px;
 }
@@ -452,31 +451,35 @@ section.bridegroom .bridegroom-inner .head .text-01 {
     text-align: center;
 }
 .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
-    font-size: 40px;
+    font-size: 48px;
     line-height: 50px;
     font-weight: 500;
-    margin-bottom: 0.2em;
+    margin-bottom: 20px;
     color: var(--wood-clr);
+    font-family: var(--caramel);
     letter-spacing: 1px;
 }
 .bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
-    font-family: var(--montserrat-bold);
-    font-size: 28px;
-    line-height: 28px;
+    font-family: var(--montserrat);
+    font-size: 22px;
+    letter-spacing: -1.5px;
+    color: var(--wood-clr);
+}
+.bridegroom .bridegroom-inner .body .bridegroom-details .text-02 {
+    font-family: var(--montserrat);
+    font-size: 26px;
     letter-spacing: -1px;
     color: var(--wood-clr);
 }
 .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
     text-decoration: none;
     font-family: var(--montserrat);
-    font-size: 26px;
-    line-height: 26px;
-    letter-spacing: 1px;
+    font-size: 20px;
     color: var(--wood-clr);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .bridegroom .bridegroom-inner .body .bridegroom-details .link-01:hover {
     text-decoration: underline;
@@ -624,8 +627,7 @@ body.toska section.save-date .inner .foot .link-01:hover {
     /* background-color: lightblue; */
 }
 .love-story .inner .title h1 {
-    font-size: 60px;
-    font-weight: 500;
+    font-size: 72px;
     color: var(--olive-clr);
     display: inline-block;
     position: relative;
@@ -643,14 +645,6 @@ body.toska section.save-date .inner .foot .link-01:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-}
-.love-story .inner .title h1::before {
-    right: 110%;
-    background-image: var(--orn-04);
-}
-.love-story .inner .title h1::after {
-    left: 110%;
-    background-image: var(--orn-05);
 }
 .love-story .inner .timeline {
     position: relative;
@@ -966,25 +960,25 @@ section.video-gallery .inner .video-outer {
     margin-bottom: 10px;
 }
 .event-inner .event .activities .activity .title .orn.orn-party {
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
     object-fit: contain;
     display: block;
     margin: 0 auto 15px auto;
 }
 .event-inner .event .activities .activity .title h1 {
-    font-size: 36px;
+    font-size: 38px;
     line-height: 45px;
     font-weight: 600;
     color: var(--olive-clr);
-    font-family: var(--montserrat);
-    margin-bottom: 0.2em;
+    font-family: var(--cinzel);
+    margin-bottom: 20px;
 }
 .event-inner .event .activities .activity .title p {
     font-size: 28px;
     line-height: 28px;
     color: var(--olive-clr);
-    font-family: var(--montserrat);
+    font-family: var(--montserrat-bold);
 }
 .event-inner .event .activities .activity .address {
     text-align: center;
@@ -994,7 +988,7 @@ section.video-gallery .inner .video-outer {
     font-size: 26px;
     line-height: 32px;
     color: var(--olive-clr);
-    font-family: var(--montserrat);
+    font-family: var(--montserratbold);
 }
 .event-inner .event .activities .activity .address p:first-child {
     margin-bottom: .75em;
@@ -1083,17 +1077,6 @@ section.live-streaming > .inner > .body > .preview > .play-btn:hover {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.1);
 }
-/* Live Streaming > Inner > Foot */
-section.live-streaming > .inner > .foot {
-    padding: 10px 20px;
-    text-align: center;
-}
-section.live-streaming > .inner > .foot > p {
-    font-size: 32px;
-    font-family: var(--montserrat);
-    line-height: 28px;
-    color: var(--olive-clr);
-}
 
 /* Gift */
 section.gift {
@@ -1124,13 +1107,13 @@ section.gift .gift-inner .gift-title h1 {
     line-height: 52px;
     letter-spacing: 1px;
     margin-bottom: 0.25em;
-    color: var(--olive-clr);
+    color: var(--wood-clr);
 }
 section.gift .gift-inner .gift-title p {
     font-size: 32px;
     font-family: var(--montserrat);
     line-height: 28px;
-    color: var(--olive-clr);
+    color: var(--wood-clr);
 }
 section.gift .gift-inner .gift-form {
     box-shadow: none;
@@ -1140,25 +1123,45 @@ section.gift .bank-detail .saving-books .book span {
     font-size: 32px;
     line-height: 28px;
     letter-spacing: 1px;
-    color: var(--olive-clr);
+    color: var(--wood-clr);
 }
 .bank-detail .saving-books .copy-account {
-    border: .5px solid var(--olive-clr);
+    border: .5px solid var(--wood-clr);
 }
 .bank-detail .saving-books .copy-account:hover {
-    background: var(--olive-clr);
+    background: var(--wood-clr);
     color: var(--white-clr);
 }
 
 .gift .gift-inner .gift-form .gift-submit,
 .gift .gift-inner .gift-form .gift-next {
-    background: var(--olive-clr);
+    background: var(--wood-clr);
     color: var(--white-clr);
     font-weight: 600;
 }
 .gift .gift-inner .gift-form .gift-submit:hover,
 .gift .gift-inner .gift-form .gift-next:hover {
-    background: var(--primary-clr);
+    background: var(--wood-clr);
+}
+
+#gift-btn {
+    border: 1px solid var(--wood-clr);
+    color: var(--wood-clr);
+    padding: 7px 18px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 32px;
+    line-height: 28px;
+    margin: 15px auto;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+#gift-btn:hover {
+    border: 1px solid var(--wood-clr);
+    background-color: var(--wood-clr);
+    color: var(--font-clr);
+    padding: 7px 18px;
 }
 
 #gift-form p,
@@ -1175,19 +1178,6 @@ section.gift .bank-detail .saving-books .book span {
 #gift-form label.center {
     font-size: 29px;
 }
-#gift-btn {
-    border: 1px solid var(--primary-clr);
-    color: var(--primary-clr);
-    padding: 7px 18px;
-    text-decoration: none;
-    border-radius: 7px;
-    font-size: 32px;
-    line-height: 28px;
-    margin: 15px auto;
-    display: inline-block;
-    transition: all 0.2s ease-in-out;
-}
-
 
 /* PROTOCOL */
 .protocol {
@@ -1267,7 +1257,7 @@ section.gift .bank-detail .saving-books .book span {
     font-size: 48px;
     line-height: 50px;
     letter-spacing: 1px;
-    color: var(--olive-clr);
+    color: var(--wood-clr);
     margin-bottom: 0;
 }
 .comment-outer .comment-inner .comments .comment .comment-head p > strong {
@@ -1284,7 +1274,7 @@ section.gift .bank-detail .saving-books .book span {
 }
 .comment-outer .comment-inner .comments .comment small {
     font-family: var(--montserrat);
-    font-size: 16px;
+    font-size: 14px;
 }
 .comment-outer .comment-inner .comments .comment small sup {
     font-size: 8px;
@@ -1309,11 +1299,11 @@ section.gift .bank-detail .saving-books .book span {
 .comment-outer .comment-inner .foot #send-comment {
     font-size: 26px;
     line-height: 18px;
-    background: #878787;
+    background-color: var(--wood-clr);
 }
 .comment-outer .comment-inner .comment-form button:hover,
 .comment-outer .comment-inner .foot #send-comment:hover {
-    background: var(--primary-dark-clr);
+    background: var(--primary-clr);
 }
 .comment-outer .comment-inner .foot {
     padding: 10px;
@@ -1340,8 +1330,9 @@ section.gift .bank-detail .saving-books .book span {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 650px;
+    padding: 200px 0 550px;
     position: relative;
+    color: var(--mellow-apricot);
 }
 
 /* QUOTE */
@@ -1360,10 +1351,10 @@ section.quote .inner {
 }
 section.quote .inner p.text-01,
 section.quote .inner p.text-02 {
+    font-family: var(--cinzel);
     font-size: 32px;
     line-height: 28px;
     letter-spacing: 2px;
-    color: var(--olive-clr);
     margin-bottom: 1em;
     font-weight: 600;
 }
@@ -1378,30 +1369,29 @@ section.quote .inner p.text-02 {
 section.footnote {
     background: transparent;
     padding: 10px;
-    position: relative;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
     z-index: 1;
 }
 section.footnote .inner {
     width: 720px;
-    padding: 20px;
     text-align: center;
     display: block;
     margin: 0 auto;
 }
 section.footnote .inner p {
-    font-size: 32px;
+    font-size: 24px;
     font-family: var(--montserrat);
-    color: var(--olive-clr);
 }
 section.footnote .inner p sup {
     font-size: 14px;
 }
 section.footnote .inner h1 {
-    font-size: 60px;
+    font-size: 48px;
     font-weight: 500;
     line-height: 50px;
-    margin: 20px 0;
-    color: var(--olive-clr);
+    margin: 15px 0px;
     font-family: var(--caramel);
 }
 
@@ -1440,6 +1430,33 @@ section.footnote .inner h1 {
     }
     .cover .cover-inner .cover-picture .cover-show {
         width: 85vw;
+    }
+
+    section.quote .inner p.text-01,
+    section.quote .inner p.text-02 {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    section.quote .inner p.text-02 {
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+
+    section.quote .inner {
+        padding: 0px 20px;
+    }
+    section.footnote .inner h1 {
+        font-size: 38px;
+        line-height: 36px;
+        margin: 10px 0px;
+    }
+
+    section.footnote .inner p {
+        font-size: 20px;
+    }
+    section.footnote .inner p sup {
+        font-size: 10px;
     }
 
 }
@@ -1561,7 +1578,7 @@ section.footnote .inner h1 {
     }
     /* Wrapper */
     .quote-wrapper {
-        padding-bottom: 100px;
+        padding: 120px 0px 420px;
     }
 }
 
@@ -1675,6 +1692,17 @@ section.footnote .inner h1 {
         font-size: 16px;
         letter-spacing: -0.5px;
     }
+
+    section.quote .inner p.text-01,
+    section.quote .inner p.text-02 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    section.quote .inner p.text-02 {
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 1px;
+    }
 }
 /* =====================================
     720px
@@ -1683,12 +1711,9 @@ section.footnote .inner h1 {
     .top-cover .inner .details .text-01 {
         font-size: 55px;
     }
-    /* Love Story */
-    .love-story .inner .title h1::before {
-        right: 100%;
-    }
-    .love-story .inner .title h1::after {
-        left: 100%;
+
+    .greetings .title-01 {
+        font-size: 22px;
     }
 
     /* Video */
@@ -1789,19 +1814,21 @@ section.footnote .inner h1 {
         line-height: 24px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
-        font-size: 22px;
-        line-height: 22px;
+        font-size: 26px;
+        line-height: 26px;
         letter-spacing: 1px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
-        font-size: 22px;
-        line-height: 22px;
-        letter-spacing: 1px;
+        font-size: 14px;
+        letter-spacing: -1px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-details .text-02 {
+        font-size: 16px;
+        letter-spacing: -1px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
-        font-size: 22px;
-        line-height: 22px;
-        letter-spacing: 1px;
+        font-size: 18px;
+        line-height: 18px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 i {
         font-size: 18px;
@@ -1857,19 +1884,12 @@ section.footnote .inner h1 {
     /* Love Story */
     .love-story .inner .title h1 {
         font-size: 42px;
-        font-weight: 500;
     }
     .love-story .inner .title h1::before,
     .love-story .inner .title h1::after {
         top: 50%;
         width: 80px;
         height: 40px;
-    }
-    .love-story .inner .title h1::before {
-        right: 110%;
-    }
-    .love-story .inner .title h1::after {
-        left: 110%;
     }
     .love-story .inner .timeline .story {
         padding: 10px;
@@ -1973,8 +1993,7 @@ section.footnote .inner h1 {
         padding: 0;
     }
     .event-outer .event-inner .head > .title h1 {
-        font-size: 38px;
-        line-height: 42px;
+        font-size: 42px;
         letter-spacing: 2px;
         font-weight: 500;
         margin-bottom: -0.05em;
@@ -1992,15 +2011,14 @@ section.footnote .inner h1 {
         width: 80%;
     }
     .event-inner .event > .title h1 {
-        font-size: 36px;
-        line-height: 40px;
-        letter-spacing: 2px;
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 1.5px;
         margin-bottom: -0.1em;
     }
     .event-inner .event > .title p {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 20px;
-        color: var(--font-clr);
     }
     .event-inner .event > .title p > sup {
         font-size: 7px;
@@ -2016,13 +2034,13 @@ section.footnote .inner h1 {
         margin-bottom: 10px;
     }
     .event-inner .event .activities .activity .title h1 {
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 26px;
+        line-height: 26px;
         letter-spacing: 1px;
     }
     .event-inner .event .activities .activity .title p {
-        font-size: 24px;
-        line-height: 20px;
+        font-size: 20px;
+        line-height: 18px;
         letter-spacing: 1px;
     }
     .event-inner .event .activities .activity .address p {
@@ -2034,13 +2052,10 @@ section.footnote .inner h1 {
         margin-bottom: .75em;
     }
     .event-inner .event .activities .activity a {
-        border: 1px solid var(--olive-clr);
-        color: var(--primary-clr);
-        padding: 7px 18px;
-        font-size: 24px;
+        padding: 6px 14px;
+        font-size: 22px;
         line-height: 20px;
     }
-
 
     /* Comment */
     .comment-outer .comment-inner h1 {
@@ -2057,7 +2072,7 @@ section.footnote .inner h1 {
         font-size: 14px;
     }
     .comment-outer .comment-inner .comments .comment small {
-        font-size: 14px;
+        font-size: 12px;
     }
     .comment-outer .comment-inner .comments .comment small sup {
         font-size: 7px;
@@ -2076,34 +2091,34 @@ section.footnote .inner h1 {
         padding: 0;
     }
     section.quote .inner {
-        padding: 20px;
+        padding: 0px 20px;
     }
     section.quote .inner p.text-01,
     section.quote .inner p.text-02 {
-        font-size: 24px;
-        line-height: 24px;
-        letter-spacing: 2px;
+        font-size: 20px;
+        line-height: 20px;
     }
     section.quote .inner p.text-02 {
-        font-size: 24px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 18px;
         letter-spacing: 1px;
     }
 
     /* FOOTNOTE */
     section.footnote .inner p {
-        font-size: 26px;
+        font-size: 16px;
     }
     section.footnote .inner p sup {
-        font-size: 10px;
+        font-size: 8px;
     }
     section.footnote .inner h1 {
         font-size: 32px;
         line-height: 36px;
+        margin: 5px 0px;
     }
     /* Wrapper */
     .quote-wrapper {
-        padding-bottom: 80px;
+        padding: 90px 0px 220px;
     }
 }
 
@@ -2163,8 +2178,8 @@ section.footnote .inner h1 {
         line-height: 20px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
-        font-size: 22px;
-        line-height: 22px;
+        font-size: 24px;
+        line-height: 24px;
         letter-spacing: 1px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-border::before {
@@ -2176,14 +2191,16 @@ section.footnote .inner h1 {
         height: 250px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
-        font-size: 22px;
-        line-height: 20px;
-        letter-spacing: 1px;
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+    .bridegroom .bridegroom-inner .body .bridegroom-details .text-02 {
+        font-size: 14px;
+        letter-spacing: 0px
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
-        font-size: 22px;
-        line-height: 20px;
-        letter-spacing: 1px;
+        font-size: 16px;
+        line-height: 16px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 i {
         font-size: 14px;
@@ -2230,19 +2247,12 @@ section.footnote .inner h1 {
     /* Love Story */
     .love-story .inner .title h1 {
         font-size: 30px;
-        font-weight: 500;
     }
     .love-story .inner .title h1::before,
     .love-story .inner .title h1::after {
         top: 50%;
         width: 80px;
         height: 40px;
-    }
-    .love-story .inner .title h1::before {
-        right: 110%;
-    }
-    .love-story .inner .title h1::after {
-        left: 110%;
     }
     .love-story .inner .timeline {
         /* padding: 0 0 30px 0; */
@@ -2276,8 +2286,7 @@ section.footnote .inner h1 {
         padding: 0;
     }
     .event-outer .event-inner .head > .title h1 {
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 38px;
         letter-spacing: 2px;
         font-weight: 500;
         margin-bottom: -0.05em;
@@ -2295,15 +2304,14 @@ section.footnote .inner h1 {
         width: 95%;
     }
     .event-inner .event > .title h1 {
-        font-size: 36px;
-        line-height: 40px;
-        letter-spacing: 2px;
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: 1px;
         margin-bottom: -0.1em;
     }
     .event-inner .event > .title p {
-        font-size: 24px;
-        line-height: 20px;
-        color: var(--font-clr);
+        font-size: 18px;
+        line-height: 16px;
     }
     .event-inner .event > .title p > sup {
         font-size: 7px;
@@ -2319,13 +2327,13 @@ section.footnote .inner h1 {
         margin-bottom: 10px;
     }
     .event-inner .event .activities .activity .title h1 {
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 22px;
+        line-height: 24px;
         letter-spacing: 1px;
     }
     .event-inner .event .activities .activity .title p {
-        font-size: 24px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 16px;
         letter-spacing: 1px;
     }
     .event-inner .event .activities .activity .address p {
@@ -2337,11 +2345,9 @@ section.footnote .inner h1 {
         margin-bottom: .75em;
     }
     .event-inner .event .activities .activity a {
-        border: 1px solid var(--olive-clr);
-        color: var(--primary-clr);
-        padding: 7px 18px;
-        font-size: 24px;
-        line-height: 20px;
+        padding: 5px 12px;
+        font-size: 20px;
+        line-height: 18px;
     }
 
 
@@ -2411,7 +2417,7 @@ section.footnote .inner h1 {
         font-size: 14px;
     }
     .comment-outer .comment-inner .comments .comment small {
-        font-size: 12px;
+        font-size: 11px;
     }
     .comment-outer .comment-inner .comments .comment small sup {
         font-size: 7px;
@@ -2425,17 +2431,16 @@ section.footnote .inner h1 {
         padding: 0;
     }
     section.quote .inner {
-        padding: 20px;
+        padding: 0px 20px;
     }
     section.quote .inner p.text-01,
     section.quote .inner p.text-02 {
-        font-size: 18px;
-        line-height: 18px;
-        letter-spacing: 2px;
+        font-size: 16px;
+        line-height: 16px;
     }
     section.quote .inner p.text-02 {
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 14px;
         letter-spacing: 1px;
     }
     /* FOOTNOTE */
@@ -2448,6 +2453,7 @@ section.footnote .inner h1 {
     section.footnote .inner h1 {
         font-size: 26px;
         line-height: 30px;
+        margin: 0px;
     }
     /* Wrapper */
     .quote-wrapper {
