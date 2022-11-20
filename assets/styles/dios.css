@@ -378,9 +378,8 @@ section.bridegroom .bridegroom-inner .head {
 section.bridegroom .bridegroom-inner .head .text-01 {
     font-size: 36px;
     line-height: 30px;
-    font-style: italic;
-    color: var(--font-clr);
-    letter-spacing: 1px;
+    font-family: var(--montserrat-bold);
+    color: var(--wood-clr);
 }
 
 /* BODY */
@@ -2177,8 +2176,8 @@ section.footnote .inner h1 {
 
     /* Bride Groom */
     section.bridegroom .bridegroom-inner .head .text-01 {
-        font-size: 22px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 18px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
         font-size: 24px;
