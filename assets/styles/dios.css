@@ -848,13 +848,13 @@ section.video-gallery .inner .video-outer {
     z-index: 3;
 }
 .event-outer .event-inner .head > .title h1 {
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 64px;
+    line-height: 60px;
     letter-spacing: 2px;
     font-weight: 500;
     margin-bottom: .15em;
     font-family: var(--caramel);
-    color: var(--font-clr);
+    color: var(--olive-clr);
 }
 .event-outer .event-inner .head > .title p {
     font-size: 34px;
@@ -878,18 +878,16 @@ section.video-gallery .inner .video-outer {
     text-align: center;
 }
 .event-inner .event > .title h1 {
-    color: var(--primary-clr);
+    color: var(--olive-clr);
     font-size: 60px;
-    line-height: 60px;
-    letter-spacing: 2px;
-    font-weight: 500;
-    margin-bottom: -0.25em;
-    color: var(--font-clr);
+    letter-spacing: 3px;
+    font-family: var(--montserrat);
 }
 .event-inner .event > .title p {
     font-size: 50px;
     line-height: 50px;
-    color: var(--font-clr);
+    color: var(--olive-clr);
+    font-family: var(--montserrat);
 }
 .event-inner .event > .title p > sup {
     font-size: 12px;
@@ -975,33 +973,35 @@ section.video-gallery .inner .video-outer {
     margin: 0 auto 15px auto;
 }
 .event-inner .event .activities .activity .title h1 {
-    font-size: 50px;
+    font-size: 36px;
     line-height: 45px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--olive-clr);
+    font-family: var(--montserrat);
     margin-bottom: 0.2em;
 }
 .event-inner .event .activities .activity .title p {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 28px;
     color: var(--olive-clr);
-    font-style: italic;
+    font-family: var(--montserrat);
 }
 .event-inner .event .activities .activity .address {
     text-align: center;
 }
 .event-inner .event .activities .activity .address p {
     margin-bottom: .2em;
-    font-size: 32px;
-    line-height: 28px;
+    font-size: 26px;
+    line-height: 32px;
     color: var(--olive-clr);
+    font-family: var(--montserrat);
 }
 .event-inner .event .activities .activity .address p:first-child {
     margin-bottom: .75em;
 }
 .event-inner .event .activities .activity a {
-    border: 1px solid var(--primary-clr);
-    color: var(--primary-clr);
+    border: 1px solid var(--olive-clr);
+    color: var(--olive-clr);
     padding: 7px 18px;
     text-decoration: none;
     border-radius: 7px;
@@ -1013,8 +1013,8 @@ section.video-gallery .inner .video-outer {
 }
 .event-inner .event .activities .activity a:hover,
 .event-inner .event .activities .activity a:focus {
-    background: var(--primary-dark-clr);
-    border-color: var(--primary-dark-clr);
+    background: var(--olive-clr);
+    border-color: var(--olive-clr);
     color: var(--white-clr);
 }
 
@@ -2034,7 +2034,7 @@ section.footnote .inner h1 {
         margin-bottom: .75em;
     }
     .event-inner .event .activities .activity a {
-        border: 1px solid var(--primary-clr);
+        border: 1px solid var(--olive-clr);
         color: var(--primary-clr);
         padding: 7px 18px;
         font-size: 24px;
@@ -2337,7 +2337,7 @@ section.footnote .inner h1 {
         margin-bottom: .75em;
     }
     .event-inner .event .activities .activity a {
-        border: 1px solid var(--primary-clr);
+        border: 1px solid var(--olive-clr);
         color: var(--primary-clr);
         padding: 7px 18px;
         font-size: 24px;
