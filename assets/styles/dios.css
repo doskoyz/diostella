@@ -742,7 +742,7 @@ body.toska section.save-date .inner .foot .link-01:hover {
 /* GALLERY */
 #lightGallery {
     width: 98%;
-    max-height: 400px;
+    max-height: 600px;
     overflow-y: auto;
 }
 .gallery-wrapper {
@@ -1928,6 +1928,10 @@ section.footnote .inner h1 {
     .video-gallery .inner .video-outer .video > .title h2 {
         font-size: 36px;
         line-height: 30px;
+    }
+
+    #lightGallery {
+        max-height: 400px;
     }
 
     /* Live Streaming */
