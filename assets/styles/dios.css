@@ -118,7 +118,7 @@ body font {
 
 .top-cover .inner .details .invitation-btn {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
 }
 .top-cover .inner .details .link-01 {
     font-size: 20px;
@@ -1034,7 +1034,7 @@ section.live-streaming > .inner > .title > h1 {
     font-size: 52px;
     line-height: 44px;
     letter-spacing: 1px;
-    margin-bottom: 0.15em;
+    margin-bottom: 30px;
     color: var(--olive-clr);
 }
 /* Live Streaming > Inner > Body */
@@ -1735,22 +1735,26 @@ section.footnote .inner h1 {
     .gift .gift-inner .gift-form {
         width: 100%;
     }
-
-
     /* LAST ORNAMENT */
     section.last-orn .orn.orn-08 {
         width: 80vw;
     }
 
+    section.live-streaming .inner .title h1 {
+        font-size: 32px;
+        line-height: 30px;
+    }
 }
 
 /* =====================================
     Minimum Tablet Screen
     600px x 960px
    =====================================*/
-
 @media only screen and (max-width: 600px) {
     /* OPENING */
+    .top-cover .inner .details .invitation-btn {
+        bottom: 12%;
+    }
     .top-cover .inner .details .text-01 {
         font-size: 50px;
     }
@@ -1808,8 +1812,8 @@ section.footnote .inner h1 {
 
     /* Bride Groom */
     section.bridegroom .bridegroom-inner .head .text-01 {
-        font-size: 22px;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 16px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
         font-size: 26px;
@@ -1935,7 +1939,7 @@ section.footnote .inner h1 {
 
     /* Live Streaming */
     section.live-streaming .inner .title h1 {
-        font-size: 36px;
+        font-size: 28px;
         line-height: 30px;
     }
     section.live-streaming .inner .foot p {
@@ -2176,8 +2180,8 @@ section.footnote .inner h1 {
 
     /* Bride Groom */
     section.bridegroom .bridegroom-inner .head .text-01 {
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 14px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .title-01 {
         font-size: 24px;
@@ -2351,8 +2355,6 @@ section.footnote .inner h1 {
         font-size: 20px;
         line-height: 18px;
     }
-
-
     /* Video */
     .video-gallery .inner .video-outer .video > .title h2 {
         font-size: 28px;
@@ -2361,8 +2363,8 @@ section.footnote .inner h1 {
 
     /* Live Streaming */
     section.live-streaming .inner .title h1 {
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 24px;
+        line-height: 28px;
     }
     section.live-streaming .inner .foot p {
         font-size: 24px;
