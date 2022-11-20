@@ -1298,9 +1298,11 @@ section.gift .bank-detail .saving-books .book span {
 }
 .comment-outer .comment-inner .comment-form button,
 .comment-outer .comment-inner .foot #send-comment {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 18px;
     background-color: var(--wood-clr);
+    width: 100%;
+    margin: 0;
 }
 .comment-outer .comment-inner .comment-form button:hover,
 .comment-outer .comment-inner .foot #send-comment:hover {
@@ -1308,10 +1310,6 @@ section.gift .bank-detail .saving-books .book span {
 }
 .comment-outer .comment-inner .foot {
     padding: 10px;
-}
-.comment-outer .comment-inner .foot #send-comment {
-    width: 100%;
-    margin: 0;
 }
 .comment-outer .comment-inner .foot #send-comment > i {
     font-size: 15px;
@@ -2080,7 +2078,7 @@ section.footnote .inner h1 {
     }
     .comment-outer .comment-inner .comment-form button,
     .comment-outer .comment-inner .foot #send-comment {
-        font-size: 24px;
+        font-size: 20px;
     }
     .comment-outer .comment-inner .comments {
         max-height: 250px;
@@ -2424,7 +2422,7 @@ section.footnote .inner h1 {
     }
     .comment-outer .comment-inner .comment-form button,
     .comment-outer .comment-inner .foot #send-comment {
-        font-size: 24px;
+        font-size: 16px;
     }
     /* QUOTE */
     section.quote {
