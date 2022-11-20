@@ -628,7 +628,7 @@ body.toska section.save-date .inner .foot .link-01:hover {
 }
 .love-story .inner .title h1 {
     font-size: 72px;
-    color: var(--olive-clr);
+    color: var(--font-clr);
     display: inline-block;
     position: relative;
     font-family: var(--caramel);
