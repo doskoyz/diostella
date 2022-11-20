@@ -460,8 +460,8 @@ section.bridegroom .bridegroom-inner .head .text-01 {
     letter-spacing: 1px;
 }
 .bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
-    font-family: var(--montserrat);
-    font-size: 22px;
+    font-family: var(--montserrat-bold);
+    font-size: 24px;
     letter-spacing: -1.5px;
     color: var(--wood-clr);
 }
@@ -736,7 +736,7 @@ body.toska section.save-date .inner .foot .link-01:hover {
 }
 .love-story .inner .timeline .story:nth-child(even) .content .content-inner h2,
 .love-story .inner .timeline .story:nth-child(even) .content .content-inner p {
-    color: var(--white-clr);
+    color: var(--wood-clr);
 }
 
 /* GALLERY */
@@ -880,6 +880,7 @@ section.video-gallery .inner .video-outer {
 .event-inner .event > .title p {
     font-size: 50px;
     line-height: 50px;
+    font-weight: 600;
     color: var(--olive-clr);
     font-family: var(--montserrat);
 }
@@ -1110,9 +1111,9 @@ section.gift .gift-inner .gift-title h1 {
     color: var(--wood-clr);
 }
 section.gift .gift-inner .gift-title p {
-    font-size: 32px;
+    font-size: 30px;
     font-family: var(--montserrat);
-    line-height: 28px;
+    line-height: 32px;
     color: var(--wood-clr);
 }
 section.gift .gift-inner .gift-form {
@@ -1171,12 +1172,12 @@ section.gift .bank-detail .saving-books .book span {
 #gift-form textarea,
 #gift-form div,
 #gift-form button {
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: 1px;
     line-height: 28px;
 }
 #gift-form label.center {
-    font-size: 29px;
+    font-size: 26px;
 }
 
 /* PROTOCOL */
@@ -1653,8 +1654,8 @@ section.footnote .inner h1 {
     }
     /* Gift */
     section.gift .gift-inner .gift-title p {
-        font-size: 24px;
-        line-height: 20px;
+        font-size: 22px;
+        line-height: 24px;
     }
 
     /* FOOTNOTE & QUOTE */
@@ -1819,7 +1820,7 @@ section.footnote .inner h1 {
         letter-spacing: 1px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
-        font-size: 14px;
+        font-size: 16px;
         letter-spacing: -1px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .text-02 {
@@ -1827,11 +1828,11 @@ section.footnote .inner h1 {
         letter-spacing: -1px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 14px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 i {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     /* Save The Date */
@@ -1948,8 +1949,8 @@ section.footnote .inner h1 {
         margin-bottom: 0.5em;
     }
     section.gift .gift-inner .gift-title p {
-        font-size: 20px;
-        line-height: 18px;
+        font-size: 18px;
+        line-height: 22px;
     }
     section.gift .bank-detail .saving-books .book p,
     section.gift .bank-detail .saving-books .book span {
@@ -1963,20 +1964,20 @@ section.footnote .inner h1 {
     #gift-form textarea,
     #gift-form div,
     #gift-form button {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 22px;
         line-spacing: 0.5px;
     }
     #gift-form label.center {
-        font-size: 27px;
+        font-size: 20px;
     }
 
     #gift-btn {
         border: 1px solid var(--primary-clr);
         color: var(--primary-clr);
-        padding: 7px 18px;
-        font-size: 24px;
-        line-height: 20px;
+        padding: 6px 12px;
+        font-size: 20px;
+        line-height: 22px;
     }
 
     /* Event */
@@ -2021,7 +2022,7 @@ section.footnote .inner h1 {
         line-height: 20px;
     }
     .event-inner .event > .title p > sup {
-        font-size: 7px;
+        font-size: 10px;
     }
 
 
@@ -2191,7 +2192,7 @@ section.footnote .inner h1 {
         height: 250px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .text-01 {
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 0px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .text-02 {
@@ -2199,8 +2200,8 @@ section.footnote .inner h1 {
         letter-spacing: 0px
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 {
-        font-size: 16px;
-        line-height: 16px;
+        font-size: 14px;
+        line-height: 14px;
     }
     .bridegroom .bridegroom-inner .body .bridegroom-details .link-01 i {
         font-size: 14px;
@@ -2314,7 +2315,7 @@ section.footnote .inner h1 {
         line-height: 16px;
     }
     .event-inner .event > .title p > sup {
-        font-size: 7px;
+        font-size: 9px;
     }
 
 
@@ -2374,8 +2375,8 @@ section.footnote .inner h1 {
         margin-bottom: 0.5em;
     }
     section.gift .gift-inner .gift-title p {
-        font-size: 18px;
-        line-height: 16px;
+        font-size: 16px;
+        line-height: 20px;
     }
     section.gift .bank-detail .saving-books .book p,
     section.gift .bank-detail .saving-books .book span {
@@ -2389,19 +2390,18 @@ section.footnote .inner h1 {
     #gift-form textarea,
     #gift-form div,
     #gift-form button {
-        font-size: 16px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 16px;
         line-spacing: 0px;
     }
     #gift-form label.center {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     /* Protocol */
     .protocol .inner .head {
         padding: 10px;
     }
-
     /* Comment */
     .comment-outer .comment-inner h1 {
         font-size: 32px;
