@@ -124,7 +124,7 @@ body font {
     font-size: 20px;
     font-size: var(--fs-sub-title);
     text-decoration: none;
-    background-color: var(--wood-clr);
+    background-color: var(--olive-clr);
     display: inline-block;
     padding: 0.5em 0.5em;
     border-radius: 50px;
