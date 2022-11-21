@@ -1813,7 +1813,7 @@ section.footnote .inner h1 {
 @media only screen and (max-width: 600px) {
     /* OPENING */
     .top-cover .inner .details .invitation-btn {
-        bottom: 12%;
+        bottom: 15%;
     }
     .top-cover .inner .details .text-01 {
         font-size: 50px;
