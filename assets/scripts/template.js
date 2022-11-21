@@ -470,9 +470,9 @@ var galleryImages = [
 {'id':'1FCor5WpMGPFlZK99T7TtdzEcZwxLQnU0', 'name':'1X1A0131-min'},
 //TAMBLINGAN
 {'id':'1sAKPVfLFXl3y5UWgeS0l20tbU1yavsi4', 'name': 'DSCF5413-min'},
+{'id':'1uJjCidYV36_Kzms1tbLz87Qb29N7Oj4Z', 'name': '1X1A9999-min'},
 {'id':'1q37-h0p5miUQX7lwjdUEDGNIxjoVKKZI', 'name': 'DSCF5519-min'},
 {'id':'1bkJlxNvQm6Y3vbPATcKiIesLwHS0nBy-', 'name': '1X1A0059-min'},
-{'id':'1uJjCidYV36_Kzms1tbLz87Qb29N7Oj4Z', 'name': '1X1A9999-min'},
 {'id':'10AFlXtEfDNo8iJlROeVLPnVGLCYZ3sjl', 'name': 'DSCF5335-min'},
 {'id':'1yFci6atz7wVBm-APJUrm1-dhhc78JLd-', 'name': 'DSCF5353-min'},
 {'id':'1TuNkJq__oJqgYlBm7jGU7KrKR2hLnl1B', 'name': '1X1A9934-min'},

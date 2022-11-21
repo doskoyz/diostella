@@ -995,6 +995,7 @@ section.video-gallery .inner .video-outer {
 }
 .event-inner .event .activities .activity a {
     border: 1px solid var(--olive-clr);
+    background-color: rgba(80, 83, 43, 0.25);
     color: var(--olive-clr);
     padding: 7px 18px;
     text-decoration: none;
@@ -1968,8 +1969,8 @@ section.footnote .inner h1 {
         line-height: 35px;
     }
     .love-story .inner .timeline .story .content .content-inner p {
-        line-height: 24px;
-        font-size: 18px;
+        line-height: 22px;
+        font-size: 16px;
         letter-spacing: 0px;
     }
 
@@ -2028,9 +2029,9 @@ section.footnote .inner h1 {
     #gift-form textarea,
     #gift-form div,
     #gift-form button {
-        font-size: 18px;
-        line-height: 22px;
-        line-spacing: 0.5px;
+        font-size: 16px;
+        line-height: 20px;
+        line-spacing: 0px;
     }
     #gift-form label.center {
         font-size: 20px;
@@ -2412,8 +2413,8 @@ section.footnote .inner h1 {
         line-height: 30px;
     }
     .love-story .inner .timeline .story .content .content-inner p {
-        line-height: 28px;
-        font-size: 14px;
+        line-height: 18px;
+        font-size: 13px;
         letter-spacing: 0px;
     }
 
@@ -2527,7 +2528,7 @@ section.footnote .inner h1 {
     #gift-form div,
     #gift-form button {
         font-size: 14px;
-        line-height: 16px;
+        line-height: 14px;
         line-spacing: 0px;
     }
     #gift-form label.center {
