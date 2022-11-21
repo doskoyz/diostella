@@ -10,7 +10,7 @@ window.BOOKS = [{"bank":"Bank Central Asia (BCA)","number_account":"1341464600"}
 
 // ---------- Start Your Journey (Function) --------------------------------------------------
 function startTheJourney() {
-    $('html, body').animate({ scrollTop: $('#start').offset().top }, 'slow');
+//    $('html, body').animate({ scrollTop: $('#start').offset().top }, 'slow');
     $('.top-cover').eq(0).addClass('hide');
     $('#gift-form').hide();
     $('body').eq(0).css('overflow', 'visible');
@@ -462,19 +462,19 @@ var getUrlParameter = function getUrlParameter(sParam) {
 var galleryImages = [
 //QUEEN GAMBIT
 {'id':'1jJTWzIN1Dz6QwN1pw5cFuDzOHvsCG50a', 'name':'DSCF5729-min'},
+{'id':'1kOhgAYVLg4jDTpJLizYDI0N1Tm_tfIBT', 'name':'DSCF5663-min'},
 {'id':'1W72uS2R97nqA2UmbBQYLTpHP59Bl7irJ', 'name':'DSCF5744-min'},
 {'id':'1MSmf-QapnkbeNOT-4qpavGT1xriXOJH6', 'name':'DSCF5769-min'},
-{'id':'1kOhgAYVLg4jDTpJLizYDI0N1Tm_tfIBT', 'name':'DSCF5663-min'},
 {'id':'167pEj0K0hxE-ujsc_9M33EGUAPShmsNe', 'name':'DSCF5636-min'},
 {'id':'1WxpALmIEbkA63VbOMP3Sma2sw-mCwYr9', 'name':'DSCF5584-min'},
 {'id':'1FCor5WpMGPFlZK99T7TtdzEcZwxLQnU0', 'name':'1X1A0131-min'},
 //TAMBLINGAN
 {'id':'1sAKPVfLFXl3y5UWgeS0l20tbU1yavsi4', 'name': 'DSCF5413-min'},
+{'id':'1q37-h0p5miUQX7lwjdUEDGNIxjoVKKZI', 'name': 'DSCF5519-min'},
+{'id':'1bkJlxNvQm6Y3vbPATcKiIesLwHS0nBy-', 'name': '1X1A0059-min'},
 {'id':'1uJjCidYV36_Kzms1tbLz87Qb29N7Oj4Z', 'name': '1X1A9999-min'},
 {'id':'10AFlXtEfDNo8iJlROeVLPnVGLCYZ3sjl', 'name': 'DSCF5335-min'},
 {'id':'1yFci6atz7wVBm-APJUrm1-dhhc78JLd-', 'name': 'DSCF5353-min'},
-{'id':'1q37-h0p5miUQX7lwjdUEDGNIxjoVKKZI', 'name': 'DSCF5519-min'},
-{'id':'1bkJlxNvQm6Y3vbPATcKiIesLwHS0nBy-', 'name': '1X1A0059-min'},
 {'id':'1TuNkJq__oJqgYlBm7jGU7KrKR2hLnl1B', 'name': '1X1A9934-min'},
 //SAVANA
 {'id':'17bsWyDrunOdv6FjNE0wFOF_VLA5meOGR', 'name':'1X1A0748-min'},

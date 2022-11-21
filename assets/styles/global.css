@@ -1241,7 +1241,7 @@ p > a:hover {
     display: block;
 }
 .gift .gift-inner .gift-form .gift-details .bank-detail .saving-books .book .picture-outer img.picture {
-    width: 250px;
+    width: 200px;
     height: 90px;
     object-fit: cover;
     object-position: center;
