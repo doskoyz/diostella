@@ -479,7 +479,6 @@ p > a:hover {
     background: transparent;
 }
 .comments .comment {
-    margin-bottom: 5px;
     padding: 10px 15px;
 }
 .comment .comment-head {

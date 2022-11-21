@@ -2129,10 +2129,10 @@ section.footnote .inner h1 {
         line-height: 30px;
     }
     .comment-outer .comment-inner .comments .comment p {
-        font-size: 20px;
+        font-size: 15px;
     }
     .comment-outer .comment-inner .comments .comment .comment-head p > strong {
-        font-size: 20px;
+        font-size: 16px;
     }
     .comment-outer .comment-inner .comments .comment .comment-head p i {
         font-size: 14px;
@@ -2545,10 +2545,10 @@ section.footnote .inner h1 {
         line-height: 36px;
     }
     .comment-outer .comment-inner .comments .comment p {
-        font-size: 16px;
+        font-size: 13px;
     }
     .comment-outer .comment-inner .comments .comment .comment-head p > strong {
-        font-size: 16px;
+        font-size: 13px;
     }
     .comment-outer .comment-inner .comments .comment .comment-head p i {
         font-size: 14px;
