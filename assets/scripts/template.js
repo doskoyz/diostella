@@ -10,7 +10,7 @@ window.BOOKS = [{"bank":"Bank Central Asia (BCA)","number_account":"1341464600"}
 
 // ---------- Start Your Journey (Function) --------------------------------------------------
 function startTheJourney() {
-//    $('html, body').animate({ scrollTop: $('#start').offset().top }, 'slow');
+    $('html, body').animate({ scrollTop: $('#start').offset().top }, 'slow');
     $('.top-cover').eq(0).addClass('hide');
     $('#gift-form').hide();
     $('body').eq(0).css('overflow', 'visible');
