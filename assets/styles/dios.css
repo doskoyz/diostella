@@ -112,7 +112,7 @@ body font {
 .top-cover .inner .details .text-03 {
     text-align: center;
     font-family: var(--montserrat-bold);
-    font-size: calc(var(--fs-cover));
+    font-size: calc(var(--fs-cover) + 2px);
     color: var(--font-clr);
 }
 
@@ -124,14 +124,14 @@ body font {
     font-size: 20px;
     font-size: var(--fs-sub-title);
     text-decoration: none;
-    background-color: var(--olive-clr);
+    background-color: var(--wood-clr);
     display: inline-block;
     padding: 0.5em 0.5em;
-    border-radius: 50px;
+    border-radius: 10px;
     margin: 0;
     color: var(--white-clr);
     font-family: var(--montserrat-bold);
-    box-shadow: -1px 1px 5px rgba(var(--rgb-primary-clr), 0.3);
+    box-shadow: -1px 1px 8px rgba(var(--rgb-primary-clr), 1);
     transition: all 0.35s ease-in-out;
 }
 .top-cover .inner .details .link-01:hover {
@@ -1824,11 +1824,11 @@ section.footnote .inner h1 {
     }
 
     .top-cover .inner .details .text-03 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .top-cover .inner .details .link-01 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     /* COVER */

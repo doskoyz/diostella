@@ -162,8 +162,7 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-        {"name": "dios", "comment": "test", "date": "Mon Nov 14 2022 01:00:22"},
-        {"name": "stella", "comment": "test 123", "date": "Mon Nov 14 2022 01:00:22"}
+        {"name": "Dios & Stella", "comment": "Semoga bisa menghadiri acara ^.^", "date": "Mon Nov 14 2022 01:00:22"}
     ];
     for (idx in comments) {
         comment = comments[idx];
