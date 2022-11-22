@@ -162,7 +162,7 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-        {"name": "Dios & Stella", "comment": "Semoga bisa menghadiri acara ^.^", "date": "Mon Nov 14 2022 01:00:22"}
+        {"name": "Dicky n Winda", "comment": "Congratz lancar2 sampe hari Happily ever after GBU both", "date": "Sel,22 Nov 2022 13:24:12 GMT+07"}
     ];
     for (idx in comments) {
         comment = comments[idx];
