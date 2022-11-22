@@ -162,7 +162,8 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-        {"name": "Dicky n Winda", "comment": "Congratz lancar2 sampe hari H Happily ever after GBU both", "date": "Sel, 22 Nov 2022 13:24:12 GMT+07"}
+        {"name": "Dicky n Winda", "comment": "Congratz lancar2 sampe hari H Happily ever after GBU both", "date": "Sel, 22 Nov 2022 13:24:12 GMT+07"},
+        {"name": "Yashima & Dina", "comment": "Lancar terus Sampe wedding...selalu diberkati untuk keluarga baru nya, saling terbuka satu sama lain, bahagia terus, diberkati Sampe kakek nenek🥳🎉😇🤗🙏", "date": "Sel, 22 Nov 2022 16:27:03 GMT+07"}
     ];
     for (idx in comments) {
         comment = comments[idx];
