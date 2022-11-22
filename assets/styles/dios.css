@@ -2115,8 +2115,8 @@ section.footnote .inner h1 {
     }
     .event-inner .event .activities .activity .address p {
         margin-bottom: .2em;
-        font-size: 24px;
-        line-height: 20px;
+        font-size: 20px;
+        line-height: 18px;
     }
     .event-inner .event .activities .activity .address p:first-child {
         margin-bottom: .75em;
@@ -2490,8 +2490,8 @@ section.footnote .inner h1 {
     }
     .event-inner .event .activities .activity .address p {
         margin-bottom: .2em;
-        font-size: 24px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 18px;
     }
     .event-inner .event .activities .activity .address p:first-child {
         margin-bottom: .75em;
