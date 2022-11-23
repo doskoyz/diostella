@@ -440,8 +440,26 @@ $(window).on("scroll", function () {
 
 // ---------- LIGHT GALLERY --------------------------------------------------
 $(function(){
-    lightGallery(document.getElementById('lightGallery'), {
+    lightGallery(document.getElementById('lightGalleryAddons1'), {
         download: false,
+    });
+    lightGallery(document.getElementById('lightGalleryAddons2'), {
+        download: false,
+    });
+    lightGallery(document.getElementById('lightGalleryAddons3'), {
+        download: false,
+    });
+    lightGallery(document.getElementById('lightGalleryAddons4'), {
+        download: false,
+    });
+    lightGallery(document.getElementById('lightGalleryAddonsVid'), {
+        youtubePlayerParams: {
+            modestbranding: true,
+            showinfo: false,
+            rel: false,
+            controls: false,
+            autoplay: true
+        },
     });
 });
 
