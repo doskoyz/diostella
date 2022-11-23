@@ -1054,6 +1054,13 @@ section.live-streaming > .inner > .body > .preview > img {
     object-fit: cover;
     object-position: center;
 }
+section.live-streaming > .inner > .body > .preview > a > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
 section.live-streaming > .inner > .body > .preview > .play-btn {
     position: absolute;
     top: 50%;
