@@ -163,6 +163,7 @@ function sendComment(data) {
 $(document).ready(function(){
     comments = [
 //      {"name": "", "comment":"", "date": ""},
+        {"name": "Angela dan Michael", "comment":"Congratsss twinneyyyyyyy and pren, cant wait to see you two in your wedding day, loveeeee :) <3", "date": "Rab, Nov 23 2022 21:08:11 GMT+07"},
         {"name": "Papa & Mama (Dios)", "comment": "Bahagia ,Sejahtera Rukun rukun Selalu ,Dalam Lindungan Tuhan. Tuhan  yesus Memberkati.", "date": "Sel, 22 Nov 2022 18:52:33 GMT+07"},
         {"name": "Chris & Dian", "comment": "Lancar2 yaa sampai Hari H semoga di cukupkan dalam segala hal dan bahagia selalu untuk membangun keluarga kecilnya..Langgeng selalu smp maut memisahkan ", "date": "Sel, 22 Nov 2022 17:30:58 GMT+07"},
         {"name": "Yashima & Dina", "comment": "Lancar terus Sampe wedding...selalu diberkati untuk keluarga baru nya, saling terbuka satu sama lain, bahagia terus, diberkati Sampe kakek nenek🥳🎉😇🤗🙏", "date": "Sel, 22 Nov 2022 16:27:03 GMT+07"},
