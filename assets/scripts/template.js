@@ -163,6 +163,7 @@ function sendComment(data) {
 $(document).ready(function(){
     comments = [
 //      {"name": "", "comment":"", "date": ""},
+        {"name": "Alvin", "comment":"It's like a give or take relationship. You either give or she knows how to take it. Happy married life ahead!", "date": "Kam, Nov 24 2022 20:19:39 GMT+07"},
         {"name": "Okta", "comment":"Semoga persiapan hingga acara pada lancar semua dan selalu menjadi keluarga bahagia, Tuhan berkati", "date": "Kam, Nov 24 2022 02:06:53 GMT+07"},
         {"name": "Angela dan Michael", "comment":"Congratsss twinneyyyyyyy and pren, cant wait to see you two in your wedding day, loveeeee :) <3", "date": "Rab, Nov 23 2022 21:08:11 GMT+07"},
         {"name": "Papa & Mama (Dios)", "comment": "Bahagia ,Sejahtera Rukun rukun Selalu ,Dalam Lindungan Tuhan. Tuhan  yesus Memberkati.", "date": "Sel, 22 Nov 2022 18:52:33 GMT+07"},
