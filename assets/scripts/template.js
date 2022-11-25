@@ -163,6 +163,8 @@ function sendComment(data) {
 $(document).ready(function(){
     comments = [
 //      {"name": "", "comment":"", "date": ""},
+        {"name": "Jevon Averill", "comment":"Congrats, Dios and Stella! Semoga lancar sampai hari h ya. May your marriage be blessed with joy. Happily ever after", "date": "Jum, 25 Nov 2022 23:48:39 GMT+0700"},
+        {"name": "Galant", "comment":"Congratz Dios dan stella , happy wedding 🙏🙏", "date": "Jum, 25 Nov 2022 20:18:28 GMT+0700"},
         {"name": "Vannia", "comment":"May this marriage fill your life with joy, happiness, and lots of love. Congratulations as you start a new journey! God bless you", "date": "Jum, 25 Nov 2022 17:14:49 GMT+07"},
         {"name": "Papi dan Mami (Stella)", "comment":"Stella dan Dios, semoga kalian dilimpahi kebahagiaan dan dpt membangun keluarga yg penuh cinta kasih sayang, bisa saling melengkapi  satu sama lain.. Tuhan Yesus memberkati , Amin 🙏🏻", "date": "Jum, 25 Nov 2022 15:00:38 GMT+07"},
         {"name": "Alvin", "comment":"It's like a give or take relationship. You either give or she knows how to take it. Happy married life ahead!", "date": "Kam, 24 Nov 2022 20:19:39 GMT+07"},
