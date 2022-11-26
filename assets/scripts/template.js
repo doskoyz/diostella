@@ -162,9 +162,14 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-//      {"name": "", "comment":"", "date": ""},
-        {"name": "Jevon Averill", "comment":"Congrats, Dios and Stella! Semoga lancar sampai hari h ya. May your marriage be blessed with joy. Happily ever after", "date": "Jum, 25 Nov 2022 23:48:39 GMT+0700"},
-        {"name": "Galant", "comment":"Congratz Dios dan stella , happy wedding 🙏🙏", "date": "Jum, 25 Nov 2022 20:18:28 GMT+0700"},
+//      {"name": "", "comment":"", "date": "Sab, 26 Nov 2022 "},
+        {"name": "Flaviana Briane Sulistianto", "comment":"Congratulations so happy for u Dios 💜 Stellaa! Longlast yaaah and happily ever after pkknya, GBU.", "date": "Sab, 26 Nov 2022 17:28:41 GMT+07"},
+        {"name": "Riana & Kiki", "comment":"Lancar lancar sampe hari H dios and stella. Bahagia selalu untuk kalian berdua yaa. Langgeng terus sama kakek nenek. So happy for both ot you! Tuhan berkati kalian berduaa ❤️💖✨🫶", "date": "Sab, 26 Nov 2022 16:11:47 GMT+07"},
+        {"name": "Dexkoyz", "comment":"You guys are so cute!\n\nNo roasting for today. Juli, please!\n\nSelamat untuk temanku Dios dan Stella. Kalian telah berhasil melalui waktu yang naik turun selama 6 tahun. Luar biasa!\n\nNow, this is the time! Mengucap janji sakral. Berjanji untuk menjadi satu untuk selamanya. Ini memang awalan. Tapi ku yakin kalian bisa menjadi pasangan yang luar biasa dan diberkahi oleh Tuhan.\n\nGod bless you always, Dios dan Stella!\n\nRegards,\nLM", "date": "Sab, 26 Nov 2022 11:46:01 GMT+07"},
+        {"name": "Janice & Harme", "comment":"Congratssss tellaa diosss! Semoga smua lancar2 yaaa. Happily ever after for you both ❤️ ", "date": "Sab, 26 Nov 2022 10:30:55 GMT+07"},
+        {"name": "Ririn & Ko Christian", "comment":"Dios and ci stella lancar” yaa sampe hari H! wishing all the best for your wedding🥰 semoga langgeng terus sampe maut memisahkan🥳 God bless you all!", "date": "Sab, 26 Nov 2022 08:37:51 GMT+08"},
+        {"name": "Jevon Averill", "comment":"Congrats, Dios and Stella! Semoga lancar sampai hari h ya. May your marriage be blessed with joy. Happily ever after", "date": "Jum, 25 Nov 2022 23:48:39 GMT+07"},
+        {"name": "Galant", "comment":"Congratz Dios dan stella , happy wedding 🙏🙏", "date": "Jum, 25 Nov 2022 20:18:28 GMT+07"},
         {"name": "Vannia", "comment":"May this marriage fill your life with joy, happiness, and lots of love. Congratulations as you start a new journey! God bless you", "date": "Jum, 25 Nov 2022 17:14:49 GMT+07"},
         {"name": "Papi dan Mami (Stella)", "comment":"Stella dan Dios, semoga kalian dilimpahi kebahagiaan dan dpt membangun keluarga yg penuh cinta kasih sayang, bisa saling melengkapi  satu sama lain.. Tuhan Yesus memberkati , Amin 🙏🏻", "date": "Jum, 25 Nov 2022 15:00:38 GMT+07"},
         {"name": "Alvin", "comment":"It's like a give or take relationship. You either give or she knows how to take it. Happy married life ahead!", "date": "Kam, 24 Nov 2022 20:19:39 GMT+07"},
