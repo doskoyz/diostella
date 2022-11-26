@@ -163,7 +163,9 @@ function sendComment(data) {
 $(document).ready(function(){
     comments = [
 //      {"name": "", "comment":"", "date": "Sab, 26 Nov 2022 "},
-        {"name": "Flaviana Briane Sulistianto", "comment":"Congratulations so happy for u Dios 💜 Stellaa! Longlast yaaah and happily ever after pkknya, GBU.", "date": "Sab, 26 Nov 2022 17:28:41 GMT+07"},
+        {"name": "Vindy", "comment":"Happy wedding Dios dan Stella! Lancar terus, sehat sehat yah! Happy for both of you 💕 God Bless you both ", "date": "Sab, 26 Nov 2022 19:07:56 GMT+07"},
+        {"name": "Mekjohn", "comment":"Selamat ya Dios dan Stella, semoga lancar terus kedepannya, Semoga keluarga yang akan kalian bina diberkati selalu oleh Tuhan Yesus, bahagia dan rukun selama-lamanya, congrats yaaaa", "date": "Sab, 26 Nov 2022 18:03:53 GMT+07"},
+        {"name": "Flaviana Briane Sulistianto & Jonathan Elbert ", "comment":"Congratulations so happy for u Dios 💜 Stellaa! Longlast yaaah and happily ever after pkknya, GBU.", "date": "Sab, 26 Nov 2022 17:28:41 GMT+07"},
         {"name": "Riana & Kiki", "comment":"Lancar lancar sampe hari H dios and stella. Bahagia selalu untuk kalian berdua yaa. Langgeng terus sama kakek nenek. So happy for both ot you! Tuhan berkati kalian berduaa ❤️💖✨🫶", "date": "Sab, 26 Nov 2022 16:11:47 GMT+07"},
         {"name": "Dexkoyz", "comment":"You guys are so cute!\n\nNo roasting for today. Juli, please!\n\nSelamat untuk temanku Dios dan Stella. Kalian telah berhasil melalui waktu yang naik turun selama 6 tahun. Luar biasa!\n\nNow, this is the time! Mengucap janji sakral. Berjanji untuk menjadi satu untuk selamanya. Ini memang awalan. Tapi ku yakin kalian bisa menjadi pasangan yang luar biasa dan diberkahi oleh Tuhan.\n\nGod bless you always, Dios dan Stella!\n\nRegards,\nLM", "date": "Sab, 26 Nov 2022 11:46:01 GMT+07"},
         {"name": "Janice & Harme", "comment":"Congratssss tellaa diosss! Semoga smua lancar2 yaaa. Happily ever after for you both ❤️ ", "date": "Sab, 26 Nov 2022 10:30:55 GMT+07"},
