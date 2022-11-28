@@ -162,7 +162,8 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-//      {"name": "", "comment":"", "date": "Min, 27 Nov 2022 "},
+//      {"name": "", "comment":"", "date": "Sen, 28 Nov 2022 "},
+        {"name": "Grace Selda", "comment":"Happy wedding Stella & Dios!! Happily ever after🥰🥰🥰 God bless your marriage🥰", "date": "Min, 27 Nov 2022 20:23:09 GMT+07"},
         {"name": "Ricky Tan & Christiana Novellyn", "comment":"Selamat Dios & Stella !! Happy Wedding ❤️❤️❤️ Wishing you all of the love and happiness and wishing you long and happy marriage ❤️❤️❤️", "date": "Min, 27 Nov 2022 14:47:15 GMT+07"},
         {"name": "Feliana Tanuwijaya & Rodrigue Esken Chang", "comment":"Happy Wedding Dios & Stella! Wish u both a happy marriage life! Happy happy yah🤍", "date": "Min, 27 Nov 2022 00:09:46 GMT+07"},
         {"name": "Novi & Daniel", "comment":"Happy wedding Dios & Stella!! Wishing you both a happy marriage life ❤️❤️", "date": "Sab, 26 Nov 2022 22:19:37 GMT+07"},
