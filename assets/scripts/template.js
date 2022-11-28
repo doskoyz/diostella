@@ -163,6 +163,12 @@ function sendComment(data) {
 $(document).ready(function(){
     comments = [
 //      {"name": "", "comment":"", "date": "Sen, 28 Nov 2022 "},
+        {"name": "Arie", "comment":"Congrats dios & stella!! Lancar sampe hari H, happily ever after y, Gbu🎉🎉🎉", "date": "Sen, 28 Nov 2022 21:11:58 GMT+07"},
+        {"name": "Yanuar Wagianto", "comment":"Congrats Dios & Stella\n\nMay today mark the first of the rest of your life, filled with love and fellowship.\n\nGod Bless🥂♥️", "date": "Sen, 28 Nov 2022 19:06:01 GMT+07"},
+        {"name": "Vanya dan Iip", "comment":"Congratz Dios n stella.. lancar2 sampai hr H, menjadi kluarga yg diberkati selalu ❤️", "date": "Sen, 28 Nov 2022 18:51:01 GMT+07"},
+        {"name": "Reinaldo Khowanto", "comment":"Congratss dios & tella!! Lancar2 sampe hari H ya, dan langgeng sampai selama2nya", "date": "Sen, 28 Nov 2022 17:44:57 GMT+07"},
+        {"name": "Lisa dan klg", "comment":"Selamat menempuh hidup baru dioz, selamat memasuki babak baru kehidupan,,, semoga selalu langgeng dan menjadi keliarga yg terberkati", "date": "Sen, 28 Nov 2022 06:19:52 GMT+07"},
+        {"name": "Lanny", "comment":"Semoga persiapannya hingga hari bahagianya lancar dan menjadi keluarga yg bahagia selalu Tuhan selalu memberkati amin", "date": "Sen, 28 Nov 2022 04:59:48 GMT+07"},
         {"name": "Grace Selda", "comment":"Happy wedding Stella & Dios!! Happily ever after🥰🥰🥰 God bless your marriage🥰", "date": "Min, 27 Nov 2022 20:23:09 GMT+07"},
         {"name": "Ricky Tan & Christiana Novellyn", "comment":"Selamat Dios & Stella !! Happy Wedding ❤️❤️❤️ Wishing you all of the love and happiness and wishing you long and happy marriage ❤️❤️❤️", "date": "Min, 27 Nov 2022 14:47:15 GMT+07"},
         {"name": "Feliana Tanuwijaya & Rodrigue Esken Chang", "comment":"Happy Wedding Dios & Stella! Wish u both a happy marriage life! Happy happy yah🤍", "date": "Min, 27 Nov 2022 00:09:46 GMT+07"},
