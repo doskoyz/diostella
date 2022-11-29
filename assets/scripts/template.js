@@ -162,7 +162,10 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-//      {"name": "", "comment":"", "date": "Sen, 28 Nov 2022 "},
+//      {"name": "", "comment":"", "date": "Sel, 29 Nov 2022 "},
+        {"name": "M Niang Semarang", "comment":"Selamat Menempuh Hidup Baru Dios Stella ,rukun selalu,langgeng,cepat memperoleh momongan , menjadi keluarga yg terberkati", "date": "Sel, 29 Nov 2022 17:13:04 GMT+07"},
+        {"name": "Nita", "comment":"Congrats ko Dios & ci Stella! Semoga lancar sampai hari H !! ❤", "date": "Sel, 29 Nov 2022 12:41:15 GMT+07"},
+        {"name": "Mey hwa", "comment":"Happy Wedding Stella &Dios Wishing you both a happy marriage life ❤❤ ", "date": "Sel, 29 Nov 2022 06:52:19 GMT+07"},
         {"name": "Arie", "comment":"Congrats dios & stella!! Lancar sampe hari H, happily ever after y, Gbu🎉🎉🎉", "date": "Sen, 28 Nov 2022 21:11:58 GMT+07"},
         {"name": "Yanuar Wagianto", "comment":"Congrats Dios & Stella\n\nMay today mark the first of the rest of your life, filled with love and fellowship.\n\nGod Bless🥂♥️", "date": "Sen, 28 Nov 2022 19:06:01 GMT+07"},
         {"name": "Vanya dan Iip", "comment":"Congratz Dios n stella.. lancar2 sampai hr H, menjadi kluarga yg diberkati selalu ❤️", "date": "Sen, 28 Nov 2022 18:51:01 GMT+07"},
