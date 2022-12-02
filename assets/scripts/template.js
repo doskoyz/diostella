@@ -162,7 +162,9 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-//      {"name": "", "comment":"", "date": "Rab, 30 Nov 2022 "},
+//      {"name": "", "comment":"", "date": "Kam, 1 Des 2022 "},
+        {"name": "Susi Semarang", "comment":"Selamat menempuh hidup baru Dios & Stella semoga bahagia selalu , langgeng dan menjadi keluarga yang terberkati", "date": "Kam, 1 Des 2022 19:14:53 GMT+07"},
+        {"name": "Sugianto J", "comment":"Selamat Mrnempuh Hidup Baru Dios Stella, semoga menjadi keluarga yg selalu Di Berkati 🙏", "date": "Kam, 1 Des 2022 12:13:18 GMT+07"},
         {"name": "Anonymus", "comment":"congrats cuy nanti kita ke tidung lagi wkwk", "date": "Rab, 30 Nov 2022 21:12:45 GMT+07"},
         {"name": "Gepe", "comment":"Happy Wedding Dios Stella! Smoga lancar sampai hari H! Selamat menempuh hidup berumah tangga hingga maut memisahkan <3", "date": "Rab, 30 Nov 2022 17:52:01 GMT+07"},
         {"name": "Julianto (Tebe)", "comment":"Terima kasih untuk undangannya. Selamat ya untuk kedua mempelai, untuk komitmen memulai hidup berkeluarga. Apapun tantangan yg akan terjadi di masa yang akan datang,ingatlah selalu akan hari ini. Tuhan memberkati kedua mempelai dan keluarga mempelai.", "date": "Rab, 30 Nov 2022 11:30:05 GMT+07"},
