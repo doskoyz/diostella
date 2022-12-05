@@ -162,7 +162,9 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-//      {"name": "", "comment":"", "date": "Min, 4 Des 2022 "},
+//      {"name": "", "comment":"", "date": "Sen, 5 Des 2022 "},
+        {"name": "", "comment":"", "date": "Sen, 5 Des 2022 "},
+        {"name": "Viga dan Sarah", "comment":"Happy wedding stella dan dios happily ever after for both of you ", "date": "Sen, 5 Des 2022 06:10:54 GMT+07"},
         {"name": "Natalia Tika Indrawati, S.Pd.", "comment":"Bahagianyaaaaa......Ibu senang dan sangat terharu, Ibu menyambuat suka cita pernikahan kaliannn.....bahagia selalu, lalui perjalanan kehidupan dengan bergandeng tangan, saling menguatkan, saling menjaga, saling memahami, saling mencintai sampai akhir zaman....Doa tulus dari Ibu untuk kaliannn.....Sayang kaliannnn.....🥰🌹", "date": "Min, 4 Des 202216:04:53 GMT+07"},
         {"name": "Pa widi santa maria", "comment":"Selamat untuk Dios dan Stella. Turut berbahagia akhirnys Dios dan Stella bisa dipersatukan Tuhan dalam pernikahan untuk membangun rumah tangga, setelah sekian lama berjuang mempertahankan kebersamaan nya. Semoga terbentuk keluarga yang hermonis, tetap setia satu sama lain dan menjadikan berkat yang semakin  mencukupi  untuk keluarga. Aamiin", "date": "Min, 4 Des 202215:55:41 GMT+07"},
         {"name": "Iwan RK & Neti S Dewi", "comment":"Congratulations to the best parents of the bride. May your daughter glow like a full moon and enter happily into her new life. You must be proud of her.Dios & StellaCongratulations on your wedding.May your future bring you joy and your love forever grow.Congratulations once again!", "date": "Min, 4 Des 2022 10:51:49 GMT+07"},
