@@ -162,7 +162,12 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-//      {"name": "", "comment":"", "date": "Kam, 1 Des 2022 "},
+//      {"name": "", "comment":"", "date": "Min, 4 Des 2022 "},
+        {"name": "Natalia Tika Indrawati, S.Pd.", "comment":"Bahagianyaaaaa......Ibu senang dan sangat terharu, Ibu menyambuat suka cita pernikahan kaliannn.....bahagia selalu, lalui perjalanan kehidupan dengan bergandeng tangan, saling menguatkan, saling menjaga, saling memahami, saling mencintai sampai akhir zaman....Doa tulus dari Ibu untuk kaliannn.....Sayang kaliannnn.....🥰🌹", "date": "Min, 4 Des 202216:04:53 GMT+07"},
+        {"name": "Pa widi santa maria", "comment":"Selamat untuk Dios dan Stella. Turut berbahagia akhirnys Dios dan Stella bisa dipersatukan Tuhan dalam pernikahan untuk membangun rumah tangga, setelah sekian lama berjuang mempertahankan kebersamaan nya. Semoga terbentuk keluarga yang hermonis, tetap setia satu sama lain dan menjadikan berkat yang semakin  mencukupi  untuk keluarga. Aamiin", "date": "Min, 4 Des 202215:55:41 GMT+07"},
+        {"name": "Iwan RK & Neti S Dewi", "comment":"Congratulations to the best parents of the bride. May your daughter glow like a full moon and enter happily into her new life. You must be proud of her.Dios & StellaCongratulations on your wedding.May your future bring you joy and your love forever grow.Congratulations once again!", "date": "Min, 4 Des 2022 10:51:49 GMT+07"},
+        {"name": "Nike,Nico & Nicole", "comment":"Lancar2 sampai hari H yos & tella! Longlast, Tuhan Yesus turut serta dalam pernikahan kelian berdua nanti ,diberkati segalanya! ❤️", "date": "Jum, 2 Des 2022 21:24:37 GMT+07"},
+        {"name": "Christoper", "comment":"Congrats dios & stella! Lancar2 yaa! Langgeng terus, Godbless", "date": "Jum, 2 Des 2022 15:21:27 GMT+07"},
         {"name": "Susi Semarang", "comment":"Selamat menempuh hidup baru Dios & Stella semoga bahagia selalu , langgeng dan menjadi keluarga yang terberkati", "date": "Kam, 1 Des 2022 19:14:53 GMT+07"},
         {"name": "Sugianto J", "comment":"Selamat Mrnempuh Hidup Baru Dios Stella, semoga menjadi keluarga yg selalu Di Berkati 🙏", "date": "Kam, 1 Des 2022 12:13:18 GMT+07"},
         {"name": "Anonymus", "comment":"congrats cuy nanti kita ke tidung lagi wkwk", "date": "Rab, 30 Nov 2022 21:12:45 GMT+07"},
