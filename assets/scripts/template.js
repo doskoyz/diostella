@@ -162,7 +162,11 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-//      {"name": "", "comment":"", "date": "Sen, 5 Des 2022 "},
+//      {"name": "", "comment":"", "date": "Sel, 6 Des 2022 "},
+        {"name": "Abe & Seniko", "comment":"Congrats Dios & Stella ! Lancar2 ya sampe hari H, Happily ever after ya both of you ! Wishing both of you a happy marriage life !!! ", "date": "Sel, 6 Des 2022 09:29:25 GMT+07"},
+        {"name": "Tjan Tiauw Swan Bambang TW / Alfonso Bambang semarang", "comment":"selamat menempuh hidup baru ,selalu dalam perlindungan TUHAN YESUS KRISTUS dan Roh Kudus dalam mengarungi Hidup baru berkeluargaBerkah Dalem", "date": "Sel, 6 Des 2022 08:17:25 GMT+07"},
+        {"name": "Oei Swie Hian", "comment":"Selamat Berbahagia untuk Stella dan Dios .", "date": "Sen, 5 Des 2022 23:51:39 GMT+07"},
+        {"name": "Susaendi", "comment":"Happy Wedding Dios and Stella, I hope everything runs smoothly. God bless you all 😍", "date": "Sen, 5 Des 2022 20:59:38 GMT+07"},
         {"name": "Meidijanto Halim", "comment":"Selamat berbahagia, Tuhan. Memberkati", "date": "Sen, 5 Des 2022 07:25:20 GMT+07"},
         {"name": "Viga dan Sarah", "comment":"Happy wedding stella dan dios happily ever after for both of you ", "date": "Sen, 5 Des 2022 06:10:54 GMT+07"},
         {"name": "Natalia Tika Indrawati, S.Pd.", "comment":"Bahagianyaaaaa......Ibu senang dan sangat terharu, Ibu menyambuat suka cita pernikahan kaliannn.....bahagia selalu, lalui perjalanan kehidupan dengan bergandeng tangan, saling menguatkan, saling menjaga, saling memahami, saling mencintai sampai akhir zaman....Doa tulus dari Ibu untuk kaliannn.....Sayang kaliannnn.....🥰🌹", "date": "Min, 4 Des 202216:04:53 GMT+07"},
