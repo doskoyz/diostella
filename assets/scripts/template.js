@@ -162,7 +162,15 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-//      {"name": "", "comment":"", "date": "Sel, 6 Des 2022 "},
+//      {"name": "", "comment":"", "date": "Jum, 9 Des 2022 "},
+        {"name": "Ham may chen", "comment":"Selamat berbahagia buat kedua mempelai Congrats ", "date": "Jum, 9 Des 2022 18:38:57 GMT+07"},
+        {"name": "Nadya Bebeq & Fomal", "comment":"Yg ditunggu-tunggu datang juga! Congrats Dozkoyz dan Stella!! Semoga pernikahan ini menjadi awal yg penuh berkat buat kalian berdua. Dont forget to love each other and enjoy each other's company! See you tomorrow!!!", "date": "Jum, 9 Des 2022 12:41:45 GMT+07"},
+        {"name": "Debhie and ko pram", "comment":"Happy wedding, wish you both have a wonderful journey ahead. Gbu always.Xx", "date": "Jum, 9 Des 2022 10:00:50 GMT+07"},
+        {"name": "LINA ", "comment":"HAPPY WEDDING STELLA & DIOS ", "date": "Jum, 9 Des 2022 09:07:36 GMT+07"},
+        {"name": "Setyowati ", "comment":"Selamat menempuh hidup baru, Tuhan memberkati 🙏😇", "date": "Jum, 9 Des 2022 04:39:56 GMT+08"},
+        {"name": "Ambo Aliong", "comment":"Selamat menempuh hidup baru Dios dan Stella semoga bahagia", "date": "Kam, 8 Des 2022 18:08:58 GMT+07"},
+        {"name": "Ruben & Felicia", "comment":"Haaii Stellaa dan Dios, Happy Wedding yaa GuysLancar yaahh sampai hari H dan seterusnya yaaSorry kita ngga bisa datengGod bless yaa buat kalian!!! 🥳🥳", "date": "Kam, 8 Des 2022 18:01:49 GMT+07"},
+        {"name": "Budi Hardadi Setiabudi", "comment":"Selamat menempuh hidup baru, bahagia selalu", "date": "Rab, 7 Des 2022 14:06:31 GMT+07"},
         {"name": "Abe & Seniko", "comment":"Congrats Dios & Stella ! Lancar2 ya sampe hari H, Happily ever after ya both of you ! Wishing both of you a happy marriage life !!! ", "date": "Sel, 6 Des 2022 09:29:25 GMT+07"},
         {"name": "Tjan Tiauw Swan Bambang TW / Alfonso Bambang semarang", "comment":"selamat menempuh hidup baru ,selalu dalam perlindungan TUHAN YESUS KRISTUS dan Roh Kudus dalam mengarungi Hidup baru berkeluargaBerkah Dalem", "date": "Sel, 6 Des 2022 08:17:25 GMT+07"},
         {"name": "Oei Swie Hian", "comment":"Selamat Berbahagia untuk Stella dan Dios .", "date": "Sen, 5 Des 2022 23:51:39 GMT+07"},
