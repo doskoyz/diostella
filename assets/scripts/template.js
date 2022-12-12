@@ -162,7 +162,17 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-//      {"name": "", "comment":"", "date": "Jum, 9 Des 2022 "},
+//      {"name": "", "comment":"", "date": "Sab, 10 Des 2022 "},
+        {"name": "Rehan", "comment":"Congrats on your wedding Dios and Stella. May the years ahead be filled with love and joy 🫶", "date": "Sab, 10 Des 2022 20:22:00 GMT+07"},
+        {"name": "Erika A", "comment":"Dear Dios & Stella,Congratulations on your lovely wedding and best wishes for the new exciting things happening in your lifeMay both of you always be blessed! ^_^", "date": "Sab, 10 Des 2022 19:29:48 GMT+07"},
+        {"name": "Lenny ", "comment":"Happy Wedding ", "date": "Sab, 10 Des 2022 18:27:05 GMT+07"},
+        {"name": "Okfin", "comment":"Selamat Menempuh Hidup Baru. Bahagia Selalu didalam Keluarga yang Takut Akan Tuhan. 🥰", "date": "Sab, 10 Des 2022 15:28:05 GMT+07"},
+        {"name": "ady kurniawan(koh liliek) dan kluarga", "comment":"Slamat buat dios dan stela Semoga berbahagia slaluTuhan slalu memberkati kalianYang langgeng sampai tua Masa2 kecil mu sudah usai Akarang tinggal menjejang ke kluarga yang lebih bertanggung jawabSlamat ya yosss", "date": "Sab, 10 Des 2022 15:10:22 GMT+07"},
+        {"name": "Maria Quirina n fam ", "comment":"Selamat dan Berbahagia buat Dios dan Stella selama nya akur2", "date": "Sab, 10 Des 2022 14:52:36 GMT+07"},
+        {"name": "Ting sing /Thamrin", "comment":"Happy Wedding Dios & Stella", "date": "Sab, 10 Des 2022 10:04:39 GMT+07"},
+        {"name": "Yoscelina", "comment":"Happy Wedding Dios & Stella. Selamat menempuh hidup baru, semoga selalu diberkati dan berbahagi selalu. 😇", "date": "Sab, 10 Des 2022 08:35:22 GMT+07"},
+        {"name": "Awalina", "comment":"Selamat yaa buat Dios dan Stela, bahagia  penuh sukacita...TYM.", "date": "Sab, 10 Des 2022 08:29:48 GMT+07"},
+        {"name": "A.Jefri", "comment":"Selamat menempuh hidup baru yg bahagia semoga menjadi keluarga yang sejahtera damai sentosa sampai kakek nenek ya. Amin", "date": "Sab, 10 Des 2022 07:51:12 GMT+07"},
         {"name": "Ham may chen", "comment":"Selamat berbahagia buat kedua mempelai Congrats ", "date": "Jum, 9 Des 2022 18:38:57 GMT+07"},
         {"name": "Nadya Bebeq & Fomal", "comment":"Yg ditunggu-tunggu datang juga! Congrats Dozkoyz dan Stella!! Semoga pernikahan ini menjadi awal yg penuh berkat buat kalian berdua. Dont forget to love each other and enjoy each other's company! See you tomorrow!!!", "date": "Jum, 9 Des 2022 12:41:45 GMT+07"},
         {"name": "Debhie and ko pram", "comment":"Happy wedding, wish you both have a wonderful journey ahead. Gbu always.Xx", "date": "Jum, 9 Des 2022 10:00:50 GMT+07"},
