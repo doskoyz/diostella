@@ -162,7 +162,9 @@ function sendComment(data) {
 ============================== */
 $(document).ready(function(){
     comments = [
-//      {"name": "", "comment":"", "date": "Sab, 10 Des 2022 "},
+//      {"name": "", "comment":"", "date": "Min, 11 Des 2022 "},
+        {"name": "Dea Christy & Nehemia", "comment":"Congrats Dios & Stella! Selamat menikmati kehidupan bersama-sama, bahagia selaluu!Banyak berkat & sukacita melimpah yaaa GBU", "date": "Min, 11 Des 2022 09:32:04 GMT+07"},
+        {"name": "otong", "comment":"Selamat Prima", "date": "Min, 11 Des 2022 02:12:22 GMT+07"},
         {"name": "Rehan", "comment":"Congrats on your wedding Dios and Stella. May the years ahead be filled with love and joy 🫶", "date": "Sab, 10 Des 2022 20:22:00 GMT+07"},
         {"name": "Erika A", "comment":"Dear Dios & Stella,Congratulations on your lovely wedding and best wishes for the new exciting things happening in your lifeMay both of you always be blessed! ^_^", "date": "Sab, 10 Des 2022 19:29:48 GMT+07"},
         {"name": "Lenny ", "comment":"Happy Wedding ", "date": "Sab, 10 Des 2022 18:27:05 GMT+07"},
